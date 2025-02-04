@@ -28,7 +28,7 @@ function ResetPassword() {
             <input
               type={showPassword.password ? "text" : "password"}
               name="password"
-              className="w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400 focus:ring-lima-500"
+              className="focus:ring-apple-500 w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400"
             />
             <ShowPasswordButton
               showPassword={showPassword.password}
@@ -47,7 +47,7 @@ function ResetPassword() {
             <input
               type={showPassword.confirmPassword ? "text" : "password"}
               name="confirmPassword"
-              className="w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400 focus:ring-lima-500"
+              className="focus:ring-apple-500 w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400"
             />
             <ShowPasswordButton
               showPassword={showPassword.confirmPassword}
@@ -62,7 +62,7 @@ function ResetPassword() {
         </label>
         <button
           type="submit"
-          className="mx-auto block w-full rounded-lg bg-lima-500 px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
+          className="bg-apple-500 mx-auto block w-full rounded-lg px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
         >
           Reset
         </button>
@@ -80,7 +80,7 @@ function ShowPasswordButton({ onClick, showPassword }) {
   return (
     <button
       type="button"
-      className="absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center bg-lima-500 px-1 py-2 text-white outline-none duration-300 hover:bg-black focus:bg-black"
+      className="bg-apple-500 absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center px-1 py-2 text-white outline-none duration-300 hover:bg-black focus:bg-black"
       onClick={onClick}
     >
       {showPassword ? (

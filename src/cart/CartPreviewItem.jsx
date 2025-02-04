@@ -17,7 +17,7 @@ export default function CartPreviewItem({ data }) {
         {/* text & Pricing  */}
         <div className="">
           <h4>
-            <a className="line-clamp-1 cursor-pointer text-gray-700 hover:text-lima-500">
+            <a className="hover:text-apple-500 line-clamp-1 cursor-pointer text-gray-700">
               {productName}
             </a>
           </h4>
@@ -26,7 +26,7 @@ export default function CartPreviewItem({ data }) {
               {count}
               <span className="text-sm">x</span>
             </span>
-            <span className="ml-2 text-lima-500">${discountPrice}</span>
+            <span className="text-apple-500 ml-2">${discountPrice}</span>
           </div>
         </div>
         {/* delete btn  */}

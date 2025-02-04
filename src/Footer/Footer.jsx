@@ -15,10 +15,11 @@ import RenderContactItems from "./RenderContactItems";
 
 function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="relative bg-[url(./footer.png)] bg-[100%_100%]">
+      <div className="absolute h-full w-full bg-black/45"></div>
       <div className="container relative mx-auto px-4 lg:py-8">
         <div className="relative py-8 lg:py-12">
-          <div className="absolute -top-5 left-1/2 size-10 -translate-x-1/2 rounded-full bg-lima-500 p-[6px] lg:-top-14 lg:size-12">
+          <div className="absolute -top-5 left-1/2 size-10 -translate-x-1/2 rounded-full bg-green-800 p-[6px] lg:-top-14 lg:size-12">
             <a href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +35,7 @@ function Footer() {
               <div>
                 <img src={logo} alt="logo" />
               </div>
-              <p className="mt-5 text-gray-700">
+              <p className="mt-5 text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt lorem consectetur tempor incididunt
                 enim ad minim simply random text. It has pieceveniam.
@@ -59,19 +60,19 @@ function Footer() {
             </div>
             {/* Desktop Footer  */}
             <section className="hidden basis-1/5 lg:block">
-              <h3 className="mb-3 uppercase">information</h3>
+              <h3 className="mb-3 uppercase text-gray-200">information</h3>
               <div>
                 <RenderFooterLinks data={informationData} />
               </div>
             </section>
             <section className="hidden basis-1/5 lg:block">
-              <h3 className="mb-3 uppercase">my account</h3>
+              <h3 className="mb-3 uppercase text-gray-200">my account</h3>
               <div>
                 <RenderFooterLinks data={myAccountData} />
               </div>
             </section>
             <section className="hidden basis-1/4 lg:block">
-              <h3 className="mb-3 uppercase">contact info</h3>
+              <h3 className="mb-3 uppercase text-gray-200">contact info</h3>
               <div>
                 <RenderContactItems data={myContactData} />
               </div>

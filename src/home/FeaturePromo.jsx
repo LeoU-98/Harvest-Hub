@@ -18,7 +18,7 @@ function FeaturePromoItem({ data }) {
 
   return (
     <div className="mx-auto flex w-fit flex-col items-center gap-1 text-balance text-center capitalize">
-      <div className="relative mb-2 flex size-12 items-center justify-center rounded-full bg-white duration-300 hover:bg-lima-400 hover:fill-white md:size-16">
+      <div className="hover:bg-apple-500 relative mb-2 flex size-12 items-center justify-center rounded-full bg-white duration-300 hover:fill-white md:size-16">
         {svg}
       </div>
       <h3 className="text-xs md:text-sm lg:text-lg xl:text-xl">{title}</h3>

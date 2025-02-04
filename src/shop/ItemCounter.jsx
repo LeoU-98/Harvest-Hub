@@ -43,7 +43,7 @@ export default function ItemCounter({
     <div className="flex items-center justify-center gap-2">
       <button
         onClick={(e) => handleDec(e)}
-        className={`flex items-center justify-center rounded-full border-none ${forCartView === false && item?.count === 1 ? "bg-red-500" : "bg-lima-500"} fill-white p-1 text-white duration-300 hover:bg-black`}
+        className={`flex items-center justify-center rounded-full border-none ${forCartView === false && item?.count === 1 ? "bg-red-500" : "bg-apple-500"} fill-white p-1 text-white duration-300 hover:bg-black`}
       >
         {forCartView === false && item?.count === 1 ? (
           <TrashIcon className="size-4" />
@@ -55,11 +55,11 @@ export default function ItemCounter({
         type="text"
         value={item?.count ? item?.count : 0}
         onChange={handleSetCount}
-        className="w-8 text-center outline-none focus:ring-1 focus:ring-lima-500"
+        className="w-8 text-center outline-none focus:ring-1 focus:ring-apple-500"
       />
       <button
         onClick={handleInc}
-        className="flex items-center justify-center rounded-full border-none bg-lima-500 fill-white p-1 text-white duration-300 hover:bg-black"
+        className="flex items-center justify-center rounded-full border-none bg-apple-500 fill-white p-1 text-white duration-300 hover:bg-black"
       >
         <PlusIcon className="size-4" />
       </button>

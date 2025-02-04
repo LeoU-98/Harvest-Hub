@@ -46,7 +46,7 @@ function NavIcon({ data }) {
   console.log(icon);
   return (
     <li className="group relative mb-3 cursor-pointer py-2">
-      <div className="absolute top-1/2 h-0 w-0 -translate-y-1/2 bg-lima-500 [transition:_width_0.3s,height_0.4s_cubic-bezier(1,-0.05,.56,.69)] group-hover:h-full group-hover:w-full"></div>
+      <div className="bg-apple-500 absolute top-1/2 h-0 w-0 -translate-y-1/2 [transition:_width_0.3s,height_0.4s_cubic-bezier(1,-0.05,.56,.69)] group-hover:h-full group-hover:w-full"></div>
       <NavLink
         to={path}
         className="relative z-50 flex items-center gap-2 px-4 text-white"

@@ -14,7 +14,7 @@ export default function SignInForm({ className }) {
         <input
           type="text"
           name="email"
-          className="block w-full border-b-2 px-3 py-2 outline-none duration-300 hover:border-b-lima-500 focus:border-b-lima-500"
+          className="hover:border-b-apple-500 focus:border-b-apple-500 block w-full border-b-2 px-3 py-2 outline-none duration-300"
         />
       </label>
       <label>
@@ -23,11 +23,11 @@ export default function SignInForm({ className }) {
           <input
             type={showPassword ? "text" : "password"}
             name="password"
-            className="block w-full border-b-2 px-3 py-2 outline-none duration-300 hover:border-b-lima-500 focus:border-b-lima-500"
+            className="hover:border-b-apple-500 focus:border-b-apple-500 block w-full border-b-2 px-3 py-2 outline-none duration-300"
           />
           <button
             type="button"
-            className="rounded-sm bg-lima-500 p-1 text-white duration-300 hover:bg-black"
+            className="bg-apple-500 rounded-sm p-1 text-white duration-300 hover:bg-black"
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? (
@@ -40,7 +40,7 @@ export default function SignInForm({ className }) {
       </label>
       <button
         type="submit"
-        className="rounded-xl bg-lima-500 py-3 text-sm font-semibold uppercase text-white duration-300 hover:bg-black focus:bg-black active:translate-y-1"
+        className="bg-apple-500 rounded-xl py-3 text-sm font-semibold uppercase text-white duration-300 hover:bg-black focus:bg-black active:translate-y-1"
       >
         sign in
       </button>
@@ -48,7 +48,7 @@ export default function SignInForm({ className }) {
       <div>
         <Link
           to="/account/forgotPassword"
-          className="cursor-pointer capitalize text-gray-900 duration-300 hover:text-lima-500"
+          className="hover:text-apple-500 cursor-pointer capitalize text-gray-900 duration-300"
         >
           forget your password?
         </Link>

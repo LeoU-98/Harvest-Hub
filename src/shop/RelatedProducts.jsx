@@ -58,7 +58,7 @@ export default function RelatedProducts() {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div>
-          <h2 className="relative mb-6 ml-3 w-fit border-b-[1px] border-b-gray-400 pb-1 text-xl capitalize text-gray-900 after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:mx-auto after:block after:h-[3px] after:w-16 after:bg-lima-400 sm:mx-auto md:text-2xl lg:text-3xl">
+          <h2 className="after:bg-apple-400 relative mb-6 ml-3 w-fit border-b-[1px] border-b-gray-400 pb-1 text-xl capitalize text-gray-900 after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:mx-auto after:block after:h-[3px] after:w-16 sm:mx-auto md:text-2xl lg:text-3xl">
             related products
           </h2>
         </div>
@@ -81,7 +81,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} -top-10 right-[2%] size-7 rounded-full bg-white opacity-100 duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] hover:bg-lima-400 lg:size-9`}
+      className={`${className} hover:bg-apple-400 -top-10 right-[2%] size-7 rounded-full bg-white opacity-100 duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] lg:size-9`}
       style={{ ...style }}
       onClick={onClick}
     />
@@ -92,7 +92,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} -top-10 left-[78%] size-7 rounded-full bg-white duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] hover:bg-lima-400 sm:left-[85%] md:left-[87%] lg:left-[89%] lg:size-9 xl:left-[90%]`}
+      className={`${className} hover:bg-apple-400 -top-10 left-[78%] size-7 rounded-full bg-white duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] sm:left-[85%] md:left-[87%] lg:left-[89%] lg:size-9 xl:left-[90%]`}
       style={{ ...style }}
       onClick={onClick}
     />

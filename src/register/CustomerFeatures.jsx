@@ -3,7 +3,7 @@ import FeatureLine from "./FeatureLine";
 
 export default function CustomerFeatures() {
   return (
-    <figure className="flex flex-grow flex-col items-center bg-gradient-to-tr from-[#0ea5e9] from-10% to-lima-400 to-90% p-5 text-white">
+    <figure className="to-apple-400 flex flex-grow flex-col items-center bg-gradient-to-tr from-[#0ea5e9] from-10% to-90% p-5 text-white">
       <h2 className="mx-auto p-3 pb-0 text-xl capitalize">
         Customer Membership
       </h2>

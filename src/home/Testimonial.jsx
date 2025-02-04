@@ -14,7 +14,7 @@ function Testimonial() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    className: "px-4 py-12  z-10  bg-white  rounded-lg -mt-20 lg:-mt-52 ",
+    className: "px-4 py-12  z-10  bg-white  rounded-3xl -mt-20 lg:-mt-52 ",
   };
   return (
     <div className="container mx-auto px-4">
@@ -48,7 +48,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} right-[40%] top-[95%] z-10 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:text-xs before:font-bold before:text-gray-900 before:content-['⟩'] hover:before:text-lima-500 sm:right-[45%] lg:right-[47%]`}
+      className={`${className} hover:before:text-apple-500 right-[40%] top-[95%] z-10 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:text-xs before:font-bold before:text-gray-900 before:content-['⟩'] sm:right-[45%] lg:right-[47%]`}
       style={{ ...style }}
       onClick={onClick}
     />
@@ -59,7 +59,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} left-[40%] top-[95%] z-10 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:text-xs before:font-bold before:text-gray-900 before:content-['⟨'] hover:before:text-lima-500 sm:left-[45%] lg:left-[47%]`}
+      className={`${className} hover:before:text-apple-500 left-[40%] top-[95%] z-10 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:text-xs before:font-bold before:text-gray-900 before:content-['⟨'] sm:left-[45%] lg:left-[47%]`}
       style={{ ...style }}
       onClick={onClick}
     />

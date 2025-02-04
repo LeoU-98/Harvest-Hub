@@ -30,14 +30,14 @@ export default function BlogCard({ data }) {
         <div className="border-b-[1px] border-gray-300 py-4">
           <a
             href={blogLink}
-            className="mb-2 cursor-pointer text-lg text-gray-900 hover:text-lima-500"
+            className="hover:text-apple-500 mb-2 cursor-pointer text-lg text-gray-900"
           >
             {blogHeading}
           </a>
           <p className="text-gray-600">{blogDesc}</p>
         </div>
         <a
-          className="block w-fit cursor-pointer py-4 text-gray-900 hover:text-lima-500"
+          className="hover:text-apple-500 block w-fit cursor-pointer py-4 text-gray-900"
           href={blogLink}
         >
           Read More

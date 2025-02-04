@@ -10,13 +10,13 @@ function ProductSortBar() {
       <div className="flex items-center gap-1">
         <button
           onClick={() => setCardType("grid")}
-          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "grid" && "border-0 bg-lima-500 text-white"} `}
+          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "grid" && "bg-apple-500 border-0 text-white"} `}
         >
           <Squares2X2Icon className="size-6 stroke-1" />
         </button>
         <button
           onClick={() => setCardType("list")}
-          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "list" && "border-0 bg-lima-500 text-white"} `}
+          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "list" && "bg-apple-500 border-0 text-white"} `}
         >
           <ListBulletIcon className="size-6 stroke-1" />
         </button>

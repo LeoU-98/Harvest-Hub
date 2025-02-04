@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { addItem } from "../cart/cartSlice";
 import { useDispatch } from "react-redux";
 
-export default function ProductCard({ data, className }) {
+export default function ProductCard({ data, className, imgClassName = "" }) {
   const { id, productImage, productName, discountPrice, originalPrice } = data;
 
   const dispatch = useDispatch();
@@ -17,11 +17,14 @@ export default function ProductCard({ data, className }) {
 
   return (
     <div
-      className={`flex h-full max-w-[312px] cursor-pointer flex-col items-center overflow-hidden rounded-md border-2 bg-white ${className}`}
+      className={`flex h-full max-w-[312px] cursor-pointer flex-col items-center overflow-hidden rounded-[32px] border-2 bg-white ${className}`}
     >
       {/* image and stars  */}
       <div className="group relative flex flex-col items-center">
-        <Link to="##" className="max-h-[280] max-w-[280px] outline-none">
+        <Link
+          to="##"
+          className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
+        >
           <img
             src={productImage}
             alt="product"
@@ -40,7 +43,7 @@ export default function ProductCard({ data, className }) {
         <div className="line-clamp-1 capitalize text-gray-900">
           {productName}
         </div>
-        <div className="text-lima-500">
+        <div className="text-apple-500">
           ${discountPrice}
           <span className="ml-1 text-sm text-gray-600 line-through">
             ${originalPrice}
@@ -57,4 +60,5 @@ export default function ProductCard({ data, className }) {
 ProductCard.propTypes = {
   data: propTypes.object,
   className: propTypes.string,
+  imgClassName: propTypes.string,
 };

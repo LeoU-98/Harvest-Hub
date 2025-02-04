@@ -44,7 +44,7 @@ export default function ProductTabs() {
             key={value}
             value={value}
             onClick={() => setActiveTab(value)}
-            className={`hover:text-lima-500 ${activeTab === value ? "text-lima-500" : ""}`}
+            className={`hover:text-apple-500 ${activeTab === value ? "text-apple-500" : ""}`}
           >
             {label}
           </Tab>

@@ -51,9 +51,9 @@ function HeaderBot() {
                 <input
                   type="text"
                   placeholder="Search..."
-                  className="rounded-l-full bg-gray-100 px-4 py-[10px] text-gray-800 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-lima-500 md:w-64"
+                  className="rounded-l-full bg-gray-100 px-4 py-[10px] text-gray-800 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-apple-500 md:w-64"
                 />
-                <button className="rounded-r-full bg-lima-500 p-[10px] uppercase text-white duration-300 hover:bg-black">
+                <button className="rounded-r-full bg-apple-500 p-[10px] uppercase text-white duration-300 hover:bg-black">
                   <span className="relative top-[1px]">search</span>
                 </button>
               </form>

@@ -121,8 +121,8 @@ const filterData = [
 
 function FilterBy() {
   return (
-    <div className="flex w-64 flex-col border-[1px] border-gray-300 bg-white pb-3">
-      <h2 className="mb-5 flex h-[54px] items-center border-b-[1px] border-gray-300 ps-3 text-sm font-semibold uppercase">
+    <div className="flex flex-col rounded-2xl border-[1px] border-gray-300 bg-white pb-3 lg:w-60 2xl:w-64">
+      <h2 className="mb-5 flex h-[54px] items-center justify-center border-b-[1px] border-gray-300 text-sm font-semibold uppercase">
         filter by
       </h2>
       <div className="mt-1 flex flex-col gap-1">
@@ -172,7 +172,7 @@ function FilterOption({ data }) {
         htmlFor={`check-${optionTitle}`}
       >
         <span className="checkbox-inner flex items-center justify-center rounded-full border-2 border-gray-300 text-transparent"></span>
-        <span className="mx-2 select-none capitalize text-gray-900 hover:text-lima-500">
+        <span className="hover:text-apple-500 mx-2 select-none capitalize text-gray-900">
           {optionTitle}
         </span>
       </label>

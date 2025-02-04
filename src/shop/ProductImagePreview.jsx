@@ -6,7 +6,7 @@ export default function ProductImagePreview() {
   const settings = {
     customPaging: function (i) {
       return (
-        <div className="size-12 cursor-pointer border-[1px] border-gray-300 hover:border-lima-500 sm:size-20 lg:size-16 xl:size-20">
+        <div className="hover:border-apple-500 size-12 cursor-pointer border-[1px] border-gray-300 sm:size-20 lg:size-16 xl:size-20">
           <img src={`${baseUrl}mm${i + 1}.jpg`} />
         </div>
       );

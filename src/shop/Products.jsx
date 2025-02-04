@@ -55,12 +55,12 @@ function Products() {
                 pageCount={pageCount}
                 previousLabel="← Prev"
                 renderOnZeroPageCount={null}
-                className="mt-4 flex items-center justify-center gap-1 border-[1px] border-gray-300 bg-white py-1 sm:gap-4"
-                pageClassName="rounded-full overflow-hidden  hover:text-lima-500"
+                className="mt-3 flex items-center justify-center gap-1 rounded-3xl border-[1px] border-gray-300 bg-white py-1 sm:gap-4"
+                pageClassName="rounded-full overflow-hidden  hover:text-apple-500"
                 pageLinkClassName="size-8 sm:size-10 sm:p-1 flex justify-center items-center text-xs"
-                activeClassName="bg-lima-500 text-white hover:text-white"
-                previousClassName="text-lima-500 hover:bg-lima-500 hover:text-white rounded-full text-xs font-bold duration-200 select-none"
-                nextClassName="text-lima-500 hover:bg-lima-500 hover:text-white rounded-full text-xs font-bold duration-200 select-none"
+                activeClassName="bg-apple-500 text-white hover:text-white"
+                previousClassName="text-apple-500 hover:bg-apple-500 hover:text-white rounded-full text-xs font-bold duration-200 select-none"
+                nextClassName="text-apple-500 hover:bg-apple-500 hover:text-white rounded-full text-xs font-bold duration-200 select-none"
                 previousLinkClassName="sm:px-6 sm:py-3 py-2 px-2 block uppercase"
                 nextLinkClassName="sm:px-6 sm:py-3 py-2  px-2 block uppercase"
               />
@@ -78,7 +78,13 @@ function Items({ currentItems }) {
   return (
     <>
       {currentItems &&
-        currentItems.map((item, key) => <ProductCard data={item} key={key} />)}
+        currentItems.map((item, key) => (
+          <ProductCard
+            imgClassName="2xl:size-[12.1rem] lg:size-[12rem]"
+            data={item}
+            key={key}
+          />
+        ))}
     </>
   );
 }

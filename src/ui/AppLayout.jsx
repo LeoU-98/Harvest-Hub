@@ -4,7 +4,8 @@ import Footer from "../Footer/Footer";
 
 function AppLayout() {
   return (
-    <div>
+    <div className="bg-[url(/grayBack.jpg)]">
+      {/* <div className="bg-[url(../images/grayBack.jpg)]"> */}
       <Header />
       <Outlet />
       <Footer />

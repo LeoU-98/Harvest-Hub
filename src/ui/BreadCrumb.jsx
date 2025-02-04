@@ -16,7 +16,7 @@ function BreadCrumb() {
         <NavLink
           to={currentLocation}
           key={key}
-          className="block h-full w-full capitalize hover:text-lima-500"
+          className="hover:text-apple-500 block h-full w-full capitalize"
         >
           {crumb.replace("-", " ")}
         </NavLink>

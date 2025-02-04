@@ -5,9 +5,9 @@ import propTypes from "prop-types";
 import AddToCartButton from "../shop/AddToCartButton";
 import StarRating from "../ui/StarRating";
 import { useEffect, useState } from "react";
-
 import shovel from "../images/products/the-adventure-begins-framed-poster.jpg";
-import redBear from "../images/products/brown-bear-notebook1.jpg";
+import { motion } from "motion/react";
+import { headerVariants } from "../motion/variants";
 
 function DealOfTheDay() {
   const settings = {
@@ -34,9 +34,15 @@ function DealOfTheDay() {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <h2 className="relative mb-6 ml-2 w-fit border-b-[1px] border-b-gray-400 pb-1 text-xl capitalize text-[#222] after:absolute after:bottom-[-2px] after:left-0 after:right-0 after:mx-auto after:block after:h-[3px] after:w-16 after:bg-lima-400 sm:mx-auto md:text-2xl lg:text-3xl">
+      <motion.h2
+        variants={headerVariants}
+        initial="hidden"
+        whileInView="visible"
+        className="relative top-5 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-green-600 px-5 py-2 capitalize text-white sm:text-xl md:mb-12 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
+      >
         deal of the day
-      </h2>
+      </motion.h2>
+
       <Slider {...settings}>
         <DealOfTheDayItem />
         <DealOfTheDayItem />
@@ -49,7 +55,7 @@ export default DealOfTheDay;
 
 function DealOfTheDayItem() {
   return (
-    <div className="group mx-auto flex max-w-[400px] cursor-pointer flex-col xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
+    <div className="group mx-auto flex max-w-[400px] cursor-pointer flex-col overflow-hidden rounded-3xl xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
       <div className="mx-auto w-full overflow-hidden">
         <img
           src={shovel}
@@ -60,7 +66,7 @@ function DealOfTheDayItem() {
       <div className="mx-auto flex w-full flex-col gap-2 bg-white p-5">
         <ItemTimer />
         <p className="text-gray-900">Broadfork</p>
-        <p className="text-lima-500">
+        <p className="text-apple-500">
           $34.46
           <span className="ml-1 text-sm text-gray-700 line-through">
             $43.50
@@ -120,42 +126,32 @@ function ItemTimer() {
   return (
     <div className="flex w-fit justify-between gap-2">
       {/* days */}
-      <div className="rounded-full bg-mercury-100">
-        <div className="flex size-14 flex-col items-center justify-center">
-          <span className="block text-gray-900">
-            {`${Math.floor(time / (60 * 60 * 24))}`}
-          </span>
-
-          <span className="block text-xs text-mercury-600">Days</span>
-        </div>
+      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+        <span className="block text-gray-100">
+          {`${Math.floor(time / (60 * 60 * 24))}`}
+        </span>
+        <span className="block text-xs text-gray-200">Days</span>
       </div>
       {/* hours */}
-      <div className="rounded-full bg-mercury-100">
-        <div className="flex size-14 flex-col items-center justify-center">
-          <span className="block text-gray-900">
-            {`${Math.floor((time / (60 * 60)) % 60)}`}
-          </span>
-          <span className="block text-xs text-mercury-600">Hours</span>
-        </div>
+      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+        <span className="block text-gray-100">
+          {`${Math.floor((time / (60 * 60)) % 60)}`}
+        </span>
+        <span className="block text-xs text-gray-200">Hours</span>
       </div>
       {/* mins */}
-      <div className="rounded-full bg-mercury-100">
-        <div className="flex size-14 flex-col items-center justify-center">
-          <span className="block text-gray-900">
-            {`${Math.floor((time / 60) % 60)}`.padStart(2, 0)}
-          </span>
-
-          <span className="block text-xs text-mercury-600">Mins</span>
-        </div>
+      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+        <span className="block text-gray-100">
+          {`${Math.floor((time / 60) % 60)}`.padStart(2, 0)}
+        </span>
+        <span className="block text-xs text-gray-200">Mins</span>
       </div>
       {/* secs */}
-      <div className="rounded-full bg-mercury-100">
-        <div className="flex size-14 flex-col items-center justify-center">
-          <span className="block text-gray-900">
-            {`${time % 60}`.padStart(2, 0)}
-          </span>
-          <span className="block text-xs text-mercury-600">Secs</span>
-        </div>
+      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+        <span className="block text-gray-100">
+          {`${time % 60}`.padStart(2, 0)}
+        </span>
+        <span className="block text-xs text-gray-200">Secs</span>
       </div>
     </div>
   );

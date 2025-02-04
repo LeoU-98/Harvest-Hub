@@ -37,8 +37,13 @@ import profile3 from "../images/testimonial/sample-3.jpg";
 /////////////////////////////////////
 ///  intro banners
 
-import banner1 from "../images/banner-1.jpg";
-import banner2 from "../images/banner-2.jpg";
+import banner1 from "../images/banner-11.png";
+import banner2 from "../images/banner-22.webp";
+import banner3 from "../images/banner-33.webp";
+import banner4 from "../images/banner-44.jpg";
+import banner5 from "../images/banner-55.png";
+import banner6 from "../images/banner-66.jpg";
+import banner7 from "../images/banner-77.jpg";
 
 /////////////////////////////////////
 ///  category carousel thumbs
@@ -121,6 +126,8 @@ export const introData = [
   {
     id: 1,
     promoTitle: "Best Quality Gardenning Tools",
+    textPosition: "center",
+    overlay: false,
     promoDesc: "Discount Up To 40% Off",
     promoBanner: banner1,
     promoLink: "link1",
@@ -128,8 +135,55 @@ export const introData = [
   {
     id: 2,
     promoTitle: "Latest Garden Flowring Plants",
+    textPosition: "left",
+    overlay: false,
     promoDesc: "Shipping & Cash on Delivery Avaliable",
     promoBanner: banner2,
+    promoLink: "link2",
+  },
+  {
+    id: 3,
+    promoTitle: "Latest Garden Flowring Plants",
+    textPosition: "left",
+    overlay: false,
+    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoBanner: banner3,
+    promoLink: "link2",
+  },
+  {
+    id: 4,
+    promoTitle: "Latest Garden Flowring Plants",
+    textPosition: "center",
+    overlay: true,
+    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoBanner: banner4,
+    promoLink: "link2",
+  },
+  {
+    id: 5,
+    promoTitle: "Latest Garden Flowring Plants",
+    textPosition: "center",
+    overlay: true,
+    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoBanner: banner5,
+    promoLink: "link2",
+  },
+  {
+    id: 6,
+    promoTitle: "Latest Garden Flowring Plants",
+    textPosition: "left",
+    overlay: true,
+    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoBanner: banner6,
+    promoLink: "link2",
+  },
+  {
+    id: 7,
+    promoTitle: "Latest Garden Flowring Plants",
+    textPosition: "left",
+    overlay: true,
+    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoBanner: banner7,
     promoLink: "link2",
   },
 ];

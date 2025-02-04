@@ -60,7 +60,7 @@ function ActionAside() {
           </span>
         </div>
         <form className="py-4">
-          <button className="mx-auto block rounded-full bg-lima-500 px-5 py-2 text-sm uppercase text-white duration-300 hover:bg-black">
+          <button className="bg-apple-500 mx-auto block rounded-full px-5 py-2 text-sm uppercase text-white duration-300 hover:bg-black">
             proceed to checkout
           </button>
         </form>

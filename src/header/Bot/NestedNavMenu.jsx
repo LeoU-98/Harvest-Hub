@@ -41,7 +41,7 @@ export default function NestedNavMenu({ data, handlerText }) {
             </div>
           </div>
         </MenuHandler>
-        <MenuList className="left-0 hidden max-w-screen-xl rounded-lg border-b-2 border-b-lima-500 py-3 lg:block">
+        <MenuList className="left-0 hidden max-w-screen-xl rounded-lg border-b-2 border-b-apple-500 py-3 lg:block">
           <div className="grid grid-cols-3 gap-y-2 outline-none outline-0">
             {renderItems}
           </div>

@@ -15,19 +15,19 @@ function ForgotPassword() {
             type="text"
             name="email"
             placeholder="leou123@gmail.com"
-            className="peer w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400 focus:ring-lima-500"
+            className="focus:ring-apple-500 peer w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400"
           />
-          <EnvelopeIcon className="size-9 peer-focus:fill-lima-500 peer-focus:text-lima-500" />
+          <EnvelopeIcon className="peer-focus:fill-apple-500 peer-focus:text-apple-500 size-9" />
         </label>
         <button
           type="submit"
-          className="mx-auto mb-5 block w-full rounded-lg bg-lima-500 px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:ring-2 focus:ring-lima-800 active:translate-y-1"
+          className="bg-apple-500 focus:ring-apple-800 mx-auto mb-5 block w-full rounded-lg px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:ring-2 active:translate-y-1"
         >
           Submit
         </button>
         <Link
           to="/account/signin"
-          className="mx-auto flex w-fit items-center text-gray-900 duration-300 hover:text-lima-500 focus:outline-lima-500"
+          className="hover:text-apple-500 focus:outline-apple-500 mx-auto flex w-fit items-center text-gray-900 duration-300"
         >
           <ChevronLeftIcon className="size-6" />
           Back to Login

@@ -19,7 +19,7 @@ function SideNav() {
         <img src={leou} alt="leou" className="size-40 rounded-full" />
         <p className="mt-3 text-center text-xl">LeoU</p>
         <p className="text-center text-sm">Agri Expert</p>
-        <button className="rounded-lg bg-lima-500 px-3 py-2 text-sm text-white outline-none duration-300 hover:bg-black">
+        <button className="bg-apple-500 rounded-lg px-3 py-2 text-sm text-white outline-none duration-300 hover:bg-black">
           Upload New Avatar
         </button>
         <p>Bio</p>

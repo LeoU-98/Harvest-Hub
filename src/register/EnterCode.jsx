@@ -24,26 +24,26 @@ function EnterCode() {
           allowedCharacters="numeric"
           onChange={handleOnChange}
           containerClassName=" flex gap-2 justify-center mb-8"
-          inputClassName="block p-1 sm:size-12 size-9 text-center sm:text-4xl text-2xl  border-gray-400 outline-none focus-visible:border-lima-500 border-[1px] rounded-lg"
+          inputClassName="block p-1 sm:size-12 size-9 text-center sm:text-4xl text-2xl  border-gray-400 outline-none focus-visible:border-apple-500 border-[1px] rounded-lg"
         />
 
         <button
           type="submit"
-          className="mx-auto mb-7 block w-full rounded-lg bg-lima-500 px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
+          className="bg-apple-500 mx-auto mb-7 block w-full rounded-lg px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
         >
           Confirm Code
         </button>
         <div className="flex justify-between">
           <Link
             to="/account/signin"
-            className="flex w-fit items-center text-gray-900 duration-300 hover:text-lima-500 focus:outline-lima-500"
+            className="hover:text-apple-500 focus:outline-apple-500 flex w-fit items-center text-gray-900 duration-300"
           >
             <ChevronLeftIcon className="size-6" />
             Back to Login
           </Link>
           <button
             type="button"
-            className="block text-center duration-300 hover:text-lima-500 focus:outline-lima-500"
+            className="hover:text-apple-500 focus:outline-apple-500 block text-center duration-300"
           >
             Send another code
           </button>

@@ -3,7 +3,7 @@ export default function ProductShare() {
     <div className="flex items-center gap-2">
       <span className="text-black">Share</span>
       <a
-        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-lima-500"
+        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-apple-500"
         href="facebook lol"
       >
         <svg
@@ -15,7 +15,7 @@ export default function ProductShare() {
         </svg>
       </a>
       <a
-        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-lima-500"
+        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-apple-500"
         href="facebook lol"
       >
         <svg
@@ -27,7 +27,7 @@ export default function ProductShare() {
         </svg>
       </a>
       <a
-        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-lima-500"
+        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-apple-500"
         href="facebook lol"
       >
         <svg
@@ -39,7 +39,7 @@ export default function ProductShare() {
         </svg>
       </a>
       <a
-        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-lima-500"
+        className="flex cursor-pointer items-center justify-center duration-300 hover:fill-apple-500"
         href="facebook lol"
       >
         <svg

@@ -4,7 +4,7 @@ export default function BlogPreviewCard({ data }) {
   const { image, title, descryption, date } = data;
 
   return (
-    <div className="mx-[5px] overflow-hidden rounded-md bg-white">
+    <div className="mx-[5px] overflow-hidden rounded-2xl bg-white">
       <div className="w-full">
         <img src={image} className="w-full" alt="blog image" />
       </div>
@@ -15,7 +15,7 @@ export default function BlogPreviewCard({ data }) {
         </p>
         <div className="flex justify-between pt-4 text-gray-900">
           <span>{date}</span>
-          <a href="#read" className="duration-300 hover:text-lima-500">
+          <a href="#read" className="hover:text-apple-500 duration-300">
             Read More
           </a>
         </div>

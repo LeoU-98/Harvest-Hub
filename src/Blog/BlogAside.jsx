@@ -51,7 +51,7 @@ function BlogAsideSectionItem({ data, dropdown }) {
       <div className="ml-3">
         <a
           href={itemLink}
-          className="block cursor-pointer text-sm text-gray-900 hover:text-lima-500"
+          className="hover:text-apple-500 block cursor-pointer text-sm text-gray-900"
         >
           {itemTitle}
         </a>

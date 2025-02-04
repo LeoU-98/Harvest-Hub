@@ -27,7 +27,7 @@ function NewsLetter() {
               placeholder="Your Email Address"
               className="w-[70%] rounded-s-full px-6 py-2 text-sm outline-none lg:py-3"
             />
-            <button className="rounded-e-full bg-lima-500 px-2 py-2 pe-3 text-sm uppercase text-white duration-300 hover:bg-black lg:py-3">
+            <button className="bg-apple-500 rounded-e-full px-2 py-2 pe-3 text-sm uppercase text-white duration-300 hover:bg-black lg:py-3">
               subscribe
             </button>
           </form>

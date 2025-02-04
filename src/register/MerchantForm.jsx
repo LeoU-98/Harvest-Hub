@@ -13,7 +13,7 @@ export default function MerchantForm() {
             type="text"
             name="firstName"
             placeholder="Mohamed "
-            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
           />
         </label>
         <label className="flex-grow">
@@ -22,7 +22,7 @@ export default function MerchantForm() {
             type="text"
             name="lastName"
             placeholder="Hamdy"
-            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
           />
         </label>
       </div>
@@ -33,7 +33,7 @@ export default function MerchantForm() {
           type="text"
           name="email"
           placeholder="LeoU_98@gmail.com"
-          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
         />
       </label>
       <label>
@@ -41,7 +41,7 @@ export default function MerchantForm() {
         <input
           type="password"
           name="password"
-          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
         />
       </label>
       <label>
@@ -49,7 +49,7 @@ export default function MerchantForm() {
         <input
           type="password"
           name="confirmPassword"
-          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
         />
       </label>
 
@@ -60,7 +60,7 @@ export default function MerchantForm() {
           type="text"
           name="address"
           placeholder="159 2nd St APT 705, Jersey City, NJ 07302"
-          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+          className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
         />
       </label>
       {/* phone  */}
@@ -71,7 +71,7 @@ export default function MerchantForm() {
             type="text"
             name="phone"
             placeholder="01145024481"
-            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
           />
         </label>
         <label className="flex-grow">
@@ -80,7 +80,7 @@ export default function MerchantForm() {
             type="text"
             name="secondPhone"
             placeholder="01145024481"
-            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-lima-500"
+            className="block w-full border-b-2 px-2 py-1 outline-none focus:border-b-apple-500"
           />
         </label>
       </div>
@@ -92,21 +92,21 @@ export default function MerchantForm() {
             <input
               type="checkbox"
               name="policy"
-              className="peer relative h-4 w-4 shrink-0 appearance-none rounded-sm border-[1px] border-lima-500 bg-white checked:border-0 checked:bg-lima-500"
+              className="peer relative h-4 w-4 shrink-0 appearance-none rounded-sm border-[1px] border-apple-500 bg-white checked:border-0 checked:bg-apple-500"
             />
             <CheckIcon className="absolute hidden size-4 stroke-[3px] font-bold text-white peer-checked:block" />
           </div>
           By creating an account, you agree to our{" "}
-          <a className="text-lima-500 underline hover:text-lima-400">Terms</a>{" "}
+          <a className="text-apple-500 underline hover:text-apple-400">Terms</a>{" "}
           and have read and acknowledge the{" "}
-          <a className="text-lima-500 underline hover:text-lima-400">
+          <a className="text-apple-500 underline hover:text-apple-400">
             Global Privacy Statement
           </a>
         </label>
       </div>
       <button
         type="submit"
-        className="rounded-xl bg-lima-500 py-4 text-sm font-semibold uppercase text-white outline-none duration-300 hover:bg-black"
+        className="rounded-xl bg-apple-500 py-4 text-sm font-semibold uppercase text-white outline-none duration-300 hover:bg-black"
       >
         sign up
       </button>
@@ -119,7 +119,7 @@ export default function MerchantForm() {
         Already have an account?{" "}
         <Link
           to="/account/signin"
-          className="text-gray-900 duration-300 hover:text-lima-500"
+          className="text-gray-900 duration-300 hover:text-apple-500"
         >
           Sign In
         </Link>

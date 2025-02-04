@@ -21,12 +21,12 @@ function HeaderMid() {
           ) : (
             <Link
               to={"/account/signin"}
-              className="group flex w-fit items-center gap-2 self-center rounded-full border border-lima-500 text-sm duration-500 hover:border-gray-500"
+              className="border-apple-500 group flex w-fit items-center gap-2 self-center rounded-full border text-sm duration-500 hover:border-gray-500"
             >
-              <div className="w-fit rounded-full bg-lima-500 p-2 duration-500 group-hover:bg-black">
+              <div className="bg-apple-500 w-fit rounded-full p-2 duration-500 group-hover:bg-black">
                 <UserIcon className="size-8 text-white" />
               </div>
-              <p className="cursor pl-1 pr-4 text-base duration-500 group-hover:text-lima-500">
+              <p className="cursor group-hover:text-apple-500 pl-1 pr-4 text-base duration-500">
                 Login
               </p>
             </Link>
@@ -42,7 +42,7 @@ function HeaderMid() {
         <div className="relative flex w-fit items-center justify-end gap-2 p-4 sm:p-0 sm:py-2">
           <div
             onClick={() => setIsCartPreviewOpen((state) => !state)}
-            className="flex aspect-square cursor-pointer rounded-full bg-lima-500 p-2 duration-500 hover:bg-black"
+            className="bg-apple-500 flex aspect-square cursor-pointer rounded-full p-2 duration-500 hover:bg-black"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

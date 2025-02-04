@@ -21,11 +21,11 @@ export default function CartItem({ data }) {
           <span className="capitalize">{productName}</span>
           <div className="flex gap-4">
             <span className="flex items-center justify-center text-sm text-gray-600 line-through">{`$${originalPrice}`}</span>
-            <span className="flex items-center justify-center bg-lima-500 px-[6px] py-[3px] text-xs text-white">
+            <span className="bg-apple-500 flex items-center justify-center px-[6px] py-[3px] text-xs text-white">
               -20%
             </span>
           </div>
-          <span className="text-base text-lima-500">{`$${discountPrice}`}</span>
+          <span className="text-apple-500 text-base">{`$${discountPrice}`}</span>
         </div>
         <Specification />
       </div>

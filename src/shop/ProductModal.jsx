@@ -16,16 +16,16 @@ function ProductModal({ handleOpen, open, itemID }) {
           mount: { scale: 1, y: 0 },
           unmount: { scale: 0.9, y: -100 },
         }}
-        className="w-auto max-w-none sm:w-auto sm:max-w-none md:w-auto md:max-w-none lg:w-auto lg:max-w-none xl:w-auto xl:max-w-none 2xl:w-auto 2xl:max-w-none"
+        className="w-auto max-w-none !rounded-b-3xl !rounded-tl-3xl sm:w-auto sm:max-w-none md:w-auto md:max-w-none lg:w-auto lg:max-w-none xl:w-auto xl:max-w-none 2xl:w-auto 2xl:max-w-none"
       >
-        <div className="">
-          <div className="relative flex items-center justify-end bg-black px-2 py-3 text-sm capitalize text-white sm:text-base">
+        <div className="overflow-hidden !rounded-b-3xl">
+          <div className="relative flex items-center justify-end rounded-br-3xl rounded-tl-3xl bg-black px-2 py-4 text-sm capitalize text-white sm:text-base">
             <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 text-nowrap">
               <CheckIcon className="relative bottom-[1px] size-5" />
               <span className="">Product is added successfully </span>
             </div>
             <XMarkIcon
-              className="size-5 cursor-pointer duration-500 hover:rotate-180"
+              className="relative right-2 size-5 cursor-pointer duration-500 hover:rotate-180"
               onClick={handleOpen}
             />
           </div>
@@ -59,7 +59,7 @@ function ItemPreview({ handleOpen, itemID }) {
         </div>
         <div className="flex lg:ml-2">
           <div className="flex flex-col gap-1 text-sm">
-            <span className="max-w-40 text-base capitalize text-lima-500">
+            <span className="text-apple-500 max-w-40 text-base capitalize">
               {item?.productName}
             </span>
             <span className="">
@@ -98,13 +98,13 @@ function ItemPreview({ handleOpen, itemID }) {
           <div className="flex flex-col items-center gap-2 lg:flex-row">
             <button
               onClick={handleOpen}
-              className="outline-normal flex w-full items-center justify-center text-nowrap rounded-full bg-lima-500 px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
+              className="outline-normal bg-apple-500 flex w-full items-center justify-center text-nowrap rounded-full px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
             >
               continue shopping
             </button>
             <Link
               to="/view-cart"
-              className="outline-normal flex w-full items-center justify-center text-nowrap rounded-full bg-lima-500 px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
+              className="outline-normal bg-apple-500 flex w-full items-center justify-center text-nowrap rounded-full px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
             >
               View Cart
             </Link>

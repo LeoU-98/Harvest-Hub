@@ -13,7 +13,7 @@ export default function AddToCartButton({ svgClassName, itemID }) {
     <>
       <button
         onClick={handleOpen}
-        className={`flex items-center gap-1 rounded-full bg-lima-500 px-4 py-[6px] text-xs capitalize text-white duration-300 hover:bg-black`}
+        className={`bg-apple-500 flex items-center gap-1 rounded-full px-4 py-[6px] text-xs capitalize text-white duration-300 hover:bg-black`}
       >
         <ShoppingBagIcon className={`size-6 text-white ${svgClassName}`} />
         <span className="relative top-[1px] flex items-center justify-center">

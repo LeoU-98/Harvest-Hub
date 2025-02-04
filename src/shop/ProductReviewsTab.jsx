@@ -54,7 +54,7 @@ export default function ProductReviewsTab() {
           <UserReview />
           <UserReview />
         </div>
-        <a className="mx-auto block w-fit cursor-pointer text-center text-xs duration-300 hover:text-lima-500">
+        <a className="hover:text-apple-500 mx-auto block w-fit cursor-pointer text-center text-xs duration-300">
           View All Reviews →
         </a>
       </div>

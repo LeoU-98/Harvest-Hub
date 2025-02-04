@@ -29,7 +29,7 @@ export default function Register() {
           <Tab
             key={value}
             value={value}
-            className="text-gray-900 hover:text-lima-500"
+            className="hover:text-apple-500 text-gray-900"
           >
             {label}
           </Tab>

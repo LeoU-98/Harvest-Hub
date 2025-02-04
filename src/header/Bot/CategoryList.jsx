@@ -22,7 +22,7 @@ export default function CategroyList({ data }) {
           <li key={itemTitle}>
             <NavLink
               to={itemLink}
-              className="block w-full p-1 text-sm capitalize text-gray-700 hover:bg-white hover:text-lima-500"
+              className="hover:text-apple-500 block w-full p-1 text-sm capitalize text-gray-700 hover:bg-white"
             >
               {itemTitle}
             </NavLink>
