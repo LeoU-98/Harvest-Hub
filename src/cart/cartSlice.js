@@ -28,8 +28,6 @@ const cartSlice = createSlice({
 export const { addItem, removeItem, updateItemCount, clearCart } =
   cartSlice.actions;
 
-console.log(cartSlice);
-
 export function useCart() {
   const cart = useSelector((store) => store.cart);
   const totalItemsInCart = cart.length;

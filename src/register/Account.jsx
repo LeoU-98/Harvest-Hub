@@ -7,9 +7,9 @@ function Account() {
   const location = useLocation();
 
   return (
-    <>
+    <div className="mb-16 min-h-[852px]">
       <BreadCrumb />
-      <main className="container mx-auto mb-8">
+      <main className="container mx-auto">
         <div className="flex gap-3 px-2">
           {/* aside  */}
           <div className="hidden h-fit flex-shrink-0 flex-grow-0 basis-[22%] overflow-hidden lg:block">
@@ -27,7 +27,7 @@ function Account() {
           </div>
         </div>
       </main>
-    </>
+    </div>
   );
 }
 export default Account;

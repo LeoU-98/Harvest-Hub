@@ -7,15 +7,15 @@ function CartView() {
   const { cart } = useCart();
 
   return (
-    <div className="container mx-auto mb-20">
+    <div className="container mx-auto mb-20 lg:h-[800px]">
       <BreadCrumb />
 
       <div className="mt-4 flex flex-col justify-between gap-4 px-2 lg:flex-row">
-        <div className="basis-3/5 border-[1px] border-gray-300 bg-white">
+        <div className="basis-3/5 rounded-2xl border-[1px] border-gray-300 bg-white">
           <h2 className="border-b-[1px] border-gray-300 px-3 py-3 text-[20px] font-[500] text-gray-900">
             Shopping Cart
           </h2>
-          <ul>
+          <ul className="cart-scroll overflow-y-scroll lg:h-[600px]">
             {cart.length === 0 ? (
               <div className="relative h-64 overflow-hidden text-center text-xl text-green-500">
                 <img
@@ -44,7 +44,7 @@ function ActionAside() {
   const { totalItemsInCart, totalCartPrice } = useCart();
 
   return (
-    <div className="h-fit basis-2/5 border-[1px] border-gray-300 bg-white">
+    <div className="h-fit basis-2/5 overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white">
       <div>
         <div className="flex justify-between border-b-[1px] border-gray-300 px-3 py-4">
           <span className="text-sm">{totalItemsInCart} items</span>
@@ -60,7 +60,7 @@ function ActionAside() {
           </span>
         </div>
         <form className="py-4">
-          <button className="bg-apple-500 mx-auto block rounded-full px-5 py-2 text-sm uppercase text-white duration-300 hover:bg-black">
+          <button className="mx-auto block rounded-full bg-apple-500 px-5 py-2 text-sm uppercase text-white duration-300 hover:bg-black">
             proceed to checkout
           </button>
         </form>

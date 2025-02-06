@@ -3,12 +3,34 @@ import { Link } from "react-router-dom";
 import CartPreviewItem from "./CartPreviewItem";
 import { useCart } from "./cartSlice";
 import cartBackground_280_196 from "../images/cartBackground_280_196.jpg";
+import { useEffect, useRef } from "react";
 
-function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen }) {
+function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
   const { cart, totalCartPrice } = useCart();
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target) // Exclude the external button
+      ) {
+        setIsCartPreviewOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsCartPreviewOpen, buttonRef]);
 
   return (
     <div
+      ref={dropdownRef}
       className={`absolute right-0 top-full z-50 w-80 origin-top scale-y-0 rounded-md border-b-2 border-apple-500 bg-white px-5 duration-500 ${isCartPreviewOpen ? "scale-y-100 py-5" : ""} `}
     >
       {/* items  */}
@@ -55,4 +77,5 @@ export default CartPreview;
 CartPreview.propTypes = {
   isCartPreviewOpen: propTypes.bool,
   setIsCartPreviewOpen: propTypes.func,
+  buttonRef: propTypes.element,
 };

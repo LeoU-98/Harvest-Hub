@@ -16,7 +16,7 @@ function BreadCrumb() {
         <NavLink
           to={currentLocation}
           key={key}
-          className="hover:text-apple-500 block h-full w-full capitalize"
+          className="block h-full w-full capitalize hover:text-apple-500"
         >
           {crumb.replace("-", " ")}
         </NavLink>
@@ -27,7 +27,7 @@ function BreadCrumb() {
 
   return (
     <div className="container mx-auto px-2">
-      <div className="my-4 items-center justify-between border-[1px] border-gray-300 bg-white px-5 py-2 sm:flex">
+      <div className="my-4 items-center justify-between overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white px-5 py-2 sm:flex">
         <div className="text-center">
           <span className="uppercase">{currentItem}</span>
         </div>

@@ -10,8 +10,3 @@ export default function RenderContactItems({ data }) {
     </div>
   ));
 }
-
-// RenderContactItems.propTypes = {
-//   svg: propTypes.element,
-//   text: propTypes.string,
-// };

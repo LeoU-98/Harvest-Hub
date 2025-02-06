@@ -30,7 +30,7 @@ function BlogAsideSection({ data }) {
   const { sectionTitle, sectionItems } = data;
 
   return (
-    <div className="border-[1px] border-gray-300 bg-white">
+    <div className="overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white">
       <h2 className="border-b-[1px] border-gray-300 px-4 py-3 uppercase">
         {sectionTitle}
       </h2>
@@ -51,7 +51,7 @@ function BlogAsideSectionItem({ data, dropdown }) {
       <div className="ml-3">
         <a
           href={itemLink}
-          className="hover:text-apple-500 block cursor-pointer text-sm text-gray-900"
+          className="block cursor-pointer text-sm text-gray-900 hover:text-apple-500"
         >
           {itemTitle}
         </a>
@@ -69,7 +69,7 @@ function MobileDropDown({ data }) {
   ));
 
   return (
-    <div className="border-[1px] border-gray-300 bg-white">
+    <div className="overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white">
       <Menu>
         <MenuHandler>
           <div className="border-b-[1px] border-gray-300">

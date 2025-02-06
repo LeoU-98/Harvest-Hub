@@ -64,7 +64,7 @@ function SpecialProducts() {
             variants={headerVariants}
             initial="hidden"
             whileInView="visible"
-            className="relative top-3 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-green-600 px-5 py-2 capitalize text-white sm:text-xl md:mb-20 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
+            className="relative top-3 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-gradient-to-l from-emerald-500 to-emerald-900 px-5 py-2 capitalize text-white sm:text-xl md:mb-20 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
           >
             Special Products
           </motion.h2>
@@ -90,7 +90,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} hover:bg-apple-400 mg:-top-7 -top-10 right-[2%] size-7 rounded-full bg-white opacity-100 duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] lg:size-9`}
+      className={`${className} mg:-top-7 -top-10 right-[2%] size-7 rounded-full bg-white opacity-100 duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] hover:bg-apple-400 lg:size-9`}
       style={{ ...style }}
       onClick={onClick}
     />
@@ -101,7 +101,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} hover:bg-apple-400 mg:-top-7 -top-10 left-[79%] size-7 rounded-full bg-white duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] sm:left-[85%] md:left-[87%] lg:left-[89%] lg:size-9 xl:left-[90%]`}
+      className={`${className} mg:-top-7 -top-10 left-[79%] size-7 rounded-full bg-white duration-500 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] hover:bg-apple-400 sm:left-[85%] md:left-[87%] lg:left-[89%] lg:size-9 xl:left-[90%]`}
       style={{ ...style }}
       onClick={onClick}
     />

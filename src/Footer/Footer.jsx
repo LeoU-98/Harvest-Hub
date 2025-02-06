@@ -1,4 +1,5 @@
 import logo from "../images/logo.jpg";
+import { motion } from "motion/react";
 
 //////////////////////////
 //    Temp Data for UI  //
@@ -8,6 +9,7 @@ import FooterBottom from "./FooterBottom";
 import FooterMobileDropDown from "./FooterMobileDropDown";
 import RenderFooterLinks from "./RenderFooterLinks";
 import RenderContactItems from "./RenderContactItems";
+import { contactInfoVariants } from "../motion/variants";
 
 ///////////////////////////////
 //    Footer Main Component  //
@@ -59,24 +61,39 @@ function Footer() {
               />
             </div>
             {/* Desktop Footer  */}
-            <section className="hidden basis-1/5 lg:block">
+            <motion.section
+              variants={contactInfoVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="hidden basis-1/5 lg:block"
+            >
               <h3 className="mb-3 uppercase text-gray-200">information</h3>
               <div>
                 <RenderFooterLinks data={informationData} />
               </div>
-            </section>
-            <section className="hidden basis-1/5 lg:block">
+            </motion.section>
+            <motion.section
+              variants={contactInfoVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="hidden basis-1/5 lg:block"
+            >
               <h3 className="mb-3 uppercase text-gray-200">my account</h3>
               <div>
                 <RenderFooterLinks data={myAccountData} />
               </div>
-            </section>
-            <section className="hidden basis-1/4 lg:block">
+            </motion.section>
+            <motion.section
+              variants={contactInfoVariants}
+              initial="hidden"
+              whileInView="visible"
+              className="hidden basis-1/4 lg:block"
+            >
               <h3 className="mb-3 uppercase text-gray-200">contact info</h3>
               <div>
                 <RenderContactItems data={myContactData} />
               </div>
-            </section>
+            </motion.section>
           </div>
         </div>
         <FooterBottom />

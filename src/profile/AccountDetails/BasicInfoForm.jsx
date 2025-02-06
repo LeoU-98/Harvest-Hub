@@ -1,7 +1,7 @@
 export default function BasicInfoForm() {
   return (
     <div>
-      <p className="mb-5 rounded-br-xl rounded-tl-xl bg-lima-500 py-1 text-center text-3xl text-white">
+      <p className="mb-5 rounded-br-xl rounded-tl-xl bg-gradient-to-l from-emerald-500 to-emerald-900 py-1 text-center text-3xl text-white">
         Basic Info
       </p>
       {/* name  */}
@@ -12,7 +12,7 @@ export default function BasicInfoForm() {
             type="text"
             name="firstName"
             placeholder="Mohamed "
-            className="block w-full rounded-lg border-2 px-2 py-1 outline-none focus:border-lima-500"
+            className="block w-full rounded-lg border-2 px-2 py-1 outline-none focus:border-green-500"
           />
         </label>
         <label className="flex-grow">
@@ -21,7 +21,7 @@ export default function BasicInfoForm() {
             type="text"
             name="lastName"
             placeholder="Hamdy"
-            className="block w-full rounded-lg border-2 px-2 py-1 outline-none focus:border-lima-500"
+            className="block w-full rounded-lg border-2 px-2 py-1 outline-none focus:border-green-500"
           />
         </label>
       </div>
@@ -32,7 +32,7 @@ export default function BasicInfoForm() {
           type="text"
           name="Title"
           placeholder="Some Title"
-          className="block w-full rounded-lg border-2 px-2 py-1 outline-none focus:border-lima-500"
+          className="block w-full rounded-lg border-2 px-2 py-1 outline-none focus:border-green-500"
         />
       </label>
     </div>

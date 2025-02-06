@@ -38,7 +38,7 @@ function DealOfTheDay() {
         variants={headerVariants}
         initial="hidden"
         whileInView="visible"
-        className="relative top-5 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-green-600 px-5 py-2 capitalize text-white sm:text-xl md:mb-12 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
+        className="relative top-5 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-gradient-to-l from-emerald-500 to-emerald-900 px-5 py-2 capitalize text-white sm:text-xl md:mb-12 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
       >
         deal of the day
       </motion.h2>
@@ -55,15 +55,15 @@ export default DealOfTheDay;
 
 function DealOfTheDayItem() {
   return (
-    <div className="group mx-auto flex max-w-[400px] cursor-pointer flex-col overflow-hidden rounded-3xl xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
+    <div className="mx-auto flex max-w-[400px] flex-col overflow-hidden rounded-3xl bg-[#f1f5f9] xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
       <div className="mx-auto w-full overflow-hidden">
         <img
           src={shovel}
           alt="deal of the day product"
-          className="h-full w-full duration-300 group-hover:scale-110"
+          className="h-full w-full cursor-pointer duration-300 hover:scale-110"
         />
       </div>
-      <div className="mx-auto flex w-full flex-col gap-2 bg-white p-5">
+      <div className="mx-auto flex w-full flex-col gap-2 p-5">
         <ItemTimer />
         <p className="text-gray-900">Broadfork</p>
         <p className="text-apple-500">
@@ -124,30 +124,33 @@ function ItemTimer() {
   }, [time]);
 
   return (
-    <div className="flex w-fit justify-between gap-2">
+    <div className="flex w-fit items-center justify-between gap-1">
       {/* days */}
-      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
         <span className="block text-gray-100">
           {`${Math.floor(time / (60 * 60 * 24))}`}
         </span>
         <span className="block text-xs text-gray-200">Days</span>
       </div>
+      <span className="relative -top-[3px] text-3xl">:</span>
       {/* hours */}
-      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
         <span className="block text-gray-100">
           {`${Math.floor((time / (60 * 60)) % 60)}`}
         </span>
         <span className="block text-xs text-gray-200">Hours</span>
       </div>
+      <span className="relative -top-[3px] text-3xl">:</span>
       {/* mins */}
-      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
         <span className="block text-gray-100">
           {`${Math.floor((time / 60) % 60)}`.padStart(2, 0)}
         </span>
         <span className="block text-xs text-gray-200">Mins</span>
       </div>
+      <span className="relative -top-[3px] text-3xl">:</span>
       {/* secs */}
-      <div className="bg-apple-700 flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
         <span className="block text-gray-100">
           {`${time % 60}`.padStart(2, 0)}
         </span>

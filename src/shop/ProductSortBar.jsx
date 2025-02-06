@@ -6,22 +6,23 @@ function ProductSortBar() {
   const [cardType, setCardType] = useState("grid");
 
   return (
-    <div className="mb-3 flex items-center gap-4 border-[1px] border-gray-300 bg-white p-2">
+    <div className="mb-3 flex flex-col justify-between gap-4 rounded-2xl border-[1px] border-gray-300 bg-white p-2 sm:flex-row sm:items-center">
       <div className="flex items-center gap-1">
         <button
           onClick={() => setCardType("grid")}
-          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "grid" && "bg-apple-500 border-0 text-white"} `}
+          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "grid" && "border-0 bg-apple-500 text-white"} `}
         >
           <Squares2X2Icon className="size-6 stroke-1" />
         </button>
         <button
           onClick={() => setCardType("list")}
-          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "list" && "bg-apple-500 border-0 text-white"} `}
+          className={`rounded-full border-[0.5px] border-gray-200 p-1 text-gray-800 outline-none ${cardType === "list" && "border-0 bg-apple-500 text-white"} `}
         >
           <ListBulletIcon className="size-6 stroke-1" />
         </button>
+        <p className="text-sm text-gray-600">There are 16 products</p>
       </div>
-      <p className="mr-auto text-sm text-gray-600">There are 16 products</p>
+
       <SortSelect />
     </div>
   );
@@ -32,7 +33,7 @@ export default ProductSortBar;
 function SortSelect() {
   const [sort, setSort] = useState("Best Sellers");
   return (
-    <div className="leading w-72">
+    <div className="w-48 md:w-72">
       <Select
         onChange={(value) => setSort(value)}
         // value="Best Sellers"

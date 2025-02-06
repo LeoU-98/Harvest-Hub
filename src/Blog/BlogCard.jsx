@@ -17,7 +17,7 @@ export default function BlogCard({ data }) {
   } = data;
 
   return (
-    <article className="h-fit bg-white">
+    <article className="h-fit overflow-hidden rounded-2xl bg-white">
       <div className="">
         <img src={blogImage} alt="blog image" className="w-full" />
       </div>
@@ -30,14 +30,14 @@ export default function BlogCard({ data }) {
         <div className="border-b-[1px] border-gray-300 py-4">
           <a
             href={blogLink}
-            className="hover:text-apple-500 mb-2 cursor-pointer text-lg text-gray-900"
+            className="mb-2 cursor-pointer text-lg text-gray-900 hover:text-apple-500"
           >
             {blogHeading}
           </a>
           <p className="text-gray-600">{blogDesc}</p>
         </div>
         <a
-          className="hover:text-apple-500 block w-fit cursor-pointer py-4 text-gray-900"
+          className="block w-fit cursor-pointer py-4 text-gray-900 hover:text-apple-500"
           href={blogLink}
         >
           Read More

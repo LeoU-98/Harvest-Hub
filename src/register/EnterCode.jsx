@@ -1,8 +1,8 @@
-import { ChevronLeftIcon, EnvelopeIcon } from "@heroicons/react/16/solid";
+import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import forgotPassword from "../images/forgotPassword.svg";
 import { Link } from "react-router-dom";
 import AuthCode from "react-auth-code-input";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function EnterCode() {
   const [result, setResult] = useState();

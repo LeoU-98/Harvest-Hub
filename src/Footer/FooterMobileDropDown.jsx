@@ -26,7 +26,7 @@ export default function FooterMobileDropDown({ dataCategory, data, type }) {
         <MenuHandler>
           <div className="mb-2">
             <ListItem
-              className="flex items-center justify-between gap-2 rounded-none bg-transparent p-0 py-2 font-medium text-gray-900 transition-none hover:bg-transparent focus:bg-transparent active:bg-transparent"
+              className="flex items-center justify-between gap-2 rounded-none bg-transparent p-0 py-2 font-medium text-white transition-none hover:bg-transparent focus:bg-transparent active:bg-transparent"
               selected={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >

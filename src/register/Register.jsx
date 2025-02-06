@@ -29,7 +29,7 @@ export default function Register() {
           <Tab
             key={value}
             value={value}
-            className="hover:text-apple-500 text-gray-900"
+            className="text-gray-900 hover:text-apple-500"
           >
             {label}
           </Tab>
@@ -43,7 +43,11 @@ export default function Register() {
         }}
       >
         {data.map(({ value, form }) => (
-          <TabPanel key={value} value={value} className="mt-4 p-0">
+          <TabPanel
+            key={value}
+            value={value}
+            className="mt-4 overflow-hidden rounded-2xl p-0"
+          >
             {form}
           </TabPanel>
         ))}

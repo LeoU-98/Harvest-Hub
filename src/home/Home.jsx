@@ -13,12 +13,16 @@ function Home() {
   return (
     <main>
       <IntroCarousel />
-      <CategoryCarousel />
-      <SpecialProducts />
+      <div className="bg-[#64748b]/30">
+        <CategoryCarousel />
+        <SpecialProducts />
+      </div>
       <BigPromo />
-      <FeaturePromo />
-      <DealOfTheDay />
-      <div className="py-10">
+      <div className="bg-[url(./dealOfTheDay.jpg)] bg-cover bg-fixed">
+        <FeaturePromo />
+        <DealOfTheDay />
+      </div>
+      <div className="pb-10">
         <NewsLetter />
         <Testimonial />
       </div>

@@ -1,11 +1,6 @@
-import {
-  ChevronLeftIcon,
-  EyeIcon,
-  EyeSlashIcon,
-} from "@heroicons/react/16/solid";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/16/solid";
 
 import forgotPassword from "../images/forgotPassword.svg";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import propTypes from "prop-types";
 

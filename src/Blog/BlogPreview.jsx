@@ -43,7 +43,7 @@ function BlogPreview() {
         variants={headerVariants}
         initial="hidden"
         whileInView="visible"
-        className="relative top-5 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-green-600 px-5 py-2 capitalize text-white sm:text-xl md:mb-12 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
+        className="relative top-5 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-gradient-to-l from-emerald-500 to-emerald-900 px-5 py-2 capitalize text-white sm:text-xl md:mb-12 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
       >
         From Our Blog
       </motion.h2>
