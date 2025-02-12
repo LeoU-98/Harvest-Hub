@@ -47,7 +47,7 @@ function BlogAsideSectionItem({ data, dropdown }) {
   const { itemImage, itemTitle, itemDate, itemLink } = data;
   return (
     <li className={`flex ${dropdown ? "first:pt-3 last:pb-3" : ""}`}>
-      <img src={itemImage} alt="post image" className="size-16" />
+      <img src={itemImage} alt="post image" className="size-16 rounded-2xl" />
       <div className="ml-3">
         <a
           href={itemLink}

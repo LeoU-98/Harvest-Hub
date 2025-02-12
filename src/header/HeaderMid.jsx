@@ -1,4 +1,4 @@
-import logo from "../images/logo.jpg";
+import logo from "../images/logo.png";
 import CartPreview from "../cart/CartPreview";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
@@ -35,8 +35,10 @@ function HeaderMid() {
         </div>
 
         {/* middle  */}
-        <div className="-order-1 flex w-1/2 basis-full items-center justify-center p-4 md:-order-none md:w-1/3 md:basis-1/3">
-          <img src={logo} alt="our logo"></img>
+        <div className="-order-1 flex w-1/2 basis-full items-end justify-center gap-1 p-4 md:-order-none md:w-1/3 md:basis-1/3">
+          <span className="text-4xl text-green-500">Harvest</span>
+          <img src={logo} alt="Harvest Hub Logo" className="w-20"></img>
+          <span className="text-4xl text-green-500">Hub</span>
         </div>
 
         {/* right */}

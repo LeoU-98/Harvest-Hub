@@ -59,7 +59,7 @@ function ItemPreview({ handleOpen, itemID }) {
         </div>
         <div className="flex lg:ml-2">
           <div className="flex flex-col gap-1 text-sm">
-            <span className="text-apple-500 max-w-40 text-base capitalize">
+            <span className="max-w-40 text-base capitalize text-apple-500">
               {item?.productName}
             </span>
             <span className="">
@@ -98,13 +98,13 @@ function ItemPreview({ handleOpen, itemID }) {
           <div className="flex flex-col items-center gap-2 lg:flex-row">
             <button
               onClick={handleOpen}
-              className="outline-normal bg-apple-500 flex w-full items-center justify-center text-nowrap rounded-full px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
+              className="outline-normal flex w-full items-center justify-center text-nowrap rounded-full bg-apple-500 px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
             >
               continue shopping
             </button>
             <Link
               to="/view-cart"
-              className="outline-normal bg-apple-500 flex w-full items-center justify-center text-nowrap rounded-full px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
+              className="outline-normal flex w-full items-center justify-center text-nowrap rounded-full bg-apple-500 px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
             >
               View Cart
             </Link>
@@ -122,13 +122,13 @@ function Specification() {
         Specification
       </h3>
       <span>
-        Size: <span>S</span>
+        Prop1: <span>Value</span>
       </span>
       <span>
-        Color: <span>White</span>
+        Prop2: <span>Value</span>
       </span>
       <span>
-        Diemension: <span>40x60 cm</span>
+        Prop3: <span>Value</span>
       </span>
     </div>
   );

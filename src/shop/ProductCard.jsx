@@ -1,13 +1,19 @@
 import propTypes from "prop-types";
 import AddToCartButton from "./AddToCartButton";
-import StarRating from "../ui/StarRating";
 import { Link } from "react-router-dom";
-
+import { Rating } from "@material-tailwind/react";
 import { addItem } from "../cart/cartSlice";
 import { useDispatch } from "react-redux";
 
 export default function ProductCard({ data, className, imgClassName = "" }) {
-  const { id, productImage, productName, discountPrice, originalPrice } = data;
+  const {
+    id,
+    rating,
+    productImage,
+    productName,
+    discountPrice,
+    originalPrice,
+  } = data;
 
   const dispatch = useDispatch();
 
@@ -30,10 +36,12 @@ export default function ProductCard({ data, className, imgClassName = "" }) {
             alt="product"
             className="duration-300 group-hover:scale-110"
           />
-          <StarRating
-            NumOfStars={4}
-            style={
-              "absolute bottom-2 left-1/2  -translate-x-1/2 justify-center "
+
+          <Rating
+            value={rating}
+            readonly
+            className={
+              "absolute bottom-2 left-1/2 -translate-x-1/2 justify-center"
             }
           />
         </Link>

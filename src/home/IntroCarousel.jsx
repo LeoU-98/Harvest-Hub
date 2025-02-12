@@ -14,7 +14,7 @@ export default function IntroCarousel() {
     dotsClass: "slick-dots  bottom-[0] ",
     className: "intro-carousel",
     customPaging: () => (
-      <div className="active-helper bg-apple-500 size-2 rounded-full opacity-50"></div>
+      <div className="active-helper size-2 rounded-full bg-apple-500 opacity-50"></div>
     ),
     autoplay: true,
     speed: 1300,
@@ -51,7 +51,7 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} bg-apple-500 right-5 z-10 size-10 rounded-full opacity-100 duration-300 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-base before:content-['⟩'] hover:bg-black`}
+      className={`${className} right-5 z-10 size-10 rounded-full bg-apple-500 opacity-100 duration-300 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-base before:content-['⟩'] hover:bg-black`}
       style={{ ...style }}
       onClick={onClick}
     />
@@ -62,7 +62,7 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} bg-apple-500 left-5 z-10 size-10 rounded-full opacity-100 duration-300 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-base before:content-['⟨'] hover:bg-black`}
+      className={`${className} left-5 z-10 size-10 rounded-full bg-apple-500 opacity-100 duration-300 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-base before:content-['⟨'] hover:bg-black`}
       style={{ ...style }}
       onClick={onClick}
     />
@@ -81,7 +81,7 @@ function IntroItem({ data }) {
 
   const leftText = "left-[5%] top-1/2 z-10 -translate-y-1/2";
   const centerText =
-    "left-1/2 top-1/2 z-10 -translate-y-1/2 flex flex-col items-center  -translate-x-1/2 ";
+    "left-1/2 top-1/2 z-10 -translate-y-1/2 flex flex-col items-center  -translate-x-1/2 text-balance text-center";
   const overlayText = "bg-black/60 rounded-2xl py-8 px-4";
 
   return (
@@ -93,22 +93,21 @@ function IntroItem({ data }) {
       ></img>
 
       <div
-        className={`absolute ${textPosition === "left" && leftText} ${textPosition === "center" && centerText} ${overlay && overlayText} `}
+        className={`absolute 2xl:w-[600px] 3xl:w-[800px] ${textPosition === "left" && leftText} ${textPosition === "center" && centerText} ${overlay && overlayText} `}
       >
         <p
-          className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} sm:text-xs md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl`}
-        >
-          {promoDesc}
-        </p>
-
-        <p
-          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 text-xs sm:text-sm md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
+          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-4xl 3xl:text-5xl`}
         >
           {promoTitle}
         </p>
+        <p
+          className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} w-48 text-xs sm:w-72 md:text-base lg:w-96 lg:text-xl xl:w-[480px] xl:text-2xl 2xl:text-2xl 3xl:w-auto 3xl:text-3xl`}
+        >
+          {promoDesc}
+        </p>
         <Link
           to={promoLink}
-          className="bg-apple-500 mt-2 inline-block cursor-pointer rounded-full px-3 py-1 text-sm text-white duration-300 hover:bg-black md:text-base lg:mt-6 2xl:mt-12"
+          className="mt-2 inline-block cursor-pointer rounded-full bg-apple-500 px-3 py-1 text-sm text-white duration-300 hover:bg-black md:text-base lg:mt-6 2xl:mt-12"
         >
           Shop Now
         </Link>

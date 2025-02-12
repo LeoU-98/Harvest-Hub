@@ -31,7 +31,7 @@ function Products() {
           <div className="hidden lg:block">
             <FilterBy />
           </div>
-          <div className="flex flex-col justify-between">
+          <div className="flex w-full flex-col justify-between">
             <div>
               <ProductSortBar />
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">

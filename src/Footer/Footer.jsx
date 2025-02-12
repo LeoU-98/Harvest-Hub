@@ -1,4 +1,4 @@
-import logo from "../images/logo.jpg";
+import logo from "../images/logo.png";
 import { motion } from "motion/react";
 
 //////////////////////////
@@ -34,13 +34,12 @@ function Footer() {
           </div>
           <div className="flex flex-col justify-between lg:flex-row">
             <div className="basis-1/4 pl-3">
-              <div>
-                <img src={logo} alt="logo" />
-              </div>
+              <img src={logo} alt="Harvest Hub Logo" className="size-40" />
+
               <p className="mt-5 text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt lorem consectetur tempor incididunt
-                enim ad minim simply random text. It has pieceveniam.
+                Harvest Hub – Connecting farmers with quality equipment,
+                supplies, and resources for a smarter, more sustainable future.
+                🌱
               </p>
             </div>
 

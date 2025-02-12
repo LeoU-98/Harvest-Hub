@@ -3,11 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import propTypes from "prop-types";
 import AddToCartButton from "../shop/AddToCartButton";
-import StarRating from "../ui/StarRating";
 import { useEffect, useState } from "react";
-import shovel from "../images/products/the-adventure-begins-framed-poster.jpg";
 import { motion } from "motion/react";
 import { headerVariants } from "../motion/variants";
+import { dealOfTheDayProducts } from "../utils/StaticData";
+import { Rating } from "@material-tailwind/react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../cart/cartSlice";
 
 function DealOfTheDay() {
   const settings = {
@@ -44,8 +46,11 @@ function DealOfTheDay() {
       </motion.h2>
 
       <Slider {...settings}>
-        <DealOfTheDayItem />
-        <DealOfTheDayItem />
+        {dealOfTheDayProducts.map((product) => (
+          <DealOfTheDayItem data={product} key={product.id} />
+        ))}
+        {/* <DealOfTheDayItem />
+        <DealOfTheDayItem /> */}
       </Slider>
     </div>
   );
@@ -53,33 +58,50 @@ function DealOfTheDay() {
 
 export default DealOfTheDay;
 
-function DealOfTheDayItem() {
+function DealOfTheDayItem({ data }) {
+  const {
+    id,
+    rating,
+    productImage,
+    productName,
+    productDescryption,
+    discountPrice,
+    originalPrice,
+  } = data;
+
+  const dispatch = useDispatch();
+
+  function handleAddToCart() {
+    dispatch(addItem({ ...data }));
+  }
+
   return (
     <div className="mx-auto flex max-w-[400px] flex-col overflow-hidden rounded-3xl bg-[#f1f5f9] xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
       <div className="mx-auto w-full overflow-hidden">
         <img
-          src={shovel}
-          alt="deal of the day product"
-          className="h-full w-full cursor-pointer duration-300 hover:scale-110"
+          src={productImage}
+          alt={productName}
+          className="h-full w-full duration-300 group-hover:scale-110"
         />
       </div>
-      <div className="mx-auto flex w-full flex-col gap-2 p-5">
+      <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:p-5">
         <ItemTimer />
-        <p className="text-gray-900">Broadfork</p>
-        <p className="text-apple-500">
-          $34.46
-          <span className="ml-1 text-sm text-gray-700 line-through">
-            $43.50
+        <p className="text-gray-900">{productName}</p>
+        <p className="text-apple-500 xl:text-base 2xl:text-xl">
+          ${discountPrice}
+          <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-xl">
+            ${originalPrice}
           </span>
         </p>
-        <StarRating NumOfStars={3} />
-        <p className="max-w-80">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod...
+        <Rating value={rating} readonly />
+        <p className="max-w-80 xl:line-clamp-2 2xl:line-clamp-3">
+          {productDescryption}
         </p>
         {/* add to cart & other  */}
-        <div className="flex justify-start gap-4 border-t-2 border-gray-300 pt-3">
-          <AddToCartButton />
+        <div className="mt-auto flex justify-start gap-4 border-t-2 border-gray-300 pt-3">
+          <div onClick={handleAddToCart}>
+            <AddToCartButton itemID={id} />
+          </div>
           <a
             href="add to wish list"
             className="rounded-full bg-mercury-100 p-2"
@@ -126,7 +148,7 @@ function ItemTimer() {
   return (
     <div className="flex w-fit items-center justify-between gap-1">
       {/* days */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
           {`${Math.floor(time / (60 * 60 * 24))}`}
         </span>
@@ -134,7 +156,7 @@ function ItemTimer() {
       </div>
       <span className="relative -top-[3px] text-3xl">:</span>
       {/* hours */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
           {`${Math.floor((time / (60 * 60)) % 60)}`}
         </span>
@@ -142,7 +164,7 @@ function ItemTimer() {
       </div>
       <span className="relative -top-[3px] text-3xl">:</span>
       {/* mins */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
           {`${Math.floor((time / 60) % 60)}`.padStart(2, 0)}
         </span>
@@ -150,7 +172,7 @@ function ItemTimer() {
       </div>
       <span className="relative -top-[3px] text-3xl">:</span>
       {/* secs */}
-      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900">
+      <div className="flex size-14 flex-col items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-emerald-600 to-emerald-900 xl:size-12 2xl:size-14">
         <span className="block text-gray-100">
           {`${time % 60}`.padStart(2, 0)}
         </span>
@@ -192,4 +214,8 @@ SampleNextArrow.propTypes = {
   className: propTypes.string,
   style: propTypes.object,
   onClick: propTypes.func,
+};
+
+DealOfTheDayItem.propTypes = {
+  data: propTypes.object,
 };

@@ -12,16 +12,16 @@ const cartSlice = createSlice({
       state.push({ ...action.payload, count: 1 });
     },
     removeItem: (state, action) => {
-      return state.filter((item) => item.id !== action.payload.id); // Remove item by id
+      return state.filter((item) => item.id !== action.payload.id);
     },
     updateItemCount: (state, action) => {
       const existingItem = state.find((item) => item.id === action.payload.id);
       if (existingItem) {
-        existingItem.count = action.payload.count; // Update item count
+        existingItem.count = action.payload.count;
       }
     },
     clearCart: (state) => {
-      state = []; // Clear all items from the cart
+      state = [];
     },
   },
 });

@@ -49,14 +49,14 @@ export const myAccountData = [
 export const myContactData = [
   {
     svg: <PhoneIcon className="fill-white" />,
-    text: "0123-456-789, 123-456-7890",
+    text: "011-4502-4481, 010-2273-6402",
   },
   {
     svg: <MapPinIcon className="fill-white" />,
-    text: "71 penningtion lane vernon rockville, ct 06066",
+    text: "123 Greenfield Avenue, Agri City, Country 45678",
   },
   {
     svg: <EnvelopeIcon className="fill-white" />,
-    text: "demo@yourstore.com",
+    text: "GP@HelwanUnversity.com",
   },
 ];

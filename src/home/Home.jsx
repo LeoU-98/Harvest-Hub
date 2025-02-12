@@ -13,7 +13,7 @@ function Home() {
   return (
     <main>
       <IntroCarousel />
-      <div className="bg-[#64748b]/30">
+      <div className="bg-[#cbd5e1]/30">
         <CategoryCarousel />
         <SpecialProducts />
       </div>

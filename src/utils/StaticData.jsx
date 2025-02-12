@@ -37,7 +37,6 @@ import profile3 from "../images/testimonial/sample-3.jpg";
 /////////////////////////////////////
 ///  intro banners
 
-import banner1 from "../images/banner-11.png";
 import banner2 from "../images/banner-22.webp";
 import banner3 from "../images/banner-33.webp";
 import banner4 from "../images/banner-44.jpg";
@@ -103,65 +102,61 @@ export const CategoryCarouselArray = [
 
 export const introData = [
   {
-    id: 1,
-    promoTitle: "Best Quality Gardenning Tools",
-    textPosition: "center",
-    overlay: false,
-    promoDesc: "Discount Up To 40% Off",
-    promoBanner: banner1,
-    promoLink: "link1",
-  },
-  {
     id: 2,
-    promoTitle: "Latest Garden Flowring Plants",
+    promoTitle: "Farm-Fresh Goodness",
     textPosition: "left",
     overlay: false,
-    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoDesc:
+      "Crisp, nutritious veggies, straight from local farms to your table.",
     promoBanner: banner2,
     promoLink: "link2",
   },
   {
     id: 3,
-    promoTitle: "Latest Garden Flowring Plants",
+    promoTitle: "Nature’s Sweetest Bounty",
     textPosition: "left",
     overlay: false,
-    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoDesc:
+      "Savor the juiciest, ripest fruits straight from the orchards to your table.",
     promoBanner: banner3,
     promoLink: "link2",
   },
   {
     id: 4,
-    promoTitle: "Latest Garden Flowring Plants",
+    promoTitle: "Innovate Your Farm",
     textPosition: "center",
     overlay: true,
-    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoDesc:
+      "Get the latest farming tools and smart tech to boost productivity and efficiency.",
     promoBanner: banner4,
     promoLink: "link2",
   },
   {
     id: 5,
-    promoTitle: "Latest Garden Flowring Plants",
+    promoTitle: "Harvest More, Waste Less",
     textPosition: "center",
     overlay: true,
-    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoDesc:
+      "Optimize your yields and reduce waste with our smart agricultural solutions.",
     promoBanner: banner5,
     promoLink: "link2",
   },
   {
     id: 6,
-    promoTitle: "Latest Garden Flowring Plants",
+    promoTitle: "Stronger Farms, Better Harvests",
     textPosition: "left",
     overlay: true,
-    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoDesc: "Providing the tools and resources farmers need to thrive.",
     promoBanner: banner6,
     promoLink: "link2",
   },
   {
     id: 7,
-    promoTitle: "Latest Garden Flowring Plants",
+    promoTitle: "Farming for the Future",
     textPosition: "left",
     overlay: true,
-    promoDesc: "Shipping & Cash on Delivery Avaliable",
+    promoDesc:
+      "Empowering farmers with sustainable practices for a greener tomorrow.",
     promoBanner: banner7,
     promoLink: "link2",
   },
@@ -170,10 +165,34 @@ export const introData = [
 /////////////////////////////////////
 ///   products data
 
+export const dealOfTheDayProducts = [
+  {
+    id: 1,
+    productImage: product3,
+    rating: 3,
+    productName: "Pulsating Sprinklers",
+    productDescryption:
+      "The Pulsating Sprinkler delivers even water coverage with an adjustable spray pattern. Durable, efficient, and easy to install—perfect for lush lawns and gardens!",
+    discountPrice: "40",
+    originalPrice: "60",
+  },
+  {
+    id: 2,
+    productImage: product4,
+    rating: 4,
+    productName: "Drive Sprinkler",
+    productDescryption:
+      "The Drive Sprinkler offers powerful, consistent irrigation with a rotating spray for even coverage. Durable, efficient, and ideal for large lawns and gardens!",
+    discountPrice: "34",
+    originalPrice: "60",
+  },
+];
+
 export const productData = [
   {
     id: 1,
     productImage: product1,
+    rating: 4,
     productName: "wheel barrows",
     discountPrice: "43",
     originalPrice: "56",
@@ -181,6 +200,7 @@ export const productData = [
   {
     id: 2,
     productImage: product2,
+    rating: 5,
     productName: "micro rain",
     discountPrice: "22",
     originalPrice: "35",
@@ -188,6 +208,7 @@ export const productData = [
   {
     id: 3,
     productImage: product3,
+    rating: 3,
     productName: "pulsating sprinklers",
     discountPrice: "40",
     originalPrice: "60",
@@ -195,6 +216,7 @@ export const productData = [
   {
     id: 4,
     productImage: product4,
+    rating: 3,
     productName: "drive sprinkler",
     discountPrice: "43",
     originalPrice: "60",
@@ -203,6 +225,7 @@ export const productData = [
   {
     id: 5,
     productImage: product6,
+    rating: 4,
     productName: "pruninig saw",
     discountPrice: "41",
     originalPrice: "60",
@@ -211,6 +234,7 @@ export const productData = [
   {
     id: 6,
     productImage: product8,
+    rating: 5,
     productName: "garden fork",
     discountPrice: "20",
     originalPrice: "33",
@@ -218,7 +242,8 @@ export const productData = [
   {
     id: 7,
     productImage: product9,
-    productName: "husqvarna LC 140S husqvarna LC 140S",
+    rating: 4,
+    productName: "husqvarna LC 140S",
     // productName: "husqvarna LC 140S",
     discountPrice: "25",
     originalPrice: "50",
@@ -226,6 +251,7 @@ export const productData = [
   {
     id: 8,
     productImage: product10,
+    rating: 3,
     productName: "cutco garden trowel",
     discountPrice: "10",
     originalPrice: "32",
@@ -233,6 +259,7 @@ export const productData = [
   {
     id: 9,
     productImage: product11,
+    rating: 5,
     productName: "camping shovel",
     discountPrice: "15",
     originalPrice: "27",
@@ -447,21 +474,21 @@ export const testimonialData = [
     name: "sandra",
     role: "customer",
     feedback:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "The best place for farm supplies Everything I needed was easy to find, and delivery was super fast. Highly recommended",
   },
   {
     image: profile2,
     name: "scarlet",
     role: "engineer",
     feedback:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Harvest Hub provides top-tier farming solutions. Their equipment is reliable, and their supplies ensure efficiency in large-scale farming operations.",
   },
   {
     image: profile3,
     name: "mai",
     role: "farmer",
     feedback:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Reliable supplies, fast delivery, and excellent customer support. Harvest Hub is now my go-to for all farming needs.",
   },
 ];
 

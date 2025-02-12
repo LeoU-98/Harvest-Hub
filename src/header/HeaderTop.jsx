@@ -10,7 +10,7 @@ function HeaderTop() {
     <div className="bg-transparent py-1">
       <div className="container mx-auto flex items-center justify-between text-xs sm:px-3">
         <div className="hidden text-sm text-gray-600 md:block">
-          Worlds Fastest Online Shopping Destination
+          World&apos;s Fastest Online Shopping Destination
         </div>
 
         <div className="mx-auto flex justify-between gap-2 md:mx-0">
@@ -27,12 +27,12 @@ function HeaderTop() {
                   />
                 </span>
               </MenuHandler>
-              <MenuList className="border-b-apple-500 left-0 min-w-32 border-b-2">
+              <MenuList className="left-0 min-w-32 border-b-2 border-b-apple-500">
                 <ul className="outline-none">
                   <li className="group cursor-pointer outline-none">
                     <NavLink
                       to="account/signin"
-                      className="group-hover:text-apple-500 block px-0 py-1 outline-none"
+                      className="block px-0 py-1 outline-none group-hover:text-apple-500"
                     >
                       Sign in
                     </NavLink>
@@ -40,7 +40,7 @@ function HeaderTop() {
                   <li className="group cursor-pointer outline-none">
                     <NavLink
                       to="account/register"
-                      className="group-hover:text-apple-500 block px-0 py-1 outline-none"
+                      className="block px-0 py-1 outline-none group-hover:text-apple-500"
                     >
                       Register
                     </NavLink>
@@ -61,15 +61,15 @@ function HeaderTop() {
                   />
                 </span>
               </MenuHandler>
-              <MenuList className="border-b-apple-500 left-0 min-w-32 border-b-2">
+              <MenuList className="left-0 min-w-32 border-b-2 border-b-apple-500">
                 <ul className="outline-none">
                   <li className="group cursor-pointer px-0 py-1 outline-none">
-                    <a className="group-hover:text-apple-500 outline-none">
+                    <a className="outline-none group-hover:text-apple-500">
                       € EUR
                     </a>
                   </li>
                   <li className="group cursor-pointer px-0 py-1 outline-none">
-                    <a className="group-hover:text-apple-500 outline-none">
+                    <a className="outline-none group-hover:text-apple-500">
                       $ USD
                     </a>
                   </li>
@@ -89,10 +89,10 @@ function HeaderTop() {
                   />
                 </span>
               </MenuHandler>
-              <MenuList className="border-b-apple-500 left-0 min-w-32 border-b-2">
+              <MenuList className="left-0 min-w-32 border-b-2 border-b-apple-500">
                 <ul className="outline-none">
                   <li className="group cursor-pointer px-0 py-1 outline-none">
-                    <a className="group-hover:text-apple-500 outline-none">
+                    <a className="outline-none group-hover:text-apple-500">
                       <img
                         src={english}
                         alt="english icon"
@@ -102,7 +102,7 @@ function HeaderTop() {
                     </a>
                   </li>
                   <li className="group cursor-pointer px-0 py-1 outline-none">
-                    <a className="group-hover:text-apple-500 outline-none">
+                    <a className="outline-none group-hover:text-apple-500">
                       <img
                         src={arabic}
                         alt="arabic icon"
