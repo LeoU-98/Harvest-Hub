@@ -58,7 +58,11 @@ export default function ProductTabs() {
         }}
       >
         {data.map(({ value, element }) => (
-          <TabPanel key={value} value={value} className="mt-3 p-0">
+          <TabPanel
+            key={value}
+            value={value}
+            className="mt-3 overflow-hidden rounded-2xl p-0"
+          >
             {element}
           </TabPanel>
         ))}

@@ -11,7 +11,7 @@ function ProductView() {
     <>
       <BreadCrumb />
       <main className="container mx-auto mb-16 px-2">
-        <div className="flex flex-col items-center bg-white p-4 lg:flex-row">
+        <div className="flex flex-col items-center rounded-2xl bg-white p-4 lg:flex-row">
           <ProductImagePreview />
           <ProductSpecifications />
         </div>

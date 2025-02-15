@@ -6,9 +6,6 @@ export default withMT({
   content: ["./index.html", "./src/*.jsx", "./src/**/*.jsx"],
   theme: {
     extend: {
-      screens: {
-        "3xl": "1390px",
-      },
       colors: {
         lima: {
           50: "#f3fbea",

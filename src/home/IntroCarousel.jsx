@@ -93,15 +93,15 @@ function IntroItem({ data }) {
       ></img>
 
       <div
-        className={`absolute 2xl:w-[600px] 3xl:w-[800px] ${textPosition === "left" && leftText} ${textPosition === "center" && centerText} ${overlay && overlayText} `}
+        className={`absolute 2xl:w-[800px] ${textPosition === "left" && leftText} ${textPosition === "center" && centerText} ${overlay && overlayText} `}
       >
         <p
-          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-4xl 3xl:text-5xl`}
+          className={` ${overlay ? "text-gray-200" : "text-black"} my-1 sm:text-lg md:text-xl lg:mt-3 lg:text-3xl xl:text-4xl 2xl:mt-6 2xl:text-5xl`}
         >
           {promoTitle}
         </p>
         <p
-          className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} w-48 text-xs sm:w-72 md:text-base lg:w-96 lg:text-xl xl:w-[480px] xl:text-2xl 2xl:text-2xl 3xl:w-auto 3xl:text-3xl`}
+          className={`text-[10px] ${overlay ? "text-gray-400" : "text-gray-600"} w-48 text-xs sm:w-72 md:text-base lg:w-96 lg:text-xl xl:w-[480px] xl:text-2xl 2xl:w-auto 2xl:max-w-[700px] 2xl:text-3xl`}
         >
           {promoDesc}
         </p>
