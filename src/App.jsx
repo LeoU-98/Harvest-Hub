@@ -1,0 +1,174 @@
+import Blog from "./Blog/Blog";
+import Account from "./register/Account";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AppLayout from "./ui/AppLayout";
+import Home from "./home/Home";
+import ProductListPage from "./shop/ProductListPage/ProductListPage";
+import CartView from "./cart/CartView";
+import Register from "./register/Register";
+import SignIn from "./register/SignIn";
+import ProductDetailsPage from "./shop/ProductDetailsPage/ProductDetailsPage";
+import BlogView from "./Blog/BlogView";
+import ForgotPassword from "./register/ForgotPassword";
+import ResetPassword from "./register/ResetPassword";
+import EnterCode from "./register/EnterCode";
+import MyProfile from "./profile/MyProfile";
+import AccountDetails from "./profile/AccountDetails";
+import ProductsDashboard from "./Dashoard/ProductsDashboard";
+import EquipmentDashboard from "./Dashoard/EquipmentDashboard";
+import SuppliesDashboard from "./Dashoard/SuppliesDashboard";
+import DashboardLayout from "./Dashoard/DashboardLayout";
+import Auction from "./Auction/Auction";
+import AuctionListingsPage from "./Auction/AuctionListingPage";
+import AuctionDetailPage from "./Auction/AuctionDetailPage";
+import CreateAuctionPage from "./Auction/CreateAuctionPage";
+import MyAuctionsPage from "./Auction/MyAuctionsPage";
+import AuctionResultPage from "./Auction/AuctionResultPage";
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        index: true,
+      },
+
+      {
+        path: "auctions/:id",
+        element: <AuctionDetailPage />,
+      },
+      {
+        path: "auctions/:id/success",
+        element: <AuctionResultPage />,
+      },
+      {
+        path: "auctions",
+        element: <Auction />,
+        children: [
+          {
+            path: "list",
+            element: <AuctionListingsPage />,
+          },
+          {
+            path: "my-auctions",
+            element: <MyAuctionsPage />,
+          },
+          {
+            path: "new",
+            element: <CreateAuctionPage />,
+          },
+        ],
+      },
+
+      {
+        path: "Dashboard",
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "ProductsDashboard",
+            element: <ProductsDashboard />,
+          },
+          {
+            path: "EquipmentDashboard",
+            element: <EquipmentDashboard />,
+          },
+          {
+            path: "SuppliesDashboard",
+            element: <SuppliesDashboard />,
+          },
+        ],
+      },
+
+      {
+        path: "MyProfile",
+        element: <MyProfile />,
+        children: [
+          {
+            path: "AccountDetails",
+            element: <AccountDetails />,
+          },
+        ],
+      },
+
+      {
+        path: "account",
+        element: <Account />,
+        children: [
+          {
+            path: "register",
+            element: <Register />,
+          },
+          {
+            path: "signin",
+            element: <SignIn />,
+          },
+          {
+            path: "forgotpassword",
+            element: <ForgotPassword />,
+          },
+          {
+            path: "resetpassword",
+            element: <ResetPassword />,
+          },
+          {
+            path: "EnterCode",
+            element: <EnterCode />,
+          },
+        ],
+      },
+      {
+        path: "view-cart",
+        element: <CartView />,
+      },
+
+      {
+        path: "Products",
+        element: <ProductListPage />,
+        children: [
+          {
+            path: "AgriculturalProducts",
+            element: <ProductListPage />,
+          },
+
+          {
+            path: "AgriculturalProducts/Crop&FreshProduce",
+            element: <ProductListPage />,
+          },
+          {
+            path: "AgriculturalProducts/Seeds&Saplings",
+            element: <ProductListPage />,
+          },
+          {
+            path: "AgriculturalProducts/Organic&SustainableProducts",
+            element: <ProductListPage />,
+          },
+        ],
+      },
+      {
+        path: "blog",
+        element: <Blog />,
+      },
+      {
+        path: "ProductDetails/:id",
+        element: <ProductDetailsPage />,
+      },
+
+      {
+        path: "blogView",
+        element: <BlogView />,
+      },
+    ],
+  },
+]);
+
+function App() {
+  return (
+    <div className="">
+      <RouterProvider router={router} />
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,72 @@
+import propTypes from "prop-types";
+import AddToCartButton from "./AddToCartButton";
+import { Link } from "react-router-dom";
+import { Rating } from "@material-tailwind/react";
+import { addItem } from "../cart/cartSlice";
+import { useDispatch } from "react-redux";
+
+export default function ProductCard({ data, className, imgClassName = "" }) {
+  const {
+    id,
+    rating,
+    productImage,
+    productName,
+    discountPrice,
+    originalPrice,
+  } = data;
+
+  const dispatch = useDispatch();
+
+  function handleAddToCart() {
+    dispatch(addItem({ ...data }));
+  }
+
+  return (
+    <div
+      className={`flex h-full max-w-[312px] cursor-pointer flex-col items-center overflow-hidden rounded-[32px] border-2 bg-white ${className}`}
+    >
+      {/* image and stars  */}
+      <div className="group relative flex flex-col items-center">
+        <Link
+          to={`/ProductDetails/${id}`}
+          className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
+        >
+          <img
+            src={productImage}
+            alt="product"
+            className="duration-300 group-hover:scale-110"
+          />
+
+          <Rating
+            value={rating}
+            readonly
+            className={
+              "absolute bottom-2 left-1/2 -translate-x-1/2 justify-center"
+            }
+          />
+        </Link>
+      </div>
+      {/* text data and cart  */}
+      <div className="z-10 flex w-11/12 flex-col items-center gap-2 border-t-2 border-mercury-100 py-4">
+        <div className="line-clamp-1 capitalize text-gray-900">
+          {productName}
+        </div>
+        <div className="text-apple-500">
+          ${discountPrice}
+          <span className="ml-1 text-sm text-gray-600 line-through">
+            ${originalPrice}
+          </span>
+        </div>
+
+        <div onClick={handleAddToCart}>
+          <AddToCartButton itemID={id} />
+        </div>
+      </div>
+    </div>
+  );
+}
+ProductCard.propTypes = {
+  data: propTypes.object,
+  className: propTypes.string,
+  imgClassName: propTypes.string,
+};

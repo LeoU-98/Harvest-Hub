@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 105%;
+}
+
+/* .home-background {
+  background-image: url("../images/homeback.jpg");
+} */
+
+/*//////////////////////*/
+/*    Intro Slider      */
+/*//////////////////////*/
+
+.slick-dots .slick-active .active-helper {
+  opacity: 1;
+}
+
+@layer components {
+  .newsletter-background {
+    background-image: url(/src/images/newsletter-bg.jpg);
+  }
+
+  .middle-underline::after {
+    content: "";
+    height: 2px;
+    background-color: #6bb42f;
+    display: block;
+    width: 0;
+    transition-duration: 300ms;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .left-underline::after {
+    content: "";
+    height: 2px;
+    background-color: #6bb42f;
+    display: block;
+    width: 0;
+    transition-duration: 500ms;
+    margin-top: 5px;
+  }
+}
+
+/*////////////////////////*/
+/*   scroll bar styling   */
+/*////////////////////////*/
+
+/* width */
+.cart::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #adadad;
+} */
+
+.cart-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cart-scroll::-webkit-scrollbar-thumb,
+.cart::-webkit-scrollbar-thumb {
+  background: #279b3c;
+  border-radius: 5px;
+}
+
+.auction-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.auction-scroll::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 5px;
+}
+
+/*/////////////////////////////*/
+/*       Rounded-CheckBox      */
+/*/////////////////////////////*/
+input[type="checkbox"] + label span:first-of-type {
+  background-color: #fff;
+  border-color: #999;
+}
+input[type="checkbox"]:checked + label span:first-of-type {
+  background-color: #6bb42f;
+  border-color: #fff;
+  color: #fff;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='14px' height='10px' viewBox='0 0 14 10' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 59.1 (86144) - https://sketch.com --%3E%3Ctitle%3Echeck%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='ios_modification' transform='translate(-27.000000, -191.000000)' fill='%23FFFFFF' fill-rule='nonzero'%3E%3Cg id='Group-Copy' transform='translate(0.000000, 164.000000)'%3E%3Cg id='ic-check-18px' transform='translate(25.000000, 23.000000)'%3E%3Cpolygon id='check' points='6.61 11.89 3.5 8.78 2.44 9.84 6.61 14 15.56 5.05 14.5 4'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 12px 8px;
+}
+
+.checkbox-inner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: transparent no-repeat center;
+}
+
+/* //////////////////////////// */
+
+/*/////////////////////////////*/
+/*       React Slick Config    */
+/*/////////////////////////////*/
+
+.intro-carousel .slick-track {
+  display: block;
+}
+
+.category-carousel .slick-track {
+  display: block;
+}
+
+.blog-review .slick-track {
+  display: block;
+}
+
+.slick-track::after,
+.slick-track::before {
+  display: none;
+}
+
+.deal-of-the-day .slick-track,
+.slick-track {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.product-image-preview .slick-track {
+  display: flex;
+  gap: 1px;
+}
