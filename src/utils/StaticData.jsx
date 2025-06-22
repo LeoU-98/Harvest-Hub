@@ -149,66 +149,6 @@ export const introData = [
 ];
 
 /////////////////////////////////////
-///   Mega Menu Data
-
-export const megaMenuData = [
-  {
-    categoryItem: "Agricultural Products",
-    categoryLink: "Products/AgriculturalProducts",
-    items: [
-      {
-        itemTitle: "Crops & Fresh Produce",
-        itemLink: "Products/AgriculturalProducts/Crop&FreshProduce",
-      },
-      {
-        itemTitle: "Seeds & Saplings",
-        itemLink: "Products/AgriculturalProducts/Seeds&Saplings",
-      },
-      {
-        itemTitle: "Organic & Sustainable Products",
-        itemLink: "Products/AgriculturalProducts/Organic&SustainableProducts",
-      },
-    ],
-  },
-  {
-    categoryItem: "Farming Equipments",
-    categoryLink: "Products/FarmingEquipments",
-    items: [
-      {
-        itemTitle: "Machinery & Tools",
-        itemLink: "Products/FarmingEquipments/Machinery&Tools",
-      },
-      {
-        itemTitle: "Agri-Tech Solutions",
-        itemLink: "Products/FarmingEquipments/Agri-TechSolution",
-      },
-      {
-        itemTitle: "Storage & Processing ",
-        itemLink: "Products/FarmingEquipments/Storage&Processing ",
-      },
-    ],
-  },
-  {
-    categoryItem: "Farm Supplies",
-    categoryLink: "Products/FarmSupplies",
-    items: [
-      {
-        itemTitle: "Irrigation & Water Management",
-        itemLink: "Products/FarmSupplies/Irrigation",
-      },
-      {
-        itemTitle: "Livestock & Poultry Supplies",
-        itemLink: "Products/FarmSupplies/Livestock",
-      },
-      {
-        itemTitle: "Protective Gear & Packaging",
-        itemLink: "Products/FarmSupplies/Packaging",
-      },
-    ],
-  },
-];
-
-/////////////////////////////////////
 ///   Feature Promo
 
 export const featurePromoData = [

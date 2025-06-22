@@ -6,17 +6,59 @@ import {
 } from "@material-tailwind/react";
 import propTypes from "prop-types";
 import { useState } from "react";
-import CategroyList from "./CategoryList";
+import CategoryList from "./CategoryList";
 
-export default function NestedNavMenu({ data, handlerText }) {
+/////////////////////////////////////
+///   Mega Menu Data
+
+const megaMenuData = [
+  {
+    categoryItem: "Agricultural Products",
+    categoryLink: "Products/AgriculturalProducts",
+    items: [
+      {
+        itemTitle: "Crops & Fresh Produce",
+        itemLink: "Products/AgriculturalProducts/Crop&FreshProduce",
+      },
+      {
+        itemTitle: "Seeds & Saplings",
+        itemLink: "Products/AgriculturalProducts/Seeds&Saplings",
+      },
+      {
+        itemTitle: "Organic & Sustainable Products",
+        itemLink: "Products/AgriculturalProducts/Organic&SustainableProducts",
+      },
+    ],
+  },
+  {
+    categoryItem: "Farming Equipments",
+    categoryLink: "Products/FarmingEquipments",
+    items: [
+      {
+        itemTitle: "Machinery & Tools",
+        itemLink: "Products/FarmingEquipments/Machinery&Tools",
+      },
+      {
+        itemTitle: "Agri-Tech Solutions",
+        itemLink: "Products/FarmingEquipments/Agri-TechSolution",
+      },
+      {
+        itemTitle: "Storage & Processing ",
+        itemLink: "Products/FarmingEquipments/Storage&Processing ",
+      },
+    ],
+  },
+];
+
+export default function NestedNavMenu({ handlerText }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const renderItems = data.map((data, key) => (
+  const renderItems = megaMenuData.map((data, key) => (
     <Menu
       className="flex items-center gap-4 rounded-md border-2 border-green-500"
       key={key}
     >
-      <CategroyList data={data} />
+      <CategoryList data={data} />
     </Menu>
   ));
 
@@ -42,7 +84,7 @@ export default function NestedNavMenu({ data, handlerText }) {
           </div>
         </MenuHandler>
         <MenuList className="left-0 hidden max-w-screen-xl rounded-lg border-b-2 border-b-apple-500 py-3 lg:block">
-          <div className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+          <div className="grid grid-cols-2 gap-y-2 outline-none outline-0">
             {renderItems}
           </div>
         </MenuList>

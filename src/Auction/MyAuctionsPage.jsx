@@ -219,12 +219,12 @@ function AuctionModal({ selectedAuction, modalType, modalRef, closeModal }) {
         >
           <motion.div
             ref={modalRef}
-            className={`relative w-full max-w-md rounded-lg p-6 ${
+            className={`relative w-full rounded-lg p-6 ${
               modalType === "result"
-                ? "bg-gradient-to-r from-indigo-500 to-blue-500"
+                ? "max-w-md bg-gradient-to-r from-indigo-500 to-blue-500"
                 : modalType === "edit"
                   ? "max-w-4xl bg-gradient-to-br from-emerald-800 to-emerald-600/90"
-                  : "bg-gradient-to-r from-red-500 to-orange-500"
+                  : "max-w-md bg-gradient-to-r from-red-500 to-orange-500"
             }`}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{

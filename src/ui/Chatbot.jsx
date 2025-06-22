@@ -121,7 +121,7 @@ export default function ChatBot() {
       {!isBarExpanded && (
         <button
           onClick={toggleChat}
-          className="flex items-center justify-center rounded-full bg-emerald-600 p-3 text-white shadow-lg hover:bg-emerald-700"
+          className="flex items-center justify-center rounded-full bg-emerald-600 p-3 text-white shadow-lg duration-300 hover:bg-emerald-700"
           title="Chat with us"
         >
           <TbMessageChatbot className="size-8" />

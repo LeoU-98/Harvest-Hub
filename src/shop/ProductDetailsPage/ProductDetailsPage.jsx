@@ -1,5 +1,5 @@
 import BreadCrumb from "../../ui/BreadCrumb";
-import ProductImagePreview from "./ProductImagePreview";
+import ProductImagePreview from "../../Shared/ProductImagePreview";
 import ProductSpecifications from "./ProductSpecifications";
 import ProductReviews from "../Reviews/ProductReviews";
 import RelatedProducts from "./RelatedProducts";

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ProductImagePreview from "../shop/ProductDetailsPage/ProductImagePreview";
+import ProductImagePreview from "../Shared/ProductImagePreview";
 import { splitCommonPrefix } from "../utils/helpers";
 import { productDetailsData } from "../utils/ProductStaticData";
 import { Link, useParams } from "react-router-dom";
@@ -23,7 +23,6 @@ export default function AuctionDetailPage() {
 
   return (
     <div className="container mx-auto my-10 mb-16 rounded-2xl bg-gradient-to-br from-emerald-900/80 to-emerald-600/90 p-5">
-      {/* <div className="container mx-auto my-10 mb-16 rounded-2xl bg-white p-5"> */}
       <div className="mb-3">
         <Link
           to={"../auctions/list"}
@@ -37,7 +36,7 @@ export default function AuctionDetailPage() {
         <ProductImagePreview
           data={images}
           iconClassName="overflow-hidden rounded-2xl"
-          imageClassName="overflow-hidden rounded-2xl"
+          imageClassName="overflow-hidden rounded-2xl !w-[500px] "
         />
         <AuctionSpecifications data={auction} />
       </div>

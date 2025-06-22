@@ -2,7 +2,7 @@ import { List } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 import propTypes from "prop-types";
 
-export default function CategroyList({ data }) {
+export default function CategoryList({ data }) {
   const { categoryItem, categoryLink, items } = data;
 
   return (
@@ -22,7 +22,7 @@ export default function CategroyList({ data }) {
           <li key={itemTitle}>
             <NavLink
               to={itemLink}
-              className="hover:text-apple-500 block w-full p-1 text-sm capitalize text-gray-700 hover:bg-white"
+              className="block w-full p-1 text-sm capitalize text-gray-700 hover:bg-white hover:text-apple-500"
             >
               {itemTitle}
             </NavLink>
@@ -33,6 +33,6 @@ export default function CategroyList({ data }) {
   );
 }
 
-CategroyList.propTypes = {
+CategoryList.propTypes = {
   data: propTypes.object,
 };

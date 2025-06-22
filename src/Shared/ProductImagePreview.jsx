@@ -36,7 +36,7 @@ export default function ProductImagePreview({
   };
 
   return (
-    <div className="w-full basis-1/2 px-1 lg:w-1/2 xl:w-2/5">
+    <div className="w-full basis-1/2 px-1 text-center lg:w-1/2 xl:w-2/5">
       <Slider {...settings}>
         {variables.map((suffix) => (
           <ImageZoom

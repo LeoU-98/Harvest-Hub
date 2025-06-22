@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { megaMenuData } from "../../utils/StaticData";
 import NestedNavMenu from "./NestedNavMenu";
 
 export default function NavList() {
@@ -15,7 +14,7 @@ export default function NavList() {
           </NavLink>
         </li>
         <li>
-          <NestedNavMenu data={megaMenuData} handlerText={"store"} />
+          <NestedNavMenu handlerText={"store"} />
         </li>
         <li>
           <NavLink
@@ -36,7 +35,7 @@ export default function NavList() {
         </li>
         <li>
           <NavLink
-            to="monitor"
+            to="monitor/field-details"
             className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
           >
             Monitor

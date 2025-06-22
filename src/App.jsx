@@ -23,7 +23,10 @@ import AuctionListingsPage from "./Auction/AuctionListingPage";
 import AuctionDetailPage from "./Auction/AuctionDetailPage";
 import CreateAuctionPage from "./Auction/CreateAuctionPage";
 import MyAuctionsPage from "./Auction/MyAuctionsPage";
-import AuctionResultPage from "./Auction/AuctionResultPage";
+import Monitor from "./Monitor/Monitor";
+import FieldDetails from "./Monitor/FieldDetails";
+import SensorAnalytics from "./Monitor/SensorAnalytics";
+import AlertsNotifications from "./Monitor/AlertsNotifications";
 
 const router = createBrowserRouter([
   {
@@ -38,10 +41,6 @@ const router = createBrowserRouter([
       {
         path: "auctions/:id",
         element: <AuctionDetailPage />,
-      },
-      {
-        path: "auctions/:id/success",
-        element: <AuctionResultPage />,
       },
       {
         path: "auctions",
@@ -62,6 +61,24 @@ const router = createBrowserRouter([
         ],
       },
 
+      {
+        path: "monitor",
+        element: <Monitor />,
+        children: [
+          {
+            path: "field-details",
+            element: <FieldDetails />,
+          },
+          {
+            path: "sensor-analytics",
+            element: <SensorAnalytics />,
+          },
+          {
+            path: "notification-alerts",
+            element: <AlertsNotifications />,
+          },
+        ],
+      },
       {
         path: "Dashboard",
         element: <DashboardLayout />,
