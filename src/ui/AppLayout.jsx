@@ -5,9 +5,11 @@ import ChatBot from "./Chatbot";
 
 function AppLayout() {
   return (
-    <div className="bg-[#e4e4e7]">
+    <div className="bg-[black]/25">
       <Header />
-      <Outlet />
+      <div className="bg-[url(/bg-texture-1.png)] bg-cover bg-fixed">
+        <Outlet />
+      </div>
       <Footer />
       <ChatBot />
     </div>

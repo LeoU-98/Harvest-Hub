@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 function HeaderTop() {
   return (
-    <div className="bg-transparent py-1">
+    <div className="bg-[#e4e4e7]/80 py-1">
       <div className="container mx-auto flex items-center justify-between text-xs sm:px-3">
         <div className="hidden text-sm text-gray-600 md:block">
           World&apos;s Fastest Online Shopping Destination
