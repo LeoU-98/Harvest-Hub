@@ -27,6 +27,7 @@ import Monitor from "./Monitor/Monitor";
 import FieldDetails from "./Monitor/FieldDetails";
 import SensorAnalytics from "./Monitor/SensorAnalytics";
 import AlertsNotifications from "./Monitor/AlertsNotifications";
+import MerchantSetupPage from "./register/MerchantSetupPage";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
         path: "auctions/:id",
         element: <AuctionDetailPage />,
       },
+      {
+        path: "merchant/setup",
+        element: <MerchantSetupPage />,
+      },
+
       {
         path: "auctions",
         element: <Auction />,
