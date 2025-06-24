@@ -17,6 +17,16 @@ import product11 from "../images/products/the-best-is-yet-to-come-framed-poster.
 ///   products data
 
 export const dealOfTheDayProducts = [
+  // {
+  //   id: 1,
+  //   productImage: product3,
+  //   rating: 3,
+  //   productName: "Pulsating Sprinklers",
+  //   productDescryption:
+  //     "The Pulsating Sprinkler delivers even water coverage with an adjustable spray pattern. Durable, efficient, and easy to install—perfect for lush lawns and gardens!",
+  //   discountPrice: "40",
+  //   originalPrice: "60",
+  // },
   {
     id: 1,
     productImage: product3,
@@ -24,7 +34,7 @@ export const dealOfTheDayProducts = [
     productName: "Pulsating Sprinklers",
     productDescryption:
       "The Pulsating Sprinkler delivers even water coverage with an adjustable spray pattern. Durable, efficient, and easy to install—perfect for lush lawns and gardens!",
-    discountPrice: "40",
+    discountPrice: "0",
     originalPrice: "60",
   },
   {
@@ -40,12 +50,20 @@ export const dealOfTheDayProducts = [
 ];
 
 export const productData = [
+  // {
+  //   id: 1,
+  //   productImage: product1,
+  //   rating: 4,
+  //   productName: "wheel barrows",
+  //   discountPrice: "43",
+  //   originalPrice: "56",
+  // },
   {
     id: 1,
     productImage: product1,
     rating: 4,
     productName: "wheel barrows",
-    discountPrice: "43",
+    discountPrice: "0",
     originalPrice: "56",
   },
   {
@@ -115,9 +133,62 @@ export const productData = [
     discountPrice: "15",
     originalPrice: "27",
   },
+  {
+    id: "frute11",
+    productImage: product11,
+    rating: 5,
+    productName: "camping shovel",
+    discountPrice: "15",
+    originalPrice: "27",
+  },
 ];
 
 export const productDetailsData = [
+  // {
+  //   id: 1,
+  //   productName: "wheel barrows",
+  //   images: [
+  //     "/images/products/saw1.jpg",
+  //     "/images/products/saw2.jpg",
+  //     "/images/products/saw3.jpg",
+  //     "/images/products/saw4.jpg",
+  //     "/images/products/saw5.jpg",
+  //   ],
+  //   description:
+  //     "Heavy-duty wheel barrow for transporting soil, tools, and plants across the farm with ease.",
+  //   specs: { material: "Steel", capacity: "80L", wheelType: "Pneumatic" },
+  //   rating: 4,
+  //   reviews: [
+  //     {
+  //       name: "Ali",
+  //       comment: "Very durable and easy to use.",
+  //       rating: 4,
+  //       image: "https://randomuser.me/api/portraits/men/11.jpg",
+  //       reviewDate: "2025-06-01",
+  //       likesCount: 12,
+  //     },
+  //     {
+  //       name: "Sara",
+  //       comment: "Perfect for my farm!",
+  //       rating: 5,
+  //       image: "https://randomuser.me/api/portraits/women/44.jpg",
+  //       reviewDate: "2025-06-03",
+  //       likesCount: 18,
+  //     },
+  //     {
+  //       name: "Khaled",
+  //       comment: "Handles heavy loads without issues.",
+  //       rating: 4,
+  //       image: "https://randomuser.me/api/portraits/men/45.jpg",
+  //       reviewDate: "2025-06-04",
+  //       likesCount: 20,
+  //     },
+  //   ],
+  //   stock: 12,
+  //   discountPrice: "43",
+  //   originalPrice: "56",
+  //   category: "Equipment",
+  // },
   {
     id: 1,
     productName: "wheel barrows",
@@ -159,7 +230,7 @@ export const productDetailsData = [
       },
     ],
     stock: 12,
-    discountPrice: "43",
+    discountPrice: "0",
     originalPrice: "56",
     category: "Equipment",
   },

@@ -3,21 +3,50 @@ import FilterBy from "./FilterBy";
 import BreadCrumb from "../../ui/BreadCrumb";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
-import propTypes from "prop-types";
 import ProductCard from "../../Shared/ProductCard";
 import ProductSortBar from "./ProductSortBar";
+import {
+  cropAndFreshProducesData,
+  dairyAndLivestockProducts,
+  seedAndSaplingProducts,
+} from "../../utils/AgriProductStaticData";
+import { useParams } from "react-router-dom";
 
-function Products() {
+function fetchData(dataCategory) {
+  switch (dataCategory) {
+    case "all":
+      return [
+        ...cropAndFreshProducesData,
+        ...seedAndSaplingProducts,
+        ...dairyAndLivestockProducts,
+      ];
+    case "crop-fresh-produce":
+      return cropAndFreshProducesData;
+    case "seeds-and-saplings":
+      return seedAndSaplingProducts;
+    case "dairy-and-livestock":
+      return dairyAndLivestockProducts;
+  }
+}
+
+function ProductListPage() {
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 12;
+  const { type } = useParams();
+  const itemsPerPage = 8;
+
+  ////////////////////////////////////////////
+  /////////////// Mocking Data Fetch /////////
+
+  const data = fetchData(type);
+
+  /////////////////////////////////////////////
 
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = productData.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(productData.length / itemsPerPage);
+  const currentItems = data?.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(data?.length / itemsPerPage);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % productData.length;
+    const newOffset = (event.selected * itemsPerPage) % data?.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`,
     );
@@ -74,12 +103,4 @@ function Products() {
   );
 }
 
-export default Products;
-
-// function Items({ currentItems }) {
-//   return <></>;
-// }
-
-// Items.propTypes = {
-//   currentItems: propTypes.number,
-// };
+export default ProductListPage;

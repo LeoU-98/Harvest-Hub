@@ -5,15 +5,13 @@ import { Rating } from "@material-tailwind/react";
 import { addItem } from "../cart/cartSlice";
 import { useDispatch } from "react-redux";
 
-export default function ProductCard({ data, className, imgClassName = "" }) {
-  const {
-    id,
-    rating,
-    productImage,
-    productName,
-    discountPrice,
-    originalPrice,
-  } = data;
+export default function ProductCard({
+  data,
+  className,
+  imgClassName = "",
+  type,
+}) {
+  const { id, rating, productImage, productName, discountPrice, price } = data;
 
   const dispatch = useDispatch();
 
@@ -39,7 +37,7 @@ export default function ProductCard({ data, className, imgClassName = "" }) {
           />
 
           <Rating
-            value={rating}
+            value={Math.round(rating)}
             readonly
             className={
               "absolute bottom-2 left-1/2 -translate-x-1/2 justify-center"
@@ -52,11 +50,18 @@ export default function ProductCard({ data, className, imgClassName = "" }) {
         <div className="line-clamp-1 capitalize text-gray-900">
           {productName}
         </div>
+
         <div className="text-apple-500">
-          ${discountPrice}
-          <span className="ml-1 text-sm text-gray-600 line-through">
-            ${originalPrice}
-          </span>
+          {Number(discountPrice) !== 0 ? (
+            <>
+              ${discountPrice}
+              <span className="ml-1 text-sm text-gray-600 line-through">
+                ${price}
+              </span>
+            </>
+          ) : (
+            <>${price}</>
+          )}
         </div>
 
         <div onClick={handleAddToCart}>
@@ -70,4 +75,5 @@ ProductCard.propTypes = {
   data: propTypes.object,
   className: propTypes.string,
   imgClassName: propTypes.string,
+  type: propTypes.string,
 };

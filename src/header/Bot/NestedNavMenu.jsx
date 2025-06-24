@@ -14,19 +14,19 @@ import CategoryList from "./CategoryList";
 const megaMenuData = [
   {
     categoryItem: "Agricultural Products",
-    categoryLink: "Products/AgriculturalProducts",
+    categoryLink: "products/agricultural-products/all",
     items: [
       {
         itemTitle: "Crops & Fresh Produce",
-        itemLink: "Products/AgriculturalProducts/Crop&FreshProduce",
+        itemLink: "products/agricultural-products/crop-fresh-produce",
       },
       {
         itemTitle: "Seeds & Saplings",
-        itemLink: "Products/AgriculturalProducts/Seeds&Saplings",
+        itemLink: "products/agricultural-products/seeds-and-saplings",
       },
       {
-        itemTitle: "Organic & Sustainable Products",
-        itemLink: "Products/AgriculturalProducts/Organic&SustainableProducts",
+        itemTitle: "Dairy & livestock",
+        itemLink: "products/agricultural-products/dairy-and-livestock",
       },
     ],
   },

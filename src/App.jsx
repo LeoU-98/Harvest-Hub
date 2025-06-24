@@ -162,28 +162,16 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "Products",
+        path: "products",
         element: <ProductListPage />,
         children: [
           {
-            path: "AgriculturalProducts",
-            element: <ProductListPage />,
-          },
-
-          {
-            path: "AgriculturalProducts/Crop&FreshProduce",
-            element: <ProductListPage />,
-          },
-          {
-            path: "AgriculturalProducts/Seeds&Saplings",
-            element: <ProductListPage />,
-          },
-          {
-            path: "AgriculturalProducts/Organic&SustainableProducts",
+            path: "agricultural-products/:type",
             element: <ProductListPage />,
           },
         ],
       },
+
       {
         path: "blog",
         element: <Blog />,

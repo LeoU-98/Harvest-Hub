@@ -85,12 +85,20 @@ function DealOfTheDayItem({ data }) {
       <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:p-5">
         <ItemTimer />
         <p className="text-gray-900">{productName}</p>
+
         <p className="text-apple-500 xl:text-base 2xl:text-xl">
-          ${discountPrice}
-          <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-xl">
-            ${originalPrice}
-          </span>
+          {Number(discountPrice) !== 0 ? (
+            <>
+              ${discountPrice}
+              <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-xl">
+                ${originalPrice}
+              </span>
+            </>
+          ) : (
+            <>${originalPrice}</>
+          )}
         </p>
+
         <Rating value={rating} readonly />
         <p className="max-w-80 xl:line-clamp-2 2xl:line-clamp-3">
           {productDescryption}
