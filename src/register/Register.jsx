@@ -1,5 +1,3 @@
-import CustomerSignup from "./CustomerSignup";
-import MerchantSignup from "./MerchantSignup";
 import {
   Tabs,
   TabsHeader,
@@ -7,18 +5,21 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
+import SignupForm from "./SignupForm";
+import FeaturesCard from "./FeaturesCard";
+import propTypes from "prop-types";
 
 export default function Register() {
   const data = [
     {
       label: "Customer",
       value: "customer",
-      form: <CustomerSignup />,
+      form: <SignupMembership type="customer" />,
     },
     {
       label: "Merchant",
       value: "merchant",
-      form: <MerchantSignup />,
+      form: <SignupMembership type="merchant" />,
     },
   ];
 
@@ -55,3 +56,14 @@ export default function Register() {
     </Tabs>
   );
 }
+
+function SignupMembership({ type }) {
+  return (
+    <div className="flex flex-col-reverse gap-0 xl:flex-row">
+      <SignupForm />
+      <FeaturesCard type={type} />
+    </div>
+  );
+}
+
+SignupMembership.propTypes = { type: propTypes.string };

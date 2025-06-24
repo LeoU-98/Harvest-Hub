@@ -12,8 +12,6 @@ import BlogView from "./Blog/BlogView";
 import ForgotPassword from "./register/ForgotPassword";
 import ResetPassword from "./register/ResetPassword";
 import EnterCode from "./register/EnterCode";
-import MyProfile from "./profile/MyProfile";
-import AccountDetails from "./profile/AccountDetails";
 import ProductsDashboard from "./Dashoard/ProductsDashboard";
 import EquipmentDashboard from "./Dashoard/EquipmentDashboard";
 import SuppliesDashboard from "./Dashoard/SuppliesDashboard";
@@ -28,6 +26,11 @@ import FieldDetails from "./Monitor/FieldDetails";
 import SensorAnalytics from "./Monitor/SensorAnalytics";
 import AlertsNotifications from "./Monitor/AlertsNotifications";
 import MerchantSetupPage from "./register/MerchantSetupPage";
+import ProfileLayout from "./profile/ProfileLayout";
+import ProfileEdit from "./profile/ProfileEdit";
+import BasicInfoEdit from "./profile/BasicInfoEdit";
+import ChangePassword from "./profile/ChangePassword";
+import DeactivateAccount from "./profile/DeactivateAccount";
 
 const router = createBrowserRouter([
   {
@@ -105,12 +108,24 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "MyProfile",
-        element: <MyProfile />,
+        path: "profile",
+        element: <ProfileLayout />,
         children: [
           {
-            path: "AccountDetails",
-            element: <AccountDetails />,
+            path: "profile-info",
+            element: <ProfileEdit />,
+          },
+          {
+            path: "basic-info",
+            element: <BasicInfoEdit />,
+          },
+          {
+            path: "change-password",
+            element: <ChangePassword />,
+          },
+          {
+            path: "deactivate-account",
+            element: <DeactivateAccount />,
           },
         ],
       },

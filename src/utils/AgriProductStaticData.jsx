@@ -77,6 +77,7 @@
     stock: 50,
     unit: "box",
   },
+
   {
     id: "fruit-07",
     productName: "Organic Gala 2 lb Bag",
@@ -90,6 +91,7 @@
     stock: 90,
     unit: "bag",
   },
+
   {
     id: "fruit-08",
     productName: "Organic Apple Bowl",

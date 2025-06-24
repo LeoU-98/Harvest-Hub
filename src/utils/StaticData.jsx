@@ -43,7 +43,6 @@ import thumb6 from "../images/category_carousel/thumb-6.png";
 /////////////////////////////////////
 ///  there promo images
 
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { BsShop } from "react-icons/bs";
 import { PiGiftBold } from "react-icons/pi";
 import { MdOutlineQueryStats } from "react-icons/md";
@@ -311,65 +310,5 @@ export const testimonialData = [
     role: "farmer",
     feedback:
       "Reliable supplies, fast delivery, and excellent customer support. Harvest Hub is now my go-to for all farming needs.",
-  },
-];
-
-////////////////////////////////////////
-//////////  Merchant Features
-
-export const merchantFeatures = [
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "AI Features To Enhance Your Bussiness ",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Ability To Expand Your Business By Reaching More Clients",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Access to a large customer base",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Tools for promoting products within the marketplace",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Unlimited product listings",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Basic analytics on sales and traffic",
-  },
-];
-
-////////////////////////////////////////
-//////////  Customer Features
-
-export const customerFeatures = [
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "AI Features To Enhance Your Bussiness ",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Ability To Expand Your Business By Reaching More Clients",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Access to a large customer base",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Tools for promoting products within the marketplace",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Unlimited product listings",
-  },
-  {
-    featureIcon: <CheckCircleIcon className="size-5" />,
-    featureDesc: "Basic analytics on sales and traffic",
   },
 ];

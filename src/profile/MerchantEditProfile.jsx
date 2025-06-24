@@ -23,7 +23,7 @@ const allCategories = [
   "Other",
 ];
 
-export default function MerchantSetupPage() {
+export default function MerchantEditProfile() {
   const [formData, setFormData] = useState({
     businessName: "",
     industryType: "",
@@ -125,8 +125,8 @@ export default function MerchantSetupPage() {
   };
 
   return (
-    <div className="container mx-auto my-20 space-y-6 rounded-xl bg-gradient-to-br from-emerald-900/80 to-emerald-600/90 p-6">
-      <h2 className="text-2xl font-bold text-white">Merchant Profile Setup</h2>
+    <div className="w-3/4 space-y-6 p-6">
+      <h2 className="text-2xl font-bold text-white">Merchant Profile Edit</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Business Info */}
         <div className="grid grid-cols-2 gap-4 rounded-2xl bg-white p-5">
@@ -430,13 +430,26 @@ export default function MerchantSetupPage() {
             className="w-full rounded-xl border px-3 py-2 outline-none ring-1 ring-gray-300 focus:ring-green-500"
           />
         </div>
-        <div className="flex items-center justify-center">
-          <button
-            type="submit"
-            className="w-[70%] rounded-full bg-white py-3 font-semibold text-apple-500 transition duration-300 hover:bg-black hover:text-white"
-          >
-            Save Info
-          </button>
+
+        <div className="rounded-2xl bg-white p-5">
+          <label className="">
+            Password
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              className="input-sss w-full rounded-xl px-3 py-2 outline-none ring-1 ring-gray-400 focus:ring-green-500"
+            />
+          </label>
+          <div className="mt-8 flex items-center justify-center">
+            <button
+              type="submit"
+              className="w-[70%] rounded-full bg-apple-500 py-3 font-semibold text-white transition duration-300 hover:bg-black hover:text-white"
+            >
+              Save Info
+            </button>
+          </div>
         </div>
       </form>
     </div>

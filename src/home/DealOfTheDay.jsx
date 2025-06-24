@@ -49,8 +49,6 @@ function DealOfTheDay() {
         {dealOfTheDayProducts.map((product) => (
           <DealOfTheDayItem data={product} key={product.id} />
         ))}
-        {/* <DealOfTheDayItem />
-        <DealOfTheDayItem /> */}
       </Slider>
     </div>
   );

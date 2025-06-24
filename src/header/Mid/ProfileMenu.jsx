@@ -21,7 +21,7 @@ const profileMenuItems = [
   {
     label: "My Profile",
     icon: UserCircleIcon,
-    path: "MyProfile/AccountDetails",
+    path: "profile/basic-info",
   },
   {
     label: "Inbox",
