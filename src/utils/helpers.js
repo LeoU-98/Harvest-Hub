@@ -33,3 +33,20 @@ export function formatDate(isoDateStr) {
     year: "numeric",
   });
 }
+
+export function getActiveAuctions(auctions) {
+  const now = new Date();
+
+  return auctions.filter((auction) => {
+    const start = new Date(auction.startTime);
+    const end = new Date(auction.endTime);
+    return now >= start && now < end;
+  });
+}
+
+export function extractNumericValue(priceString) {
+  return parseInt(
+    priceString.replace(/,/g, "").match(/\d+/g)?.join("") || "0",
+    10,
+  );
+}

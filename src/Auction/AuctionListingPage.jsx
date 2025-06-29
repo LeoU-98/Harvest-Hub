@@ -4,23 +4,36 @@ import { CountdownTimer } from "../Shared/CountdownTimer";
 import { auctions } from "../utils/AuctionStaticData";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
+import { getActiveAuctions } from "../utils/helpers";
 
 export default function AuctionListingsPage() {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 3;
 
+  const LiveAuctionsData = getActiveAuctions(auctions);
+
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentItems = auctions.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(auctions.length / itemsPerPage);
+  const currentItems = LiveAuctionsData.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(LiveAuctionsData.length / itemsPerPage);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % auctions.length;
+    const newOffset = (event.selected * itemsPerPage) % LiveAuctionsData.length;
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`,
     );
     setItemOffset(newOffset);
   };
+
+  if (LiveAuctionsData.length === 0) {
+    return (
+      <div className="flex items-center justify-center rounded-2xl bg-white lg:h-[500px]">
+        <p className="text-2xl text-gray-900">
+          Sorry , No Active Bids Right Now{" "}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -67,15 +80,13 @@ function AuctionCard({ data }) {
           className="h-[320px] w-[320px] rounded object-cover"
         />
       </div>
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-lg font-semibold">{data.title}</h2>
-          <p>Current Bid: {data.currentBid}</p>
-        </div>
-        <div className="flex flex-col items-center justify-center">
-          <p className="">Time Left</p>
-          <CountdownTimer endTime={data.endTime} />
-        </div>
+      <div>
+        <h2 className="text-lg font-semibold">{data.title}</h2>
+        <p>Current Bid: {data.currentBid}</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <p className="">Time Left</p>
+        <CountdownTimer endTime={data.endTime} />
       </div>
     </Link>
   );

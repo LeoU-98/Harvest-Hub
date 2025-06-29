@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { BsTrash } from "react-icons/bs";
+import propTypes from "prop-types";
 
 export function ImageUploader({ onImagesChange }) {
   const [images, setImages] = useState([]);
@@ -116,3 +117,5 @@ export function ImageUploader({ onImagesChange }) {
     </div>
   );
 }
+
+ImageUploader.propTypes = { onImagesChange: propTypes.func };

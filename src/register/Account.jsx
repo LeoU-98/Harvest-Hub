@@ -1,4 +1,4 @@
-import BreadCrumb from "../ui/BreadCrumb";
+import BreadCrumb from "../Shared/BreadCrumb";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import image1 from "../images/sidebar_banner.jpg";
 import SignInUp from "./SignInUp";

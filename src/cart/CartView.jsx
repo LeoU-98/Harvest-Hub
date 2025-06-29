@@ -1,4 +1,4 @@
-import BreadCrumb from "../ui/BreadCrumb";
+import BreadCrumb from "../Shared/BreadCrumb";
 import { useCart } from "./cartSlice";
 import CartItem from "./CartItem";
 import cartBackground_800_650 from "../images/cartBackground_800_650.jpg";

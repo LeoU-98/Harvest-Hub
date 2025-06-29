@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BiMessage } from "react-icons/bi";
 import { TbMessageChatbot } from "react-icons/tb";
 import { MdClose } from "react-icons/md";
 import { RiSendPlaneFill } from "react-icons/ri";

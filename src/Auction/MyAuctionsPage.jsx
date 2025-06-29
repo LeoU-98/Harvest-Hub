@@ -270,7 +270,7 @@ function AuctionModal({ selectedAuction, modalType, modalRef, closeModal }) {
 
             <button
               onClick={closeModal}
-              className="absolute right-3 top-3 text-sm text-blue-600 duration-300 hover:rotate-180"
+              className="absolute right-3 top-3 text-sm duration-300 hover:rotate-180"
             >
               <XMarkIcon className="w-7 text-white" />
             </button>
@@ -281,8 +281,8 @@ function AuctionModal({ selectedAuction, modalType, modalRef, closeModal }) {
   );
 }
 
-export function ViewResultModal() {
-  // export function ViewResultModal({ selectedAuction }) {
+function ViewResultModal() {
+  //  function ViewResultModal({ selectedAuction }) {
   const selectedAuction = {
     title: "Tractor Model X",
     highestBid: "$1,200",
@@ -330,8 +330,8 @@ export function ViewResultModal() {
   );
 }
 
-export function DeleteModal({ closeModal }) {
-  // export function DeleteModal({ closeModal, selectedAuction }) {
+function DeleteModal({ closeModal }) {
+  //  function DeleteModal({ closeModal, selectedAuction }) {
 
   return (
     <div className="mx-auto w-full max-w-sm space-y-4 rounded-2xl bg-white p-6 text-center shadow-xl">
@@ -365,7 +365,7 @@ export function DeleteModal({ closeModal }) {
   );
 }
 
-export function EditModal({ closeModal, selectedAuction }) {
+function EditModal({ closeModal, selectedAuction }) {
   const [form, setForm] = useState({
     title: selectedAuction.title,
     description: selectedAuction.description || "",
@@ -476,9 +476,11 @@ EditModal.propTypes = {
   closeModal: propTypes.func,
   selectedAuction: propTypes.object,
 };
+
 ViewResultModal.propTypes = {
   selectedAuction: propTypes.object,
 };
+
 DeleteModal.propTypes = {
   closeModal: propTypes.func,
 };

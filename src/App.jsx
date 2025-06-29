@@ -8,7 +8,7 @@ import CartView from "./cart/CartView";
 import Register from "./register/Register";
 import SignIn from "./register/SignIn";
 import ProductDetailsPage from "./shop/ProductDetailsPage/ProductDetailsPage";
-import BlogView from "./Blog/BlogView";
+import BlogDetailsPage from "./Blog/BlogDetailsPage";
 import ForgotPassword from "./register/ForgotPassword";
 import ResetPassword from "./register/ResetPassword";
 import EnterCode from "./register/EnterCode";
@@ -31,6 +31,11 @@ import ProfileEdit from "./profile/ProfileEdit";
 import BasicInfoEdit from "./profile/BasicInfoEdit";
 import ChangePassword from "./profile/ChangePassword";
 import DeactivateAccount from "./profile/DeactivateAccount";
+import ManageUsers from "./ControlCenter/ManageUsers";
+import ManageBlogs from "./ControlCenter/ManageBlogs";
+import ControlCenter from "./ControlCenter/ControlCenter";
+import MyBidsPage from "./Auction/MyBidsPage";
+import ManageProducts from "./ManageProducts/ManageProducts";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +72,25 @@ const router = createBrowserRouter([
             path: "new",
             element: <CreateAuctionPage />,
           },
+          {
+            path: "my-bids",
+            element: <MyBidsPage />,
+          },
+        ],
+      },
+
+      {
+        path: "control-center",
+        element: <ControlCenter />,
+        children: [
+          {
+            path: "manage-users",
+            element: <ManageUsers />,
+          },
+          {
+            path: "manage-blogs",
+            element: <ManageBlogs />,
+          },
         ],
       },
 
@@ -87,6 +111,11 @@ const router = createBrowserRouter([
             element: <AlertsNotifications />,
           },
         ],
+      },
+
+      {
+        path: "manage-products",
+        element: <ManageProducts />,
       },
       {
         path: "Dashboard",
@@ -162,14 +191,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "products",
+        path: "products/:type",
         element: <ProductListPage />,
-        children: [
-          {
-            path: "agricultural-products/:type",
-            element: <ProductListPage />,
-          },
-        ],
       },
 
       {
@@ -177,13 +200,13 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "ProductDetails/:id",
-        element: <ProductDetailsPage />,
+        path: "blog-view/:id",
+        element: <BlogDetailsPage />,
       },
 
       {
-        path: "blogView",
-        element: <BlogView />,
+        path: "ProductDetails/:id",
+        element: <ProductDetailsPage />,
       },
     ],
   },

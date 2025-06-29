@@ -7,12 +7,12 @@ import { IoNotifications } from "react-icons/io5";
 
 function Monitor() {
   return (
-    <main className="container mx-auto mb-28 mt-6">
+    <main className="container mx-auto pt-16">
       <ul className="mb-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-4">
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-3 py-2 duration-300 ${
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"
@@ -28,7 +28,7 @@ function Monitor() {
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-3 py-2 duration-300 ${
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"
@@ -43,7 +43,7 @@ function Monitor() {
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-3 py-2 duration-300 ${
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"

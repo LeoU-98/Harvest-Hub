@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { blogPreviewData } from "../utils/StaticData";
 import BlogPreviewCard from "./BlogPreviewCard";
 import { motion } from "motion/react";
 import { headerVariants } from "../motion/variants";
+import { blogPreviewData } from "../utils/BlogStaticData";
 
 function BlogPreview() {
   const settings = {
@@ -49,8 +49,8 @@ function BlogPreview() {
       </motion.h2>
 
       <Slider {...settings}>
-        {blogPreviewData.map((el, key) => (
-          <BlogPreviewCard data={el} key={key} />
+        {blogPreviewData.map((blog) => (
+          <BlogPreviewCard data={blog} key={blog.id} />
         ))}
       </Slider>
     </div>

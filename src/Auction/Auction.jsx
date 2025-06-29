@@ -4,15 +4,16 @@ import { NavLink, Outlet } from "react-router-dom";
 
 import { MdFormatListBulleted, MdFormatListBulletedAdd } from "react-icons/md";
 import { RiAuctionLine } from "react-icons/ri";
+import { BiDollar } from "react-icons/bi";
 
 export default function Auction() {
   return (
-    <div className="container mx-auto mb-14 mt-2 items-center rounded-lg p-8">
+    <div className="container mx-auto items-center rounded-lg pt-16">
       <ul className="mb-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-4">
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-3 py-2 duration-300 ${
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"
@@ -28,7 +29,7 @@ export default function Auction() {
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-3 py-2 duration-300 ${
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"
@@ -43,7 +44,7 @@ export default function Auction() {
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-3 py-2 duration-300 ${
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"
@@ -53,6 +54,21 @@ export default function Auction() {
           >
             <MdFormatListBulletedAdd className="size-6" />
             Create Auction
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className={({ isActive }) =>
+              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
+                isActive
+                  ? "bg-black text-white"
+                  : "bg-apple-500 text-white hover:bg-black"
+              }`
+            }
+            to={"./my-bids"}
+          >
+            <BiDollar className="size-6" />
+            My Bids
           </NavLink>
         </li>
       </ul>

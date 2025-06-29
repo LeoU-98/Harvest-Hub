@@ -1,4 +1,3 @@
-import { asideData } from "../utils/StaticData";
 import propTypes from "prop-types";
 import { useState } from "react";
 import {
@@ -8,6 +7,7 @@ import {
   MenuHandler,
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { asideData } from "../utils/BlogStaticData";
 
 export default function BlogAside() {
   return (
@@ -31,7 +31,7 @@ function BlogAsideSection({ data }) {
 
   return (
     <div className="overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white">
-      <h2 className="border-b-[1px] border-gray-300 px-4 py-3 uppercase">
+      <h2 className="border-b-[1px] border-gray-300 px-4 py-3 capitalize">
         {sectionTitle}
       </h2>
       <ul className="flex flex-col gap-3 p-4">

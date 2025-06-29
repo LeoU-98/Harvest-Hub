@@ -7,13 +7,13 @@ import propTypes from "prop-types";
 
 export default function BlogCard({ data }) {
   const {
+    id,
     blogImage,
     blogAuthor,
     blogComments,
     blogReviews,
     blogHeading,
     blogDesc,
-    blogLink,
   } = data;
 
   return (
@@ -29,16 +29,16 @@ export default function BlogCard({ data }) {
         />
         <div className="border-b-[1px] border-gray-300 py-4">
           <a
-            href={blogLink}
-            className="mb-2 cursor-pointer text-lg text-gray-900 hover:text-apple-500"
+            href={`./blog-view/${id}`}
+            className="mb-2 line-clamp-1 cursor-pointer text-lg text-gray-900 hover:text-apple-500"
           >
             {blogHeading}
           </a>
-          <p className="text-gray-600">{blogDesc}</p>
+          <p className="line-clamp-3 text-gray-600">{blogDesc}</p>
         </div>
         <a
           className="block w-fit cursor-pointer py-4 text-gray-900 hover:text-apple-500"
-          href={blogLink}
+          href={`./blog-view/${id}`}
         >
           Read More
         </a>

@@ -14,37 +14,37 @@ import CategoryList from "./CategoryList";
 const megaMenuData = [
   {
     categoryItem: "Agricultural Products",
-    categoryLink: "products/agricultural-products/all",
+    categoryLink: "products/agricultural-products",
     items: [
       {
         itemTitle: "Crops & Fresh Produce",
-        itemLink: "products/agricultural-products/crop-fresh-produce",
+        itemLink: "products/crop-fresh-produce",
       },
       {
         itemTitle: "Seeds & Saplings",
-        itemLink: "products/agricultural-products/seeds-and-saplings",
+        itemLink: "products/seeds-and-saplings",
       },
       {
         itemTitle: "Dairy & livestock",
-        itemLink: "products/agricultural-products/dairy-and-livestock",
+        itemLink: "products/dairy-and-livestock",
       },
     ],
   },
   {
-    categoryItem: "Farming Equipments",
-    categoryLink: "Products/FarmingEquipments",
+    categoryItem: "Farming Technology",
+    categoryLink: "products/farming-technology",
     items: [
       {
-        itemTitle: "Machinery & Tools",
-        itemLink: "Products/FarmingEquipments/Machinery&Tools",
+        itemTitle: "Soil & Crop Monitoring",
+        itemLink: "products/soil-and-crop-monitoring",
       },
       {
-        itemTitle: "Agri-Tech Solutions",
-        itemLink: "Products/FarmingEquipments/Agri-TechSolution",
+        itemTitle: "Crop Spraying Equipment",
+        itemLink: "products/crop-spraying-equipment",
       },
       {
         itemTitle: "Storage & Processing ",
-        itemLink: "Products/FarmingEquipments/Storage&Processing ",
+        itemLink: "products/storage-and-processing ",
       },
     ],
   },

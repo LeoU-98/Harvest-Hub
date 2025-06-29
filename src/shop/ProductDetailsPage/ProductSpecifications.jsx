@@ -12,6 +12,7 @@ export default function ProductSpecifications({ data }) {
   const {
     id,
     productName,
+    productImages,
     stock,
     description,
     numberOfReviews,
@@ -23,16 +24,16 @@ export default function ProductSpecifications({ data }) {
 
   const dispatch = useDispatch();
 
-  const productImage = productData.find(
-    (item) => item.id === Number(id),
-  ).productImage;
+  // const productImage = productData.find(
+  //   (item) => item.id === Number(id),
+  // ).productImage;
 
   function handleAddToCart() {
     dispatch(
       addItem({
         id: id,
         rating: rating,
-        productImage: productImage,
+        productImage: productImages,
         productName: productName,
         discountPrice: discountPrice,
         originalPrice: originalPrice,

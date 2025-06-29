@@ -49,6 +49,22 @@ export default function NavList() {
             Auction
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="control-center/manage-users"
+            className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
+          >
+            Control Center
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="manage-products"
+            className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
+          >
+            Manage Products
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

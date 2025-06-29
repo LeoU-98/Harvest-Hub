@@ -35,15 +35,8 @@ export default function ProductCard({
             alt="product"
             className="duration-300 group-hover:scale-110"
           />
-
-          <Rating
-            value={Math.round(rating)}
-            readonly
-            className={
-              "absolute bottom-2 left-1/2 -translate-x-1/2 justify-center"
-            }
-          />
         </Link>
+        <Rating value={Math.round(rating)} readonly className={"z-50 my-1"} />
       </div>
       {/* text data and cart  */}
       <div className="z-10 flex w-11/12 flex-col items-center gap-2 border-t-2 border-mercury-100 py-4">

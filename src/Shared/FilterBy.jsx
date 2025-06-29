@@ -67,54 +67,54 @@ const filterData = [
       },
     ],
   },
-  {
-    title: "property",
-    optionsList: [
-      {
-        optionTitle: "120 pages",
-      },
-      {
-        optionTitle: "long sleeves",
-      },
-      {
-        optionTitle: "removable cover",
-      },
-      {
-        optionTitle: "short sleeves",
-      },
-    ],
-  },
-  {
-    title: "dimension",
-    optionsList: [
-      {
-        optionTitle: "40x60 cm",
-      },
-      {
-        optionTitle: "60x90 cm",
-      },
-      {
-        optionTitle: "80x120 cm",
-      },
-    ],
-  },
-  {
-    title: "paper type",
-    optionsList: [
-      {
-        optionTitle: "ruled",
-      },
-      {
-        optionTitle: "plain",
-      },
-      {
-        optionTitle: "squarred",
-      },
-      {
-        optionTitle: "doted",
-      },
-    ],
-  },
+  // {
+  //   title: "property",
+  //   optionsList: [
+  //     {
+  //       optionTitle: "120 pages",
+  //     },
+  //     {
+  //       optionTitle: "long sleeves",
+  //     },
+  //     {
+  //       optionTitle: "removable cover",
+  //     },
+  //     {
+  //       optionTitle: "short sleeves",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "dimension",
+  //   optionsList: [
+  //     {
+  //       optionTitle: "40x60 cm",
+  //     },
+  //     {
+  //       optionTitle: "60x90 cm",
+  //     },
+  //     {
+  //       optionTitle: "80x120 cm",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "paper type",
+  //   optionsList: [
+  //     {
+  //       optionTitle: "ruled",
+  //     },
+  //     {
+  //       optionTitle: "plain",
+  //     },
+  //     {
+  //       optionTitle: "squarred",
+  //     },
+  //     {
+  //       optionTitle: "doted",
+  //     },
+  //   ],
+  // },
 ];
 
 ////////////////////////////////////
@@ -172,7 +172,7 @@ function FilterOption({ data }) {
         htmlFor={`check-${optionTitle}`}
       >
         <span className="checkbox-inner flex items-center justify-center rounded-full border-2 border-gray-300 text-transparent"></span>
-        <span className="hover:text-apple-500 mx-2 select-none capitalize text-gray-900">
+        <span className="mx-2 select-none capitalize text-gray-900 hover:text-apple-500">
           {optionTitle}
         </span>
       </label>

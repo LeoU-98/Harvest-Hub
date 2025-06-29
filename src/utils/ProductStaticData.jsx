@@ -144,51 +144,6 @@ export const productData = [
 ];
 
 export const productDetailsData = [
-  // {
-  //   id: 1,
-  //   productName: "wheel barrows",
-  //   images: [
-  //     "/images/products/saw1.jpg",
-  //     "/images/products/saw2.jpg",
-  //     "/images/products/saw3.jpg",
-  //     "/images/products/saw4.jpg",
-  //     "/images/products/saw5.jpg",
-  //   ],
-  //   description:
-  //     "Heavy-duty wheel barrow for transporting soil, tools, and plants across the farm with ease.",
-  //   specs: { material: "Steel", capacity: "80L", wheelType: "Pneumatic" },
-  //   rating: 4,
-  //   reviews: [
-  //     {
-  //       name: "Ali",
-  //       comment: "Very durable and easy to use.",
-  //       rating: 4,
-  //       image: "https://randomuser.me/api/portraits/men/11.jpg",
-  //       reviewDate: "2025-06-01",
-  //       likesCount: 12,
-  //     },
-  //     {
-  //       name: "Sara",
-  //       comment: "Perfect for my farm!",
-  //       rating: 5,
-  //       image: "https://randomuser.me/api/portraits/women/44.jpg",
-  //       reviewDate: "2025-06-03",
-  //       likesCount: 18,
-  //     },
-  //     {
-  //       name: "Khaled",
-  //       comment: "Handles heavy loads without issues.",
-  //       rating: 4,
-  //       image: "https://randomuser.me/api/portraits/men/45.jpg",
-  //       reviewDate: "2025-06-04",
-  //       likesCount: 20,
-  //     },
-  //   ],
-  //   stock: 12,
-  //   discountPrice: "43",
-  //   originalPrice: "56",
-  //   category: "Equipment",
-  // },
   {
     id: 1,
     productName: "wheel barrows",
@@ -230,10 +185,11 @@ export const productDetailsData = [
       },
     ],
     stock: 12,
-    discountPrice: "0",
+    discountPrice: "43",
     originalPrice: "56",
     category: "Equipment",
   },
+
   {
     id: 2,
     productName: "micro rain",
