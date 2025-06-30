@@ -3,9 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import propTypes from "prop-types";
 import ProductCard from "../Shared/ProductCard";
-import { productData } from "../utils/ProductStaticData";
 import { motion } from "motion/react";
 import { headerVariants } from "../motion/variants";
+import {
+  cropAndFreshProducesData,
+  dairyAndLivestockProducts,
+  seedAndSaplingProducts,
+} from "../utils/AgriDataPLP";
 
 function SpecialProducts() {
   const settings = {
@@ -71,10 +75,15 @@ function SpecialProducts() {
         </div>
 
         <Slider {...settings}>
-          {productData.map((product) => (
+          {[
+            ...cropAndFreshProducesData,
+            ...dairyAndLivestockProducts,
+            ...seedAndSaplingProducts,
+          ].map((product) => (
             <ProductCard
               data={product}
               key={product.id}
+              imgClassName="size-[240px]"
               className="mx-auto mb-[10px] w-full md:mx-0 md:max-w-none"
             />
           ))}

@@ -64,6 +64,7 @@ export default function ProductCard({
     </div>
   );
 }
+
 ProductCard.propTypes = {
   data: propTypes.object,
   className: propTypes.string,

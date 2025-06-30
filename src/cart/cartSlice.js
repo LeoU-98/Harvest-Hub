@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
+import { extractPriceDetails } from "../utils/helpers";
 
 const initialState = [];
 const cartSlice = createSlice({
@@ -30,12 +31,25 @@ export const { addItem, removeItem, updateItemCount, clearCart } =
 
 export function useCart() {
   const cart = useSelector((store) => store.cart);
-  const totalItemsInCart = cart.length;
-  const totalCartPrice = cart.reduce((total, item) => {
-    return total + item.count * item.discountPrice;
-  }, 0);
+  const totalItemsInCart = cart?.length;
 
-  return { cart, totalItemsInCart, totalCartPrice };
+  const totalCartPriceCurrency = extractPriceDetails(
+    cart[0]?.discountPrice,
+  ).currencyOnly;
+  const totalCartPriceNumber = cart
+    .reduce((total, item) => {
+      const { numberOnly } = extractPriceDetails(item?.discountPrice);
+      return total + item.count * numberOnly;
+    }, 0)
+    .toFixed(2)
+    .replace(/\.?0+$/, "");
+
+  return {
+    cart,
+    totalItemsInCart,
+    totalCartPriceCurrency,
+    totalCartPriceNumber,
+  };
 }
 
 export default cartSlice.reducer;

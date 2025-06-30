@@ -5,6 +5,7 @@ import ItemCounter from "../shop/ItemCounter";
 import { useSelector } from "react-redux";
 import { useCart } from "../cart/cartSlice";
 import { Link } from "react-router-dom";
+import { extractPriceDetails } from "../utils/helpers";
 
 function ProductModal({ handleOpen, open, itemID }) {
   return (
@@ -42,9 +43,15 @@ function ItemPreview({ handleOpen, itemID }) {
   const item = useSelector((store) =>
     store.cart.find((item) => item.id === itemID),
   );
-  const { totalItemsInCart, totalCartPrice } = useCart();
+  const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
+    useCart();
 
-  const totalItemPrice = item?.count * item?.discountPrice;
+  const discount = extractPriceDetails(item?.discountPrice)?.numberOnly;
+  const price = extractPriceDetails(item?.price)?.numberOnly;
+  const currency = extractPriceDetails(item?.price)?.currencyOnly;
+
+  const totalItemPrice =
+    discount && discount !== 0 ? item?.count * discount : item?.count * price;
 
   return (
     <div className="mx-auto flex w-fit flex-col bg-white p-3 py-6 lg:flex-row lg:px-6 lg:py-12">
@@ -67,7 +74,7 @@ function ItemPreview({ handleOpen, itemID }) {
             </span>
             <span className="">Quantity:{item?.count ? item?.count : 0}</span>
             <span className="mb-2">
-              Total Price: ${totalItemPrice.toFixed(2).replace(/\.?0+$/, "")}
+              Total Price: {totalItemPrice + " " + currency}
             </span>
             <ItemCounter itemID={itemID} handleOpen={handleOpen} />
           </div>
@@ -82,16 +89,16 @@ function ItemPreview({ handleOpen, itemID }) {
           </p>
           <div className="mb-3 flex justify-between px-1">
             <span>Total products:</span>
-            <span>${totalCartPrice.toFixed(2).replace(/\.?0+$/, "")}</span>
+            <span>{totalCartPriceNumber + " " + totalCartPriceCurrency}</span>
           </div>
           <div className="mb-3 flex justify-between px-1">
             <span>Total shipping:</span>
-            <span>$200</span>
+            <span>50 {totalCartPriceCurrency}</span>
           </div>
           <div className="mb-5 flex justify-between bg-gray-200 p-1">
             <span>Total</span>
             <span>
-              ${(totalCartPrice + 200).toFixed(2).replace(/\.?0+$/, "")} (tax
+              {Number(totalCartPriceNumber) + 200} {totalCartPriceCurrency} (tax
               incl.)
             </span>
           </div>

@@ -4,7 +4,7 @@ import { removeItem } from "./cartSlice";
 import { useDispatch } from "react-redux";
 
 export default function CartPreviewItem({ data }) {
-  const { id, productImage, productName, discountPrice, count } = data;
+  const { id, productImage, productName, discountPrice, price, count } = data;
   const dispatch = useDispatch();
 
   return (
@@ -17,7 +17,7 @@ export default function CartPreviewItem({ data }) {
         {/* text & Pricing  */}
         <div className="">
           <h4>
-            <a className="hover:text-apple-500 line-clamp-1 cursor-pointer text-gray-700">
+            <a className="line-clamp-1 cursor-pointer text-gray-700 hover:text-apple-500">
               {productName}
             </a>
           </h4>
@@ -26,7 +26,9 @@ export default function CartPreviewItem({ data }) {
               {count}
               <span className="text-sm">x</span>
             </span>
-            <span className="text-apple-500 ml-2">${discountPrice}</span>
+            <span className="ml-2 text-apple-500">
+              {discountPrice !== 0 ? discountPrice : price}
+            </span>
           </div>
         </div>
         {/* delete btn  */}

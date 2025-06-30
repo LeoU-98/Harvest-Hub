@@ -50,3 +50,17 @@ export function extractNumericValue(priceString) {
     10,
   );
 }
+
+export function extractPriceDetails(priceString) {
+  const numberMatch = priceString?.match(/\d+/);
+  const numberWithCurrencyMatch = priceString?.match(/\d+\s*\p{L}+/u);
+  const currencyOnlyMatch = priceString?.match(/\p{L}+/u); // Matches first group of letters (currency)
+
+  return {
+    numberOnly: numberMatch ? parseInt(numberMatch[0], 10) : null,
+    numberWithCurrency: numberWithCurrencyMatch
+      ? numberWithCurrencyMatch[0].replace(/\s+/g, " ")
+      : null,
+    currencyOnly: currencyOnlyMatch ? currencyOnlyMatch[0] : null,
+  };
+}

@@ -6,7 +6,7 @@ import cartBackground_280_196 from "../images/cartBackground_280_196.jpg";
 import { useEffect, useRef } from "react";
 
 function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
-  const { cart, totalCartPrice } = useCart();
+  const { cart, totalCartPriceNumber, totalCartPriceCurrency } = useCart();
 
   const dropdownRef = useRef(null);
 
@@ -31,7 +31,7 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
   return (
     <div
       ref={dropdownRef}
-      className={`absolute right-0 top-full z-50 w-80 origin-top scale-y-0 rounded-md border-b-2 border-apple-500 bg-white px-5 duration-500 ${isCartPreviewOpen ? "scale-y-100 py-5" : ""} `}
+      className={`absolute right-0 top-full z-50 w-80 origin-top scale-y-0 rounded-b-2xl border-b-2 border-apple-500 bg-white px-5 duration-500 ${isCartPreviewOpen ? "scale-y-100 py-5" : ""} `}
     >
       {/* items  */}
       <ul className="cart max-h-72 min-h-6 overflow-y-auto scroll-smooth p-2">
@@ -49,7 +49,9 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
         <span className="font-bold text-gray-900">Total</span>
 
         <span className="ml-2 text-apple-500">
-          ${totalCartPrice.toFixed(2).replace(/\.?0+$/, "")}
+          {Number(totalCartPriceNumber) !== 0
+            ? totalCartPriceNumber + " " + totalCartPriceCurrency
+            : ""}
         </span>
       </div>
       {/* action & checkout  */}

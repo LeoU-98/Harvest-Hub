@@ -10,7 +10,8 @@ import { useProfile } from "../profile/profileSlice";
 function HeaderMid() {
   const [isCartPreviewOpen, setIsCartPreviewOpen] = useState(false);
 
-  const { totalItemsInCart, totalCartPrice } = useCart();
+  const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
+    useCart();
   const { logged } = useProfile();
   const buttonRef = useRef(null);
 
@@ -60,7 +61,12 @@ function HeaderMid() {
           </div>
 
           <div className="text-xs md:text-sm">
-            <span>${totalCartPrice}</span>
+            <span>
+              {" "}
+              {Number(totalCartPriceNumber) !== 0
+                ? totalCartPriceNumber + " " + totalCartPriceCurrency
+                : 0}
+            </span>
             <span> - </span>
             <span>{totalItemsInCart} items</span>
           </div>

@@ -6,6 +6,11 @@ import ProductCard from "../../Shared/ProductCard";
 import { productData } from "../../utils/ProductStaticData";
 import { headerVariants } from "../../motion/variants";
 import { motion } from "motion/react";
+import {
+  cropAndFreshProducesData,
+  dairyAndLivestockProducts,
+  seedAndSaplingProducts,
+} from "../../utils/AgriDataPLP";
 
 export default function RelatedProducts() {
   const settings = {
@@ -69,11 +74,16 @@ export default function RelatedProducts() {
         </motion.h2>
 
         <Slider {...settings}>
-          {productData.map((el, key) => (
+          {[
+            ...cropAndFreshProducesData,
+            ...dairyAndLivestockProducts,
+            ...seedAndSaplingProducts,
+          ].map((el, key) => (
             <ProductCard
               data={el}
               key={key}
               className="mx-auto mb-[10px] w-full md:mx-0 md:max-w-none"
+              imgClassName="size-[240px]"
             />
           ))}
         </Slider>

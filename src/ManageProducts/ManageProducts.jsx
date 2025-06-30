@@ -6,13 +6,13 @@ import {
   seedAndSaplingProducts,
 } from "../utils/AgriDataPLP";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { FiSearch } from "react-icons/fi";
+import { useEffect, useState } from "react";
 import propTypes from "prop-types";
 import MerchantProductCard from "./MerchantProductCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ImageUploader } from "../Shared/ImageUploader";
+import { AiOutlineProduct } from "react-icons/ai";
 
 function fetchData(id) {
   console.log(id);
@@ -27,25 +27,26 @@ function fetchData(id) {
 export default function ManageProducts() {
   const [itemOffset, setItemOffset] = useState(0);
   const [showAddModal, setShowAddModal] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
   const { id } = useParams();
   const itemsPerPage = 8;
 
-  ////////////////////////////////////////////
-  /////////////// Mocking Data Fetch /////////
+  const fullData = fetchData(id);
 
-  const data = fetchData(id);
+  // 🔍 Filter based on search query
+  const filteredData = searchQuery.trim()
+    ? fullData.filter((item) =>
+        item.productName.toLowerCase().includes(searchQuery.toLowerCase()),
+      )
+    : fullData;
 
-  /////////////////////////////////////////////
-
+  // Paginate after filtering
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = data?.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(data?.length / itemsPerPage);
+  const currentItems = filteredData.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(filteredData.length / itemsPerPage);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % data?.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`,
-    );
+    const newOffset = (event.selected * itemsPerPage) % filteredData.length;
     setItemOffset(newOffset);
   };
 
@@ -67,106 +68,109 @@ export default function ManageProducts() {
           </button>
         </div>
 
-        <div className="">
-          {/* //"products" */}
-          <div className="flex gap-3">
-            <div className="hidden lg:block">{/* <FilterBy /> */}</div>
-            <div className="flex w-full flex-col justify-between">
-              <div>
-                <div className="mb-5 flex w-full items-center justify-between gap-5 rounded-2xl bg-white p-3">
-                  <p className="text-gray-800">
-                    There are {data.length} products
-                  </p>
-                  <SearchBox />
+        {/* <div className="flex w-full gap-3"> */}
+        <div className="flex w-full flex-col justify-between">
+          <div>
+            <div className="mb-5 flex w-full items-center justify-between gap-5 rounded-2xl bg-white px-5 py-3">
+              <div className="flex items-center justify-center gap-2">
+                <div className="rounded-full border-gray-200 bg-apple-500 p-1 text-white outline-none">
+                  <AiOutlineProduct className="size-6 stroke-1" />
                 </div>
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:h-[775px] lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-4">
-                  {currentItems &&
-                    currentItems.map((item, key) => (
-                      <MerchantProductCard
-                        imgClassName="2xl:size-[12.1rem] lg:size-[12rem]"
-                        data={item}
-                        key={key}
-                      />
-                    ))}
-                </div>
+                <p className="text-gray-800">
+                  There are {filteredData.length} products
+                </p>
               </div>
+              <SearchBox onSearch={setSearchQuery} />
+            </div>
 
-              <div className="">
-                <ReactPaginate
-                  pageRangeDisplayed={5}
-                  breakLabel="..."
-                  nextLabel="Next →"
-                  onPageChange={handlePageClick}
-                  pageCount={pageCount}
-                  previousLabel="← Prev"
-                  renderOnZeroPageCount={null}
-                  className="mt-3 flex items-center justify-center gap-1 rounded-3xl border-[1px] border-gray-300 bg-white py-1 sm:gap-4"
-                  pageClassName="rounded-full overflow-hidden  hover:text-apple-500"
-                  pageLinkClassName="size-8 sm:size-10 sm:p-1 flex justify-center items-center text-xs"
-                  activeClassName="bg-apple-500 text-white hover:text-white"
-                  previousClassName="text-apple-500 hover:bg-apple-500 hover:text-white rounded-full text-xs font-bold duration-200 select-none"
-                  nextClassName="text-apple-500 hover:bg-apple-500 hover:text-white rounded-full text-xs font-bold duration-200 select-none"
-                  previousLinkClassName="sm:px-6 sm:py-3 py-2 px-2 block uppercase"
-                  nextLinkClassName="sm:px-6 sm:py-3 py-2  px-2 block uppercase"
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:h-[775px] lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-4">
+              {currentItems.map((item) => (
+                <MerchantProductCard
+                  imgClassName="2xl:size-[12.1rem] lg:size-[12rem]"
+                  data={item}
+                  key={item.id}
                 />
-              </div>
+              ))}
             </div>
           </div>
-        </div>
 
-        <AnimatePresence>
-          {showAddModal && (
-            <AddProductModal
-              onClose={() => setShowAddModal(false)}
-              onAdd={(productData) => console.log("Added:", productData)}
+          <div>
+            <ReactPaginate
+              pageRangeDisplayed={5}
+              breakLabel="..."
+              nextLabel="Next →"
+              onPageChange={handlePageClick}
+              pageCount={pageCount}
+              previousLabel="← Prev"
+              renderOnZeroPageCount={null}
+              className="mt-3 flex items-center justify-center gap-1 rounded-3xl border border-gray-300 bg-white py-1 sm:gap-4"
+              pageClassName="rounded-full hover:text-apple-500"
+              pageLinkClassName="size-8 sm:size-10 flex justify-center items-center text-xs"
+              activeClassName="bg-apple-500 text-white hover:text-white"
+              previousClassName="text-apple-500 hover:bg-apple-500 hover:text-white rounded-full text-xs font-bold"
+              nextClassName="text-apple-500 hover:bg-apple-500 hover:text-white rounded-full text-xs font-bold"
+              previousLinkClassName="sm:px-6 sm:py-3 py-2 px-2 block uppercase"
+              nextLinkClassName="sm:px-6 sm:py-3 py-2 px-2 block uppercase"
             />
-          )}
-        </AnimatePresence>
+          </div>
+        </div>
       </div>
+
+      <AnimatePresence>
+        {showAddModal && (
+          <AddProductModal
+            onClose={() => setShowAddModal(false)}
+            onAdd={(productData) => console.log("Added:", productData)}
+          />
+        )}
+      </AnimatePresence>
+      {/* </div> */}
     </main>
   );
 }
 
 function SearchBox({ placeholder = "Search...", onSearch }) {
   const [query, setQuery] = useState("");
+  const [filtered, setFiltered] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const handleSearch = () => {
-    if (onSearch) {
-      onSearch(query);
-    }
-  };
+  const allProducts = [
+    ...cropAndFreshProducesData,
+    ...dairyAndLivestockProducts,
+    ...seedAndSaplingProducts,
+  ];
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      handleSearch();
+  useEffect(() => {
+    if (query.trim() === "") {
+      setFiltered([]);
+      setShowSuggestions(false);
+      if (onSearch) onSearch(""); // clear external filter
+      return;
     }
-  };
+
+    const filteredResults = allProducts.filter((item) =>
+      item.productName.toLowerCase().includes(query.toLowerCase()),
+    );
+    setFiltered(filteredResults);
+    setShowSuggestions(true);
+    if (onSearch) onSearch(query);
+  }, [query]);
 
   return (
-    <div className="flex items-center justify-center gap-2">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
-        className="rounded-full px-3 py-2 text-sm text-gray-800 ring-1 ring-gray-400 focus:outline-none focus:ring-green-500 lg:w-[300px]"
-        placeholder={placeholder}
-      />
-
-      <button
-        onClick={handleSearch}
-        className="flex items-center gap-1 rounded-full bg-green-600 px-3 py-2 text-sm font-medium text-white transition duration-300 hover:bg-black"
-      >
-        <FiSearch className="size-5 text-white" />
-        Search
-      </button>
-    </div>
+    <input
+      type="text"
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+      onFocus={() => query && setShowSuggestions(true)}
+      placeholder={placeholder}
+      className="w-[400px] max-w-80 flex-1 rounded-2xl px-3 py-2 text-sm text-gray-800 outline-none ring-1 ring-gray-800 focus:ring-green-500"
+    />
   );
 }
 
 SearchBox.propTypes = {
   placeholder: propTypes.string,
-  onSearch: propTypes.func,
+  onSearch: propTypes.func, // Add this
 };
 
 function AddProductModal({ onClose, onAdd }) {

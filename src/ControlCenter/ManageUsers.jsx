@@ -10,7 +10,7 @@ const dummyUser = {
   id: "user123",
   name: "Mohamed Hamdy",
   email: "mohamed@example.com",
-  role: "Admin",
+  role: "Merchant",
   status: "Active",
   image: "/leou.jpg",
 };
@@ -18,7 +18,7 @@ const dummyUser = {
 export default function ManageUsers() {
   const [searchId, setSearchId] = useState("");
   const [user, setUser] = useState(null);
-  const [modalType, setModalType] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const modalRef = useRef(null);
 
   const handleSearch = () => {
@@ -29,7 +29,7 @@ export default function ManageUsers() {
     }
   };
 
-  const closeModal = () => setModalType(null);
+  const closeModal = () => setIsModalOpen(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -37,13 +37,13 @@ export default function ManageUsers() {
         closeModal();
       }
     };
-    if (modalType) {
+    if (isModalOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     }
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [modalType]);
+  }, [isModalOpen]);
 
   return (
     <div className="min-h-[600px] p-5">
@@ -83,14 +83,8 @@ export default function ManageUsers() {
           </div>
           <div className="mt-6 flex justify-center gap-4">
             <button
-              onClick={() => setModalType("ban")}
-              className="rounded-md bg-yellow-500 px-5 py-2 text-white hover:bg-yellow-600"
-            >
-              Ban User
-            </button>
-            <button
-              onClick={() => setModalType("remove")}
-              className="rounded-md bg-red-600 px-5 py-2 text-white hover:bg-red-700"
+              onClick={() => setIsModalOpen(true)}
+              className="rounded-full bg-red-600 px-5 py-2 text-white duration-300 hover:bg-black"
             >
               Remove User
             </button>
@@ -104,7 +98,7 @@ export default function ManageUsers() {
 
       <ManageUserModal
         user={user}
-        modalType={modalType}
+        isModalOpen={isModalOpen}
         modalRef={modalRef}
         closeModal={closeModal}
       />
@@ -112,10 +106,10 @@ export default function ManageUsers() {
   );
 }
 
-function ManageUserModal({ user, modalType, modalRef, closeModal }) {
+function ManageUserModal({ user, isModalOpen, modalRef, closeModal }) {
   return (
     <AnimatePresence>
-      {user && modalType && (
+      {user && isModalOpen && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
           initial={{ opacity: 0 }}
@@ -124,11 +118,7 @@ function ManageUserModal({ user, modalType, modalRef, closeModal }) {
         >
           <motion.div
             ref={modalRef}
-            className={`relative w-full max-w-md rounded-xl p-6 text-white ${
-              modalType === "ban"
-                ? "bg-gradient-to-r from-yellow-600 to-yellow-500"
-                : "bg-gradient-to-r from-red-600 to-orange-500"
-            }`}
+            className="relative w-full max-w-md rounded-xl bg-gradient-to-r from-red-600 to-orange-500 p-6 text-white"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{
               scale: 1,
@@ -137,37 +127,34 @@ function ManageUserModal({ user, modalType, modalRef, closeModal }) {
             }}
             exit={{ scale: 0.8, opacity: 0, transition: { duration: 0.2 } }}
           >
-            <div className="mb-4 text-xl font-bold">
-              {modalType === "ban" ? "Ban User" : "Remove User"}
-            </div>
+            <div className="mb-4 text-xl font-bold">Remove User</div>
+            <div className="rounded-2xl bg-white px-3 py-5">
+              <div className="mb-4 flex items-center gap-3 rounded-2xl p-4 text-gray-900 shadow-lg">
+                <FiAlertTriangle className="text-5xl text-red-500" />
+                <p>
+                  Are you sure you want to <strong>remove</strong>{" "}
+                  <span className="text-red-500">{user.name}</span>? This action
+                  is irreversible.
+                </p>
+              </div>
 
-            <div className="mb-4 flex items-center gap-3 rounded-md bg-white/20 p-4 text-white">
-              <FiAlertTriangle className="text-3xl" />
-              <p>
-                Are you sure you want to{" "}
-                <strong>{modalType === "ban" ? "ban" : "remove"}</strong>{" "}
-                <span className="text-yellow-100">{user.name}</span>? This
-                action is irreversible.
-              </p>
+              <div className="flex justify-end gap-3">
+                <button
+                  onClick={closeModal}
+                  className="rounded-full border border-white bg-green-500 px-4 py-2 duration-300 hover:bg-black"
+                >
+                  Cancel
+                </button>
+                <button className="rounded-full bg-red-500 px-4 py-2 text-sm font-semibold text-white duration-300 hover:bg-black">
+                  Confirm
+                </button>
+              </div>
             </div>
-
-            <div className="flex justify-end gap-3">
-              <button
-                onClick={closeModal}
-                className="rounded-md border border-white px-4 py-2 hover:bg-white/20"
-              >
-                Cancel
-              </button>
-              <button className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-red-600 hover:bg-gray-100">
-                Confirm
-              </button>
-            </div>
-
             <button
               onClick={closeModal}
-              className="absolute right-4 top-4 text-white hover:rotate-180"
+              className="absolute right-3 top-3 text-sm duration-300 hover:rotate-180"
             >
-              <XMarkIcon className="w-6" />
+              <XMarkIcon className="w-7 text-white" />
             </button>
           </motion.div>
         </motion.div>
@@ -178,7 +165,7 @@ function ManageUserModal({ user, modalType, modalRef, closeModal }) {
 
 ManageUserModal.propTypes = {
   user: propTypes.object,
-  modalType: propTypes.string,
+  isModalOpen: propTypes.bool,
   modalRef: propTypes.string,
   closeModal: propTypes.func,
 };
