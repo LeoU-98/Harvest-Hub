@@ -8,6 +8,7 @@ import { FaCrown } from "react-icons/fa";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ImageUploader } from "../Shared/ImageUploader";
 import { FiAlertTriangle } from "react-icons/fi";
+import { myAuctions } from "../utils/AuctionStaticData";
 
 MyAuctionCard.propTypes = {
   auction: propTypes.object,
@@ -19,55 +20,18 @@ AuctionModal.propTypes = {
   closeModal: propTypes.func,
 };
 
-const myAuctions = [
-  {
-    id: 1,
-    title: "Tractor",
-    images: [
-      "/images/products/saw1.jpg",
-      "/images/products/saw2.jpg",
-      "/images/products/saw3.jpg",
-      "/images/products/saw4.jpg",
-      "/images/products/saw5.jpg",
-    ],
-    status: "Live",
-    highestBid: "$500",
-    bids: 12,
-    startTime: "2025-06-10",
-    endTime: "2025-06-20",
-  },
-  {
-    id: 2,
-    title: "Sprayer",
-    images: [
-      "/images/products/saw1.jpg",
-      "/images/products/saw2.jpg",
-      "/images/products/saw3.jpg",
-      "/images/products/saw4.jpg",
-      "/images/products/saw5.jpg",
-    ],
-    status: "Ended",
-    highestBid: "$350",
-    bids: 8,
-    startTime: "2025-05-10",
-    endTime: "2025-05-15",
-  },
-];
-
 export default function MyAuctionsPage() {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 3;
 
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+
   const currentItems = myAuctions.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(myAuctions.length / itemsPerPage);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % myAuctions.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`,
-    );
+
     setItemOffset(newOffset);
   };
 
@@ -142,7 +106,7 @@ function MyAuctionCard({ auction }) {
         </div>
         <div>
           <div className="mb-2 flex items-center justify-between">
-            <h3 className="text-2xl font-semibold text-gray-900">
+            <h3 className="text-lg font-semibold text-gray-900">
               {auction.title}
             </h3>
             <span

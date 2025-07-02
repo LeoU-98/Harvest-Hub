@@ -4,7 +4,6 @@ import ProductSpecifications from "./ProductSpecifications";
 import ProductReviews from "../Reviews/ProductReviews";
 import RelatedProducts from "./RelatedProducts";
 import { useParams } from "react-router-dom";
-// import { productDetailsData } from "../../utils/ProductStaticData";
 import { cropAndFreshPDP, dairyAndLivestockPDP } from "../../utils/AgriDataPDP";
 
 import { splitCommonPrefix } from "../../utils/helpers";
@@ -25,13 +24,11 @@ function fetchPDPData(id, type = "") {
 
 //////////////////////////////////////////////////////////
 
-function ProductView() {
+function ProductDetailsPage() {
   const { id } = useParams();
 
   // const product = productDetailsData.find((p) => p.id === Number(id));
   const product = fetchPDPData(id);
-
-  console.log(product);
 
   const specifications = {
     id: id,
@@ -41,7 +38,7 @@ function ProductView() {
     description: product.description,
     rating: product.rating,
     discountPrice: product.discountPrice,
-    originalPrice: product.originalPrice,
+    price: product.price,
     specs: product.specs,
     numberOfReviews: product.reviews.length,
   };
@@ -51,8 +48,6 @@ function ProductView() {
     variables: splitCommonPrefix(product.images).variables,
   };
 
-  console.log(images);
-
   return (
     <>
       <BreadCrumb />
@@ -60,8 +55,8 @@ function ProductView() {
         <div className="flex flex-col items-center rounded-2xl bg-white p-4 lg:flex-row">
           <ProductImagePreview
             data={images}
-            imageClassName=" max-w-[500px] aspect-square"
-            iconClassName="overflow-hidden"
+            imageClassName=" max-w-[500px] aspect-square rounded-2xl"
+            iconClassName="overflow-hidden rounded-2xl"
           />
           <ProductSpecifications data={specifications} />
         </div>
@@ -74,4 +69,4 @@ function ProductView() {
   );
 }
 
-export default ProductView;
+export default ProductDetailsPage;

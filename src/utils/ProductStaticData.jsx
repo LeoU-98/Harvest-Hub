@@ -5,9 +5,7 @@ import product1 from "../images/products/brown-bear-cushion.jpg";
 import product2 from "../images/products/brown-bear-notebook.jpg";
 import product3 from "../images/products/today-is-a-good-day-framed-poster.jpg";
 import product4 from "../images/products/brown-bear-notebook1.jpg";
-import product5 from "../images/products/brown-bear-printed-sweater.jpg";
 import product6 from "../images/products/hummingbird-cushion.jpg";
-import product7 from "../images/products/hummingbird-printed-t-shirt.jpg";
 import product8 from "../images/products/mountain-fox-cushion.jpg";
 import product9 from "../images/products/mug-the-adventure-begins.jpg";
 import product10 from "../images/products/the-adventure-begins-framed-poster.jpg";
@@ -17,47 +15,32 @@ import product11 from "../images/products/the-best-is-yet-to-come-framed-poster.
 ///   products data
 
 export const dealOfTheDayProducts = [
-  // {
-  //   id: 1,
-  //   productImage: product3,
-  //   rating: 3,
-  //   productName: "Pulsating Sprinklers",
-  //   productDescryption:
-  //     "The Pulsating Sprinkler delivers even water coverage with an adjustable spray pattern. Durable, efficient, and easy to install—perfect for lush lawns and gardens!",
-  //   discountPrice: "40",
-  //   originalPrice: "60",
-  // },
   {
-    id: 1,
-    productImage: product3,
-    rating: 3,
+    id: "animal-01",
+    productImage: "/products/agriProducts/DairyAndLivestock/egg3.jpg",
+    rating: 4,
     productName: "Pulsating Sprinklers",
-    productDescryption:
-      "The Pulsating Sprinkler delivers even water coverage with an adjustable spray pattern. Durable, efficient, and easy to install—perfect for lush lawns and gardens!",
-    discountPrice: "0",
-    originalPrice: "60",
+    description:
+      "Farm-fresh chicken eggs, unprocessed and packed with nutrition. Ideal for daily meals and baking.",
+    price: "50 EGP/pack",
+    discountPrice: "45 EGP/pack",
+    tags: ["Dairy", "Eggs", "Poultry", "Essential"],
   },
   {
-    id: 2,
-    productImage: product4,
-    rating: 4,
+    id: "animal-011",
+    productImage: "/products/agriProducts/DairyAndLivestock/steak1.jpg",
+    rating: 5,
     productName: "Drive Sprinkler",
-    productDescryption:
-      "The Drive Sprinkler offers powerful, consistent irrigation with a rotating spray for even coverage. Durable, efficient, and ideal for large lawns and gardens!",
-    discountPrice: "34",
-    originalPrice: "60",
+    description:
+      "Premium quality beef steak slices, vacuum-packed to preserve freshness and flavor.",
+
+    price: "230 EGP/kg",
+    discountPrice: "215 EGP/kg",
+    tags: ["Meat", "Beef", "Packed", "Premium"],
   },
 ];
 
 export const productData = [
-  // {
-  //   id: 1,
-  //   productImage: product1,
-  //   rating: 4,
-  //   productName: "wheel barrows",
-  //   discountPrice: "43",
-  //   originalPrice: "56",
-  // },
   {
     id: 1,
     productImage: product1,

@@ -10,6 +10,7 @@ import { dealOfTheDayProducts } from "../utils/ProductStaticData";
 import { Rating } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../cart/cartSlice";
+import { Link } from "react-router-dom";
 
 function DealOfTheDay() {
   const settings = {
@@ -62,9 +63,9 @@ function DealOfTheDayItem({ data }) {
     rating,
     productImage,
     productName,
-    productDescryption,
+    description,
     discountPrice,
-    originalPrice,
+    price,
   } = data;
 
   const dispatch = useDispatch();
@@ -74,34 +75,38 @@ function DealOfTheDayItem({ data }) {
   }
 
   return (
-    <div className="mx-auto flex max-w-[400px] flex-col overflow-hidden rounded-3xl bg-[#f1f5f9] xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
-      <div className="mx-auto w-full overflow-hidden">
+    <div className="mx-auto flex max-w-[400px] flex-col overflow-hidden rounded-3xl bg-white xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
+      <Link
+        to={`./product-details/${id}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="mx-auto w-full overflow-hidden"
+      >
         <img
           src={productImage}
           alt={productName}
-          className="h-full w-full duration-300 group-hover:scale-110"
+          className="h-full w-full duration-300 hover:scale-110"
         />
-      </div>
-      <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:p-5">
+      </Link>
+      <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:border-l-[1px] 2xl:border-gray-400 2xl:p-5">
         <ItemTimer />
         <p className="text-gray-900">{productName}</p>
 
         <p className="text-apple-500 xl:text-base 2xl:text-xl">
           {Number(discountPrice) !== 0 ? (
             <>
-              ${discountPrice}
-              <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-xl">
-                ${originalPrice}
+              {discountPrice}
+              <span className="ml-1 text-sm text-gray-700 line-through xl:text-base 2xl:text-base">
+                {price}
               </span>
             </>
           ) : (
-            <>${originalPrice}</>
+            <>{price}</>
           )}
         </p>
 
         <Rating value={rating} readonly />
         <p className="max-w-80 xl:line-clamp-2 2xl:line-clamp-3">
-          {productDescryption}
+          {description}
         </p>
         {/* add to cart & other  */}
         <div className="mt-auto flex justify-start gap-4 border-t-2 border-gray-300 pt-3">

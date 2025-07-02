@@ -15,8 +15,6 @@ import { ImageUploader } from "../Shared/ImageUploader";
 import { AiOutlineProduct } from "react-icons/ai";
 
 function fetchData(id) {
-  console.log(id);
-
   return [
     ...cropAndFreshProducesData,
     ...dairyAndLivestockProducts,

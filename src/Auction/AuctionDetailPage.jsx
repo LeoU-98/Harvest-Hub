@@ -179,7 +179,6 @@ function BidConfirmationModal({ modalRef, closeModal, isModalOpen }) {
     //     email,
     //   };
 
-    console.log("Submitting bid:");
     closeModal();
   }
 

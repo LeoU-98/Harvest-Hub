@@ -26,7 +26,7 @@ export default function MerchantProductCard({
         <div className="group relative flex flex-col items-center">
           <Link
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            to={`/ProductDetails/${id}`}
+            to={`/product-details/${id}`}
             className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
           >
             <img
@@ -47,13 +47,13 @@ export default function MerchantProductCard({
           <div className="text-apple-500">
             {Number(discountPrice) !== 0 ? (
               <>
-                ${discountPrice}
+                {discountPrice}
                 <span className="ml-1 text-sm text-gray-600 line-through">
-                  ${price}
+                  {price}
                 </span>
               </>
             ) : (
-              <>${price}</>
+              <>{price}</>
             )}
           </div>
 
@@ -99,7 +99,7 @@ export default function MerchantProductCard({
 }
 
 function EditModal({ product, onClose, onSave }) {
-  const { productImage, productName, price, discountPrice, rating } = product;
+  const { productName, price, discountPrice } = product;
 
   return (
     <motion.div
@@ -126,11 +126,6 @@ function EditModal({ product, onClose, onSave }) {
         <div className="flex flex-col gap-6 md:flex-row">
           {/* Left Side - Image & Upload */}
           <div className="flex flex-1 flex-col items-center">
-            {/* <img
-              src={productImage}
-              alt="preview"
-              className="max-w-full rounded-2xl object-cover shadow"
-            /> */}
             <ImageUploader />
             <div className="mt-4 w-full rounded-2xl bg-white p-5">
               <label className="mb-1 block text-sm text-gray-700">

@@ -79,5 +79,5 @@ export default CartPreview;
 CartPreview.propTypes = {
   isCartPreviewOpen: propTypes.bool,
   setIsCartPreviewOpen: propTypes.func,
-  buttonRef: propTypes.element,
+  buttonRef: propTypes.object,
 };

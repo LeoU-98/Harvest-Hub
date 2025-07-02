@@ -17,7 +17,7 @@ function DashboardLayout() {
                   : "bg-apple-500 text-white hover:bg-black"
               }`
             }
-            to={"./ProductsDashboard"}
+            to={"./products-dashboard"}
           >
             <MdProductionQuantityLimits className="size-6" />
             Products Dashboard
@@ -32,7 +32,7 @@ function DashboardLayout() {
                   : "bg-apple-500 text-white hover:bg-black"
               }`
             }
-            to={"./EquipmentDashboard"}
+            to={"./equipment-dashboard"}
           >
             <GiToolbox className="size-6" />
             Equipments Dashboard
@@ -47,7 +47,7 @@ function DashboardLayout() {
                   : "bg-apple-500 text-white hover:bg-black"
               }`
             }
-            to={"./SuppliesDashboard"}
+            to={"./supplies-dashboard"}
           >
             <TfiPackage className="size-6" />
             Supplies Dashboard

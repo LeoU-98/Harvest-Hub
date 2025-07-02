@@ -27,7 +27,7 @@ export default function ProductCard({
       <div className="group relative flex flex-col items-center">
         <Link
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          to={`/ProductDetails/${id}`}
+          to={`/product-details/${id}`}
           className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
         >
           <img
@@ -47,9 +47,9 @@ export default function ProductCard({
         <div className="text-apple-500">
           {Number(discountPrice) !== 0 ? (
             <>
-              ${discountPrice}
+              {discountPrice}
               <span className="ml-1 text-sm text-gray-600 line-through">
-                ${price}
+                {price}
               </span>
             </>
           ) : (

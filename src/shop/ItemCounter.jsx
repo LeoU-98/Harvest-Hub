@@ -37,8 +37,6 @@ export default function ItemCounter({
     dispatch(updateItemCount({ id: itemID, count: Number(e.target.value) }));
   }
 
-  console.log(item);
-
   return (
     <div className="flex items-center justify-center gap-2">
       <button
@@ -68,7 +66,7 @@ export default function ItemCounter({
 }
 
 ItemCounter.propTypes = {
-  itemID: propTypes.number,
+  itemID: propTypes.string,
   handleOpen: propTypes.func,
   forCartView: propTypes.bool,
 };

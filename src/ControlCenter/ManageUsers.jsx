@@ -22,7 +22,7 @@ export default function ManageUsers() {
   const modalRef = useRef(null);
 
   const handleSearch = () => {
-    if (searchId.trim() === dummyUser.id) {
+    if (searchId.trim() === dummyUser.email) {
       setUser(dummyUser);
     } else {
       setUser(null);
@@ -166,6 +166,6 @@ function ManageUserModal({ user, isModalOpen, modalRef, closeModal }) {
 ManageUserModal.propTypes = {
   user: propTypes.object,
   isModalOpen: propTypes.bool,
-  modalRef: propTypes.string,
+  modalRef: propTypes.object,
   closeModal: propTypes.func,
 };

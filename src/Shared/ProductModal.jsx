@@ -143,10 +143,10 @@ function Specification() {
 
 ItemPreview.propTypes = {
   handleOpen: propTypes.func,
-  itemID: propTypes.number,
+  itemID: propTypes.string,
 };
 ProductModal.propTypes = {
   handleOpen: propTypes.func,
   open: propTypes.bool,
-  itemID: propTypes.number,
+  itemID: propTypes.string,
 };

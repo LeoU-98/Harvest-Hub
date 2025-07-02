@@ -18,7 +18,7 @@ export default function NavList() {
         </li>
         <li>
           <NavLink
-            to="Dashboard/ProductsDashboard"
+            to="dashboard/products-dashboard"
             className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
           >
             Dashboard

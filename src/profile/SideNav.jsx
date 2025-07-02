@@ -51,7 +51,6 @@ export default SideNav;
 function NavIcon({ data }) {
   const { path, icon, title } = data;
 
-  console.log(icon);
   return (
     <li
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

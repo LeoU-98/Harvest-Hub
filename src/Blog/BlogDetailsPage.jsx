@@ -15,10 +15,6 @@ function BlogView() {
 
   const blog = blogDetailsData.find((b) => Number(b.id) === Number(id));
 
-  console.log(id);
-
-  console.log(blog);
-
   const [comments, setComments] = useState([
     {
       id: 1,

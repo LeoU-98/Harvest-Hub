@@ -4,7 +4,7 @@ import ProductShare from "./ProductShare";
 import propTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../cart/cartSlice";
-import { productData } from "../../utils/ProductStaticData";
+import { extractPriceDetails } from "../../utils/helpers";
 
 ProductSpecifications.propTypes = { data: propTypes.object };
 
@@ -18,15 +18,11 @@ export default function ProductSpecifications({ data }) {
     numberOfReviews,
     rating,
     discountPrice,
-    originalPrice,
+    price,
     specs,
   } = data;
 
   const dispatch = useDispatch();
-
-  // const productImage = productData.find(
-  //   (item) => item.id === Number(id),
-  // ).productImage;
 
   function handleAddToCart() {
     dispatch(
@@ -36,7 +32,7 @@ export default function ProductSpecifications({ data }) {
         productImage: productImages,
         productName: productName,
         discountPrice: discountPrice,
-        originalPrice: originalPrice,
+        originalPrice: price,
       }),
     );
   }
@@ -58,15 +54,20 @@ export default function ProductSpecifications({ data }) {
           <a className="text-gray-700 hover:text-apple-500">Write a review</a>
         </div>
         <div>
-          <span className="text-sm text-gray-800 line-through">
-            {originalPrice}$
-          </span>
+          <span className="text-sm text-gray-800 line-through">{price}</span>
           <div className="flex items-center gap-4">
             <span className="flex items-center justify-center text-2xl text-apple-500">
-              {discountPrice}$
+              {discountPrice > 0 ? discountPrice : price}
             </span>
             <span className="flex h-fit items-center justify-center bg-apple-500 px-1 py-[2px] text-[12px] font-bold text-white">
-              Save {Math.round((1 - discountPrice / originalPrice) * 100)}%
+              Save{" "}
+              {Math.round(
+                (1 -
+                  extractPriceDetails(discountPrice).numberOnly /
+                    extractPriceDetails(price).numberOnly) *
+                  100,
+              )}
+              %
             </span>
           </div>
         </div>

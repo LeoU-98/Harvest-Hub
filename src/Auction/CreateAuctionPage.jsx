@@ -37,8 +37,6 @@ export default function CreateAuctionPage() {
     images.forEach((img, index) => {
       formData.append(`image${index + 1}`, img);
     });
-
-    console.log("Form submitted!");
   };
 
   return (

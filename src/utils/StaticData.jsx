@@ -41,28 +41,20 @@ export const CategoryCarouselArray = [
     image: thumb1,
     text: "Plants",
   },
+
   {
     id: 2,
-    image: thumb2,
-    text: "Shovel & Rake",
-  },
-  {
-    id: 3,
     image: thumb3,
     text: "Fertilizer",
   },
   {
-    id: 4,
+    id: 3,
     image: thumb4,
     text: "Seed Bag",
   },
+
   {
-    id: 5,
-    image: thumb5,
-    text: "Watering Can",
-  },
-  {
-    id: 6,
+    id: 4,
     image: thumb6,
     text: "Accessories",
   },

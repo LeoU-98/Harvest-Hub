@@ -23,7 +23,6 @@ export default function BasicInfoEdit() {
   });
 
   const handleUpdate = (updatedData) => {
-    console.log("Updated Basic Info:", updatedData);
     // Optionally send to backend
   };
 

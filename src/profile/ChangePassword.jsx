@@ -18,7 +18,7 @@ function ChangePassword() {
       alert("New passwords do not match.");
       return;
     }
-    console.log("Password change request:", formData);
+
     // You can call your backend here
   };
 

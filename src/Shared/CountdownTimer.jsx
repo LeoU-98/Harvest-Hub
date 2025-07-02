@@ -37,21 +37,7 @@ export const CountdownTimer = ({ endTime }) => {
       {timeLeft.m}m<span>:</span>
       {timeLeft.s}s
     </div>
-    // <div className="flex gap-1 text-white">
-    //   <p className="flex size-9 items-center justify-center rounded-lg bg-green-500 p-2">
-    //     {timeLeft.d}d
-    //   </p>
-    //   <p className="flex size-9 items-center justify-center rounded-lg bg-green-500 p-2">
-    //     {timeLeft.h}h
-    //   </p>
-    //   <p className="flex size-9 items-center justify-center rounded-lg bg-green-500 p-2">
-    //     {timeLeft.m}m
-    //   </p>
-    //   <p className="flex size-9 items-center justify-center rounded-lg bg-green-500 p-2">
-    //     {timeLeft.s}s
-    //   </p>
-    // </div>
   );
 };
 
-CountdownTimer.propTypes = { endTime: propTypes.Date };
+CountdownTimer.propTypes = { endTime: propTypes.string };

@@ -9,7 +9,6 @@ export default function SensorCard({ image, label, value, status }) {
       Low: "bg-red-100 text-red-800",
     }[status] || "bg-gray-100 text-gray-800";
 
-  console.log(typeof image);
   return (
     <div className="flex gap-10 rounded-2xl border bg-white p-4 shadow-sm">
       <div>

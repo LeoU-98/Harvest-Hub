@@ -74,12 +74,12 @@ export default function FieldDetails() {
           </h3>
           <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
             <ImageAnalysisResult
-              imageUrl="/img/west-field1.jpg"
+              imageUrl="/Picture2.jpg"
               result="Disease: Fungal Infection"
               confidence={85}
             />
             <ImageAnalysisResult
-              imageUrl="/img/west-field2.jpg"
+              imageUrl="/Picture1.jpg"
               result="Not Ripe Yet"
               confidence={90}
             />

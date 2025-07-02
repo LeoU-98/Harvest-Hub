@@ -1,131 +1,64 @@
+import { useState } from "react";
 import propTypes from "prop-types";
-
-///////////////////////////////
-//     Filter Data & Options //
-///////////////////////////////
 
 const filterData = [
   {
-    title: "Categories",
+    title: "Category",
     optionsList: [
-      {
-        optionTitle: "gloves",
-      },
-      {
-        optionTitle: "hand trowel",
-      },
-      {
-        optionTitle: "pruning shears",
-      },
+      { optionTitle: "Fruits" },
+      { optionTitle: "Vegetables" },
+      { optionTitle: "Dairy Products" },
+      { optionTitle: "Meat & Poultry" },
+      { optionTitle: "Seeds" },
+      { optionTitle: "Saplings" },
+      { optionTitle: "Honey" },
     ],
   },
   {
-    title: "size",
+    title: "Rating",
     optionsList: [
-      {
-        optionTitle: "s",
-      },
-      {
-        optionTitle: "m",
-      },
-      {
-        optionTitle: "l",
-      },
-      {
-        optionTitle: "XL",
-      },
+      { optionTitle: "5 Stars" },
+      { optionTitle: "4 Stars & Up" },
+      { optionTitle: "3 Stars & Up" },
+      { optionTitle: "2 Stars & Up" },
+      { optionTitle: "1 Star & Up" },
     ],
   },
-  {
-    title: "color",
-    optionsList: [
-      {
-        optionTitle: "white",
-      },
-      {
-        optionTitle: "black",
-      },
-    ],
-  },
-  {
-    title: "composition",
-    optionsList: [
-      {
-        optionTitle: "ceramic",
-      },
-      {
-        optionTitle: "cotton",
-      },
-      {
-        optionTitle: "matt paper",
-      },
-      {
-        optionTitle: "polyester",
-      },
-      {
-        optionTitle: "recycled cardboard",
-      },
-    ],
-  },
-  // {
-  //   title: "property",
-  //   optionsList: [
-  //     {
-  //       optionTitle: "120 pages",
-  //     },
-  //     {
-  //       optionTitle: "long sleeves",
-  //     },
-  //     {
-  //       optionTitle: "removable cover",
-  //     },
-  //     {
-  //       optionTitle: "short sleeves",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "dimension",
-  //   optionsList: [
-  //     {
-  //       optionTitle: "40x60 cm",
-  //     },
-  //     {
-  //       optionTitle: "60x90 cm",
-  //     },
-  //     {
-  //       optionTitle: "80x120 cm",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "paper type",
-  //   optionsList: [
-  //     {
-  //       optionTitle: "ruled",
-  //     },
-  //     {
-  //       optionTitle: "plain",
-  //     },
-  //     {
-  //       optionTitle: "squarred",
-  //     },
-  //     {
-  //       optionTitle: "doted",
-  //     },
-  //   ],
-  // },
 ];
 
-////////////////////////////////////
-
 function FilterBy() {
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+
   return (
-    <div className="flex flex-col rounded-2xl border-[1px] border-gray-300 bg-white pb-3 lg:w-60 2xl:w-64">
-      <h2 className="mb-5 flex h-[54px] items-center justify-center border-b-[1px] border-gray-300 text-sm font-semibold uppercase">
+    <div className="flex flex-col rounded-2xl border border-gray-300 bg-white pb-3 lg:w-60 2xl:w-64">
+      <h2 className="mb-5 flex h-[54px] items-center justify-center border-b border-gray-300 text-sm font-semibold uppercase">
         filter by
       </h2>
-      <div className="mt-1 flex flex-col gap-1">
+
+      <div className="mb-4 px-3">
+        <h3 className="mb-2 font-semibold capitalize text-gray-800">
+          Price Range
+        </h3>
+        <div className="flex gap-2">
+          <input
+            type="number"
+            placeholder="Min"
+            value={minPrice}
+            onChange={(e) => setMinPrice(e.target.value)}
+            className="w-full rounded border px-2 py-1 text-sm text-gray-800"
+          />
+          <input
+            type="number"
+            placeholder="Max"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+            className="w-full rounded border px-2 py-1 text-sm text-gray-800"
+          />
+        </div>
+      </div>
+
+      <div className="mt-1 flex flex-col gap-3">
         {filterData.map((el, key) => (
           <FilterSection data={el} key={key} />
         ))}
@@ -147,8 +80,8 @@ function FilterSection({ data }) {
 
   return (
     <section className="px-3">
-      <h3 className="font-semibold capitalize text-gray-800">{title}</h3>
-      <ul className="">
+      <h3 className="mb-1 font-semibold capitalize text-gray-800">{title}</h3>
+      <ul className="space-y-1">
         {optionsList.map((el, key) => (
           <FilterOption data={el} key={key} />
         ))}
@@ -166,13 +99,17 @@ function FilterOption({ data }) {
 
   return (
     <li>
-      <input className="hidden" type="checkbox" id={`check-${optionTitle}`} />
+      <input
+        className="peer hidden"
+        type="checkbox"
+        id={`check-${optionTitle}`}
+      />
       <label
-        className="flex h-8 cursor-pointer items-center rounded px-1"
+        className="flex h-8 cursor-pointer items-center rounded px-1 hover:bg-gray-100 peer-checked:bg-apple-100"
         htmlFor={`check-${optionTitle}`}
       >
-        <span className="checkbox-inner flex items-center justify-center rounded-full border-2 border-gray-300 text-transparent"></span>
-        <span className="mx-2 select-none capitalize text-gray-900 hover:text-apple-500">
+        <span className="mr-2 size-4 rounded-full border-2 border-gray-300 peer-checked:border-apple-500 peer-checked:bg-apple-500"></span>
+        <span className="select-none capitalize text-gray-900">
           {optionTitle}
         </span>
       </label>

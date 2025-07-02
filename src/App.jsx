@@ -118,19 +118,19 @@ const router = createBrowserRouter([
         element: <ManageProducts />,
       },
       {
-        path: "Dashboard",
+        path: "dashboard",
         element: <DashboardLayout />,
         children: [
           {
-            path: "ProductsDashboard",
+            path: "products-dashboard",
             element: <ProductsDashboard />,
           },
           {
-            path: "EquipmentDashboard",
+            path: "equipment-dashboard",
             element: <EquipmentDashboard />,
           },
           {
-            path: "SuppliesDashboard",
+            path: "supplies-dashboard",
             element: <SuppliesDashboard />,
           },
         ],
@@ -172,15 +172,15 @@ const router = createBrowserRouter([
             element: <SignIn />,
           },
           {
-            path: "forgotpassword",
+            path: "forgot-password",
             element: <ForgotPassword />,
           },
           {
-            path: "resetpassword",
+            path: "reset-password",
             element: <ResetPassword />,
           },
           {
-            path: "EnterCode",
+            path: "enter-code",
             element: <EnterCode />,
           },
         ],
@@ -205,7 +205,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "ProductDetails/:id",
+        path: "product-details/:id",
         element: <ProductDetailsPage />,
       },
     ],

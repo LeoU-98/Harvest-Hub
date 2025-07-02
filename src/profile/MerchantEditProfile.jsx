@@ -121,7 +121,6 @@ export default function MerchantEditProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submitted Setup Data:", formData);
   };
 
   return (

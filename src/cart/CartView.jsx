@@ -41,22 +41,23 @@ function CartView() {
 export default CartView;
 
 function ActionAside() {
-  const { totalItemsInCart, totalCartPrice } = useCart();
+  const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
+    useCart();
 
   return (
     <div className="h-fit basis-2/5 overflow-hidden rounded-2xl border-[1px] border-gray-300 bg-white">
       <div>
         <div className="flex justify-between border-b-[1px] border-gray-300 px-3 py-4">
           <span className="text-sm">{totalItemsInCart} items</span>
-          <span>${totalCartPrice.toFixed(2).replace(/\.?0+$/, "")}</span>
+          <span>
+            {Number(totalCartPriceNumber) + " " + totalCartPriceCurrency}
+          </span>
         </div>
         <div className="flex justify-between border-b-[1px] border-gray-300 px-3 py-4">
           <span className="text-sm">Total Price (tax incl.)</span>
           <span className="text-lg">
-            $
-            {(totalCartPrice + 0.14 * totalCartPrice)
-              .toFixed(2)
-              .replace(/\.?0+$/, "")}
+            {Number(totalCartPriceNumber) + 0.14 * Number(totalCartPriceNumber)}
+            {" " + totalCartPriceCurrency}
           </span>
         </div>
         <form className="py-4">

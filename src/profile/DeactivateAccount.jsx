@@ -12,11 +12,7 @@ function DeactivateAccount() {
       alert("You must confirm the deactivation.");
       return;
     }
-    console.log("Account Deactivation Submitted:", {
-      password,
-      reason,
-      feedback,
-    });
+
     // Call API to deactivate here
   };
 

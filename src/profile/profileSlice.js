@@ -32,7 +32,7 @@ const profileSlice = createSlice({
     },
 
     logOut: (state) => {
-      console.log("from logout");
+    
 
       state.logged = false;
       state.email = "";

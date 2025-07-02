@@ -29,7 +29,7 @@ const productReviewData = [
   },
 ];
 
-export default function ProductReviewsTab({ data }) {
+export default function ProductReviews({ data }) {
   return (
     <section className="flex min-h-72 flex-col gap-8 bg-white px-4 py-8 lg:flex-row lg:gap-2 lg:px-3 xl:px-4 2xl:gap-8">
       <div className="shrink-0">
@@ -147,4 +147,4 @@ function UserReview({ review }) {
 
 UserReview.propTypes = { review: propTypes.object };
 
-ProductReviewsTab.propTypes = { data: propTypes.object };
+ProductReviews.propTypes = { data: propTypes.array };

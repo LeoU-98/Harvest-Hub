@@ -13,7 +13,7 @@ export default function AddToCartButton({ svgClassName, itemID }) {
     <>
       <button
         onClick={handleOpen}
-        className={`bg-apple-500 flex items-center gap-1 rounded-full px-4 py-[6px] text-xs capitalize text-white duration-300 hover:bg-black`}
+        className={`flex items-center gap-1 rounded-full bg-apple-500 px-4 py-[6px] text-xs capitalize text-white duration-300 hover:bg-black`}
       >
         <ShoppingBagIcon className={`size-6 text-white ${svgClassName}`} />
         <span className="relative top-[1px] flex items-center justify-center">
@@ -29,5 +29,5 @@ export default function AddToCartButton({ svgClassName, itemID }) {
 AddToCartButton.propTypes = {
   data: propTypes.object,
   svgClassName: propTypes.string,
-  itemID: propTypes.number,
+  itemID: propTypes.string,
 };

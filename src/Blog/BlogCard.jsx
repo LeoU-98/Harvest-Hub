@@ -67,7 +67,7 @@ function BlogCardReview({ blogAuthor, blogComments, blogReviews }) {
 }
 
 BlogCardReview.propTypes = {
-  blogAuthor: propTypes.object,
+  blogAuthor: propTypes.string,
   blogComments: propTypes.number,
   blogReviews: propTypes.number,
 };

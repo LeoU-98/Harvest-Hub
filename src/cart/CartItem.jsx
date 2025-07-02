@@ -4,11 +4,19 @@ import propTypes from "prop-types";
 import ItemCounter from "../shop/ItemCounter";
 import { removeItem } from "./cartSlice";
 import { useDispatch } from "react-redux";
+import { extractPriceDetails } from "../utils/helpers";
 
 export default function CartItem({ data }) {
-  const { id, productImage, productName, discountPrice, originalPrice, count } =
-    data;
+  const { id, productImage, productName, discountPrice, price, count } = data;
   const dispatch = useDispatch();
+
+  const discount = extractPriceDetails(discountPrice).numberOnly;
+  const orignalPrice = extractPriceDetails(price).numberOnly;
+  const finalPrice = discount > 0 ? discount : orignalPrice;
+
+  console.log(discount);
+  console.log(orignalPrice);
+  console.log(finalPrice);
 
   return (
     <li className="flex flex-col items-center border-b-[1px] border-gray-300 px-2 md:flex-row">
@@ -20,12 +28,12 @@ export default function CartItem({ data }) {
         <div className="flex w-36 flex-col gap-1 py-4">
           <span className="capitalize">{productName}</span>
           <div className="flex gap-4">
-            <span className="flex items-center justify-center text-sm text-gray-600 line-through">{`$${originalPrice}`}</span>
+            <span className="flex items-center justify-center text-sm text-gray-600 line-through">{`${price}`}</span>
             <span className="flex items-center justify-center rounded-br-xl rounded-tl-xl bg-apple-500 px-[6px] py-[3px] text-xs text-white">
-              -20%
+              {Math.trunc((1 - discount / orignalPrice) * 100)}%
             </span>
           </div>
-          <span className="text-base text-apple-500">{`$${discountPrice}`}</span>
+          <span className="text-base text-apple-500">{`${discountPrice}`}</span>
         </div>
         <Specification />
       </div>
@@ -33,7 +41,7 @@ export default function CartItem({ data }) {
         {/* count */}
         <ItemCounter itemID={id} forCartView={true} />
         {/* total price */}
-        <div className="flex min-w-12 items-center justify-center">{`$${(count * discountPrice).toFixed(2).replace(/\.?0+$/, "")}`}</div>
+        <div className="flex min-w-12 items-center justify-center">{`${(count * finalPrice).toFixed(2).replace(/\.?0+$/, "")}`}</div>
         {/* delete btn  */}
         <button
           onClick={() => dispatch(removeItem({ id: id }))}

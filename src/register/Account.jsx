@@ -16,7 +16,7 @@ function Account() {
             <Link to="offer">
               <img
                 src={image1}
-                className="w-full duration-300 hover:scale-110"
+                className="w-full rounded-2xl duration-300 hover:scale-110"
               />
             </Link>
           </div>

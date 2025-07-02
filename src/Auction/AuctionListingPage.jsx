@@ -13,15 +13,13 @@ export default function AuctionListingsPage() {
   const LiveAuctionsData = getActiveAuctions(auctions);
 
   const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+
   const currentItems = LiveAuctionsData.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(LiveAuctionsData.length / itemsPerPage);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % LiveAuctionsData.length;
-    console.log(
-      `User requested page number ${event.selected}, which is offset ${newOffset}`,
-    );
+
     setItemOffset(newOffset);
   };
 
@@ -29,7 +27,7 @@ export default function AuctionListingsPage() {
     return (
       <div className="flex items-center justify-center rounded-2xl bg-white lg:h-[500px]">
         <p className="text-2xl text-gray-900">
-          Sorry , No Active Bids Right Now{" "}
+          Sorry , No Active Auctions Right Now{" "}
         </p>
       </div>
     );
@@ -40,7 +38,7 @@ export default function AuctionListingsPage() {
       <h3 className="mb-4 text-2xl font-bold text-white">Live Auctions</h3>
 
       <div className="auction-scroll grid grid-cols-1 items-center gap-4 p-4 md:grid-cols-2 lg:h-[500px] lg:grid-cols-3">
-        {currentItems.map((auction) => (
+        {currentItems?.map((auction) => (
           <AuctionCard key={auction.id} data={auction} />
         ))}
       </div>
