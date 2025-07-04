@@ -12,11 +12,11 @@ import {
   PowerIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
-import leou from "../../images/leou.jpg";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logOut } from "../../profile/profileSlice";
+import { logout } from "../../register/authSlice";
 
+import propTypes from "prop-types";
 const profileMenuItems = [
   {
     label: "My Profile",
@@ -35,12 +35,12 @@ const profileMenuItems = [
   },
 ];
 
-export default function ProfileMenu() {
+export default function ProfileMenu({ data }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dispatch = useDispatch();
 
   function closeMenu(label) {
-    if (label === "Sign Out") dispatch(logOut());
+    if (label === "Sign Out") dispatch(logout());
     setIsMenuOpen(false);
   }
 
@@ -51,8 +51,8 @@ export default function ProfileMenu() {
           type="button"
           className="flex w-fit items-center gap-2 self-center rounded-full border border-gray-500 pr-2 text-sm outline-none duration-500"
         >
-          <img className="size-12 rounded-full" src={leou} />
-          <p className="cursor text-base duration-500">LeoU</p>
+          <img className="size-12 rounded-full" src={data.image} />
+          <p className="cursor text-base duration-500">{data.name}</p>
           <ChevronDownIcon
             strokeWidth={2.5}
             className={`h-3 w-3 transition-transform ${
@@ -94,3 +94,4 @@ export default function ProfileMenu() {
     </Menu>
   );
 }
+ProfileMenu.propTypes = { data: propTypes.object };

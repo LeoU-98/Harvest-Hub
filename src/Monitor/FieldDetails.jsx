@@ -8,6 +8,8 @@ import moistureSensor from "../images/moistureSensor.png";
 import humditySensor from "../images/humditySensor.png";
 import tempertureSensor from "../images/tempertureSensor.png";
 
+// import fieldDetailsData from "../utils/MonitorStaticData";
+
 export default function FieldDetails() {
   const [selectedField, setSelectedField] = useState("West Zone");
 

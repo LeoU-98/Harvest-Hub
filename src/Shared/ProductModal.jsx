@@ -70,7 +70,7 @@ function ItemPreview({ handleOpen, itemID }) {
               {item?.productName}
             </span>
             <span className="">
-              ${item?.discountPrice ? item?.discountPrice : 0}
+              {item?.discountPrice ? item?.discountPrice : 0}
             </span>
             <span className="">Quantity:{item?.count ? item?.count : 0}</span>
             <span className="mb-2">

@@ -5,23 +5,25 @@ import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import ProfileMenu from "./Mid/ProfileMenu";
 import { useCart } from "../cart/cartSlice";
-import { useProfile } from "../profile/profileSlice";
+import { useSelector } from "react-redux";
 
 function HeaderMid() {
   const [isCartPreviewOpen, setIsCartPreviewOpen] = useState(false);
 
   const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
     useCart();
-  const { logged } = useProfile();
+
   const buttonRef = useRef(null);
+
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
 
   return (
     <div className="bg-white">
       <div className="container mx-auto flex flex-wrap justify-between sm:px-3">
         {/* left */}
         <div className="flex items-center p-4 sm:p-0 sm:py-2">
-          {logged ? (
-            <ProfileMenu />
+          {isAuthenticated ? (
+            <ProfileMenu data={user} />
           ) : (
             <Link
               to={"/account/signin"}

@@ -31,6 +31,13 @@ function BreadCrumb() {
         isLast: index === pathSegments.length - 1,
       };
 
+    if (label.toLowerCase() === "blog view")
+      return {
+        label: label,
+        to: "",
+        isLast: index === pathSegments.length - 1,
+      };
+
     return {
       label: label,
       to: path,
@@ -43,6 +50,11 @@ function BreadCrumb() {
   if (pathSegments.includes("product-details")) {
     currentItem = "product";
     breadcrumbs[breadcrumbs.length - 1].label = "Prodcut";
+  }
+
+  if (pathSegments.includes("blog-view")) {
+    currentItem = "blog";
+    breadcrumbs[breadcrumbs.length - 1].label = "blog";
   }
 
   return (

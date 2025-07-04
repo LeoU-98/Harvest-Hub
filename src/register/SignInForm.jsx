@@ -1,9 +1,9 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import propTypes from "prop-types";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { logIn } from "../profile/profileSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { login } from "./authSlice";
 
 export default function SignInForm({ className }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,7 +11,9 @@ export default function SignInForm({ className }) {
     email: "",
     password: "",
   });
+
   const dispatch = useDispatch();
+  const authError = useSelector((state) => state.auth.error);
 
   const handleCredentialsEntry = (e) => {
     const { name, value } = e.target;
@@ -25,19 +27,10 @@ export default function SignInForm({ className }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/;
-    const passwordRegex = /^123.*/;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-    const { email, password } = userCredentials;
-
-    if (!emailRegex.test(email)) {
-      console.log("❌ Invalid email format.");
-    } else if (!passwordRegex.test(password)) {
-      console.log('❌ Password must start with "123".');
-    } else {
-      dispatch(logIn({ logged: true, email, password }));
-      console.log("✅ Login successful!");
-    }
+    dispatch(login({ email, password }));
   };
 
   return (
@@ -46,6 +39,7 @@ export default function SignInForm({ className }) {
       <label>
         Email
         <input
+          required
           type="text"
           name="email"
           value={userCredentials.email}
@@ -57,6 +51,7 @@ export default function SignInForm({ className }) {
         Password
         <div className="flex">
           <input
+            required
             type={showPassword ? "text" : "password"}
             name="password"
             value={userCredentials.password}
@@ -76,6 +71,7 @@ export default function SignInForm({ className }) {
           </button>
         </div>
       </label>
+      {authError && <p className="text-red-500">{authError}</p>}
       <button
         type="submit"
         className="rounded-xl bg-apple-500 py-3 text-sm font-semibold uppercase text-white duration-300 hover:bg-black focus:bg-black active:translate-y-1"
