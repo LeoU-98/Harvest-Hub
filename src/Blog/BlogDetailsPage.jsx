@@ -405,16 +405,16 @@ function BlogDetails({ data }) {
 
 function BlogViewCardReview({ blogAuthor, blogComments, blogDate }) {
   return (
-    <ul className="flex items-center gap-4 fill-gray-700 text-xs text-gray-700 sm:text-sm">
-      <li className="flex items-center justify-between gap-1">
+    <ul className="flex flex-col gap-4 fill-gray-700 text-xs text-gray-700 sm:text-sm md:flex-row md:items-center">
+      <li className="flex items-center justify-start gap-1 md:justify-between">
         <UserIcon className="inline-block size-5" />
         <span>{blogAuthor}</span>
       </li>
-      <li className="flex items-center justify-between gap-1">
+      <li className="flex items-center justify-start gap-1 md:justify-between">
         <CalendarDaysIcon className="relative top-[-1px] inline-block size-5" />
         <span>{blogDate}</span>
       </li>
-      <li className="flex items-center justify-between gap-1">
+      <li className="flex items-center justify-start gap-1 md:justify-between">
         <ChatBubbleLeftRightIcon className="inline-block size-5" />
         <span>{`${blogComments} Comments`}</span>
       </li>

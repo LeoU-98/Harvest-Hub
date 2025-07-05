@@ -39,7 +39,7 @@ export default function MyAuctionsPage() {
     <div>
       <h2 className="mb-4 text-2xl font-bold text-white">My Auctions</h2>
 
-      <div className="auction-scroll grid grid-cols-3 items-center gap-6 p-2 pr-3 lg:h-[500px]">
+      <div className="auction-scroll grid grid-cols-1 items-center gap-6 p-2 pr-3 lg:h-[600px] lg:grid-cols-3 2xl:h-[500px]">
         {currentItems.map((auction) => (
           <MyAuctionCard key={auction.id} auction={auction} />
         ))}
@@ -96,7 +96,7 @@ function MyAuctionCard({ auction }) {
 
   return (
     <>
-      <div className="rounded-2xl border bg-white p-5">
+      <div className="flex flex-col rounded-2xl border bg-white p-5 md:flex-row lg:flex-col">
         <div className="flex items-center justify-center">
           <img
             src={auction.images[0]}
@@ -136,7 +136,7 @@ function MyAuctionCard({ auction }) {
             </p>
           </div>
 
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap items-start gap-3 lg:h-24 xl:h-auto">
             {auction.status !== "Ended" && (
               <button
                 className="rounded-md bg-red-500 px-4 py-1.5 text-white hover:bg-red-600"

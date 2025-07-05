@@ -5,11 +5,11 @@ import { FaUsers } from "react-icons/fa";
 export default function ControlCenter() {
   return (
     <div className="container mx-auto items-center rounded-lg pt-16">
-      <ul className="mb-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-white p-4">
+      <ul className="mb-4 flex w-full flex-col items-center justify-center gap-2 rounded-2xl bg-white p-4 md:flex-row">
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
+              `flex w-72 items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 md:w-auto ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"
@@ -25,7 +25,7 @@ export default function ControlCenter() {
         <li>
           <NavLink
             className={({ isActive }) =>
-              `flex items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 ${
+              `flex w-72 items-center justify-center gap-2 rounded-full px-5 py-2 duration-300 md:w-auto ${
                 isActive
                   ? "bg-black text-white"
                   : "bg-apple-500 text-white hover:bg-black"

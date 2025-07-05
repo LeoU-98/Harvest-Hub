@@ -55,7 +55,7 @@ export default function ManageProducts() {
           Manage Products
         </h3>
 
-        <div className="mb-5 flex items-center justify-between rounded-2xl bg-white p-8">
+        <div className="mb-5 flex flex-col items-center justify-between gap-5 rounded-2xl bg-white p-8 sm:flex-row">
           <h3 className="text-2xl font-semibold text-green-800">My Products</h3>
           <button
             onClick={() => setShowAddModal(true)}
@@ -69,7 +69,7 @@ export default function ManageProducts() {
         {/* <div className="flex w-full gap-3"> */}
         <div className="flex w-full flex-col justify-between">
           <div>
-            <div className="mb-5 flex w-full items-center justify-between gap-5 rounded-2xl bg-white px-5 py-3">
+            <div className="mb-5 flex w-full flex-col items-center justify-between gap-5 rounded-2xl bg-white px-5 py-3 md:flex-row">
               <div className="flex items-center justify-center gap-2">
                 <div className="rounded-full border-gray-200 bg-apple-500 p-1 text-white outline-none">
                   <AiOutlineProduct className="size-6 stroke-1" />
@@ -81,7 +81,7 @@ export default function ManageProducts() {
               <SearchBox onSearch={setSearchQuery} />
             </div>
 
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:h-[775px] lg:grid-cols-3 lg:grid-rows-2 xl:grid-cols-4">
+            <div className="grid grid-cols-1 place-items-center gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {currentItems.map((item) => (
                 <MerchantProductCard
                   imgClassName="2xl:size-[12.1rem] lg:size-[12rem]"

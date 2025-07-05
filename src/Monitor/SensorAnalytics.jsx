@@ -13,6 +13,8 @@ import {
 import { useState } from "react";
 import { Select, Option } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import propTypes from "prop-types";
+import { sensorHealthData } from "../utils/MonitorStaticData";
 
 const fieldData = {
   "West Zone": [
@@ -125,7 +127,7 @@ export default function SensorAnalytics() {
       </div>
 
       {/* KPI Boxes */}
-      <div className="grid grid-cols-1 gap-4 rounded-2xl bg-white p-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 rounded-2xl bg-white p-5 lg:grid-cols-3">
         <div className="rounded-xl bg-green-50 p-4 text-green-700 shadow">
           <h4 className="text-sm font-semibold">Soil Moisture</h4>
           <p className="text-lg font-bold">Avg: {moistureStats.avg}%</p>
@@ -153,45 +155,36 @@ export default function SensorAnalytics() {
 
       <div className="mt-6">
         <h3 className="mb-4 text-2xl font-bold text-white">Device Health</h3>
-        <div className="grid grid-cols-3 gap-4">
-          <div className="rounded-xl border bg-white p-4 shadow">
-            <h4 className="mb-2 font-semibold text-gray-700">Soil Sensor A</h4>
-            <p className="text-sm text-gray-600">
-              Status: <span className="font-medium text-green-600">Online</span>
-            </p>
-            <p className="text-sm text-gray-600">
-              Battery: <span className="font-medium text-yellow-600">67%</span>
-            </p>
-            <p className="text-sm text-gray-600">Last Sync: 10 min ago</p>
-          </div>
-
-          <div className="rounded-xl border bg-white p-4 shadow">
-            <h4 className="mb-2 font-semibold text-gray-700">
-              Humidity Sensor B
-            </h4>
-            <p className="text-sm text-gray-600">
-              Status: <span className="font-medium text-green-600">Online</span>
-            </p>
-            <p className="text-sm text-gray-600">
-              Battery: <span className="font-medium text-green-600">90%</span>
-            </p>
-            <p className="text-sm text-gray-600">Last Sync: 8 min ago</p>
-          </div>
-
-          <div className="rounded-xl border bg-white p-4 shadow">
-            <h4 className="mb-2 font-semibold text-gray-700">
-              Temperature Sensor C
-            </h4>
-            <p className="text-sm text-gray-600">
-              Status: <span className="font-medium text-green-600">Online</span>
-            </p>
-            <p className="text-sm text-gray-600">
-              Battery: <span className="font-medium text-orange-600">75%</span>
-            </p>
-            <p className="text-sm text-gray-600">Last Sync: 5 min ago</p>
-          </div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          {sensorHealthData.map((sensor, index) => (
+            <SensorHealthCard key={index} {...sensor} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
+
+function SensorHealthCard({ name, status, battery, batteryColor, lastSync }) {
+  return (
+    <div className="rounded-xl border bg-white p-4 shadow">
+      <h4 className="mb-2 font-semibold text-gray-700">{name}</h4>
+      <p className="text-sm text-gray-600">
+        Status: <span className="font-medium text-green-600">{status}</span>
+      </p>
+      <p className="text-sm text-gray-600">
+        Battery:{" "}
+        <span className={`font-medium ${batteryColor}`}>{battery}%</span>
+      </p>
+      <p className="text-sm text-gray-600">Last Sync: {lastSync}</p>
+    </div>
+  );
+}
+
+SensorHealthCard.propTypes = {
+  name: propTypes.string,
+  status: propTypes.string,
+  battery: propTypes.number,
+  batteryColor: propTypes.string,
+  lastSync: propTypes.string,
+};

@@ -12,7 +12,8 @@ function Blog() {
         {/* all posts  */}
         <div className="flex flex-col-reverse gap-4 xl:flex-row">
           <BlogAside />
-          <div className="mx-4 grid basis-3/4 grid-cols-1 gap-4 lg:grid-cols-2 xl:mx-0 2xl:basis-4/5">
+          <div className="grid basis-3/4 grid-cols-1 gap-4 lg:grid-cols-2 xl:mx-0 2xl:basis-4/5">
+            {/* <div className="mx-4 grid basis-3/4 grid-cols-1 gap-4 lg:grid-cols-2 xl:mx-0 2xl:basis-4/5"> */}
             {blogItemData.map((blog) => (
               <BlogCard data={blog} key={blog.id} />
             ))}

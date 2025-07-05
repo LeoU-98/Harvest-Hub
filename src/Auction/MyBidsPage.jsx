@@ -11,8 +11,6 @@ export default function MyBidsPage() {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 3;
 
-  //   const LiveAuctionsData = getActiveAuctions(userBids);
-
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = userBids.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(userBids.length / itemsPerPage);
@@ -34,7 +32,7 @@ export default function MyBidsPage() {
     <>
       <h3 className="mb-4 text-2xl font-bold text-white">My Active Bids</h3>
 
-      <div className="auction-scroll grid grid-cols-1 items-center gap-4 p-4 md:grid-cols-2 lg:h-[500px] lg:grid-cols-3">
+      <div className="auction-scroll grid grid-cols-1 items-center gap-4 p-0 md:grid-cols-2 md:p-4 lg:h-[500px] lg:grid-cols-3">
         {currentItems.map((auction) => (
           <MyBidCard key={auction.id} data={auction} />
         ))}
@@ -104,7 +102,7 @@ export function MyBidCard({ data }) {
         />
       </div>
       <div className="mt-3">
-        <h2 className="text-lg font-semibold">{data.title}</h2>
+        <h2 className="line-clamp-1 text-lg font-semibold">{data.title}</h2>
 
         {isLive ? (
           <div className="flex items-center gap-2">

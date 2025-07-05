@@ -37,7 +37,7 @@ export default function AuctionListingsPage() {
     <>
       <h3 className="mb-4 text-2xl font-bold text-white">Live Auctions</h3>
 
-      <div className="auction-scroll grid grid-cols-1 items-center gap-4 p-4 md:grid-cols-2 lg:h-[500px] lg:grid-cols-3">
+      <div className="auction-scroll grid grid-cols-1 items-center gap-4 p-4 lg:h-[500px] lg:grid-cols-3">
         {currentItems?.map((auction) => (
           <AuctionCard key={auction.id} data={auction} />
         ))}
@@ -69,7 +69,7 @@ function AuctionCard({ data }) {
     <Link
       key={data.id}
       to={`/auctions/${data.id}`}
-      className="rounded-xl border bg-white p-4 hover:shadow-xl"
+      className="flex flex-col items-center gap-2 rounded-xl border bg-white p-4 hover:shadow-xl md:flex-row lg:flex-col"
     >
       <div>
         <img
@@ -79,12 +79,14 @@ function AuctionCard({ data }) {
         />
       </div>
       <div>
-        <h2 className="text-lg font-semibold">{data.title}</h2>
-        <p>Current Bid: {data.currentBid}</p>
-      </div>
-      <div className="flex items-center gap-2">
-        <p className="">Time Left</p>
-        <CountdownTimer endTime={data.endTime} />
+        <div>
+          <h2 className="line-clamp-1 text-lg font-semibold">{data.title}</h2>
+          <p>Current Bid: {data.currentBid}</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <p className="">Time Left</p>
+          <CountdownTimer endTime={data.endTime} />
+        </div>
       </div>
     </Link>
   );

@@ -47,7 +47,7 @@ export default function FieldDetails() {
           <h3 className="mb-4 text-2xl font-semibold text-white">
             Sensor Readings
           </h3>
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
             <SensorCard
               image={moistureSensor}
               label="Soil Moisture"
@@ -74,7 +74,7 @@ export default function FieldDetails() {
           <h3 className="mb-4 text-2xl font-semibold text-white">
             Recent AI Analysis
           </h3>
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
             <ImageAnalysisResult
               imageUrl="/Picture2.jpg"
               result="Disease: Early Blight"

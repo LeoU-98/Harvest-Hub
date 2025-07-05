@@ -8,11 +8,11 @@ import propTypes from "prop-types";
 // Dummy user data
 const dummyUser = {
   id: "user123",
-  name: "Mohamed Hamdy",
-  email: "mohamed@example.com",
+  name: "Ahmed",
+  email: "ahmed@harvesthub.com",
   role: "Merchant",
   status: "Active",
-  image: "/leou.jpg",
+  image: "/public/merchant.jpg",
 };
 
 export default function ManageUsers() {
@@ -49,11 +49,11 @@ export default function ManageUsers() {
     <div className="min-h-[600px] p-5">
       <h2 className="mb-6 text-3xl font-bold text-white">Manage Users</h2>
 
-      <div className="mb-8 flex gap-3 rounded-2xl bg-white p-10">
+      <div className="mb-8 flex flex-col gap-3 rounded-2xl bg-white p-10 px-5 sm:flex-row sm:px-10">
         <input
           value={searchId}
           onChange={(e) => setSearchId(e.target.value)}
-          placeholder="Enter User ID"
+          placeholder="Enter User Email"
           className="flex-1 rounded-full px-3 py-2 outline-none ring-2 ring-gray-400 focus:ring-green-500"
         />
         <button

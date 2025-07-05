@@ -32,7 +32,7 @@ function Dashboard({
   return (
     <div className="grid grid-cols-3 gap-4">
       {/* Bar Chart */}
-      <div className="rounded-2xl bg-white p-4 shadow-lg lg:col-span-2 lg:row-start-1">
+      <div className="col-span-3 row-start-1 rounded-2xl bg-white p-4 shadow-lg lg:col-span-2 lg:row-start-1">
         <h2 className="mb-2 text-xl font-semibold">{barTitle}</h2>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={barData}>
@@ -45,7 +45,7 @@ function Dashboard({
       </div>
 
       {/* Line Chart */}
-      <div className="rounded-2xl bg-white p-4 shadow-lg lg:col-span-2 lg:row-start-2">
+      <div className="col-span-3 row-start-2 rounded-2xl bg-white p-4 shadow-lg lg:col-span-2 lg:row-start-2">
         <h2 className="mb-2 text-xl font-semibold">{lineTitle}</h2>
         <ResponsiveContainer width="100%" height={250}>
           <LineChart data={lineData}>
@@ -63,7 +63,7 @@ function Dashboard({
       </div>
 
       {/* Pie Chart */}
-      <div className="col-start-3 rounded-2xl bg-white p-4 shadow-lg lg:row-span-2 lg:row-start-1">
+      <div className="col-span-3 row-start-3 rounded-2xl bg-white p-4 shadow-lg lg:col-start-3 lg:row-span-2 lg:row-start-1">
         <h2 className="mb-2 text-xl font-semibold">{pieTitle}</h2>
         <ResponsiveContainer width="100%" height={500}>
           <PieChart>
