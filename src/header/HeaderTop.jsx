@@ -19,7 +19,7 @@ function HeaderTop() {
         <div className="mx-auto flex justify-between gap-2 md:mx-0">
           {/* My Account */}
           <div>
-            {isAuthenticated && (
+            {!isAuthenticated && (
               <Menu placement="bottom-start">
                 <MenuHandler>
                   <span className="block cursor-pointer p-1 text-gray-600 hover:text-gray-900 focus:text-gray-900">

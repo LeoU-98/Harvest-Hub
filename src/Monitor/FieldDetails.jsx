@@ -77,7 +77,7 @@ export default function FieldDetails() {
           <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
             <ImageAnalysisResult
               imageUrl="/Picture2.jpg"
-              result="Disease: Fungal Infection"
+              result="Disease: Early Blight"
               confidence={85}
             />
             <ImageAnalysisResult
