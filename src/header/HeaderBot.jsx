@@ -48,7 +48,7 @@ function HeaderBot() {
   return (
     <div className="border-t-2 border-t-gray-200 bg-white">
       <div className="container mx-auto px-2 sm:px-3">
-        <div className="grid max-w-none grid-cols-[auto_auto] grid-rows-[auto_auto] justify-between rounded-none px-0 py-1 shadow-none">
+        <div className="grid max-w-none grid-cols-[auto_auto] grid-rows-[auto_auto] justify-between rounded-none px-0 py-1 shadow-none lg:flex lg:flex-wrap xl:grid">
           {/* left top */}
           <div className="col-span-1 col-start-1 row-span-1 row-start-1">
             <div className="flex items-center text-blue-gray-900">

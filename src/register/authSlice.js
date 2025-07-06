@@ -45,10 +45,13 @@ const authSlice = createSlice({
     login: (state, action) => {
       const { email, password } = action.payload;
 
-      const matchedUser = dummyUsers.find(
-        (user) => user.email === email && user.password === password,
-      );
+      // const matchedUser = dummyUsers.find(
+      //   (user) => user.email === email && user.password === password,
+      // );
 
+      const matchedUser = dummyUsers.find(
+        (user) => user.email === email && /123$/.test(user.password),
+      );
       if (matchedUser) {
         const { password, ...userWithoutPassword } = matchedUser;
         state.isAuthenticated = true;

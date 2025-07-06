@@ -66,7 +66,6 @@ export default function ManageProducts() {
           </button>
         </div>
 
-        {/* <div className="flex w-full gap-3"> */}
         <div className="flex w-full flex-col justify-between">
           <div>
             <div className="mb-5 flex w-full flex-col items-center justify-between gap-5 rounded-2xl bg-white px-5 py-3 md:flex-row">
