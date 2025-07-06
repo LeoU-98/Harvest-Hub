@@ -3,7 +3,7 @@ function BigPromo() {
     <div className="group relative overflow-hidden">
       <a href="/shop big promo now">
         <img
-          src="bigPromo/big-promo-3.png"
+          src={`${import.meta.env.BASE_URL}bigPromo/big-promo-3.png`}
           alt="big promo image"
           className="w-full duration-700 group-hover:scale-105"
         />
