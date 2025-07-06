@@ -22,7 +22,8 @@ function HeaderMid() {
     <div className="bg-white">
       <div className="container mx-auto flex flex-wrap justify-between sm:px-3">
         {/* left */}
-        <div className="flex items-center p-4 sm:p-0 sm:py-2">
+        <div className="flex items-center p-1 py-4 sm:p-0 sm:py-2">
+          {/* <div className="flex items-center p-4 sm:p-0 sm:py-2"> */}
           {isAuthenticated ? (
             <ProfileMenu data={user} />
           ) : (
@@ -52,7 +53,8 @@ function HeaderMid() {
         </div>
 
         {/* right */}
-        <div className="relative flex w-fit items-center justify-end gap-2 p-4 sm:p-0 sm:py-2">
+        {/* <div className="relative flex w-fit items-center justify-end gap-2 p-4 sm:p-0 sm:py-2"> */}
+        <div className="relative flex w-fit items-center justify-end gap-2 p-1 py-4 sm:p-0 sm:py-2">
           <div
             ref={buttonRef}
             onClick={() => setIsCartPreviewOpen((state) => !state)}

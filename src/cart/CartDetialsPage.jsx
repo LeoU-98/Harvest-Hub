@@ -47,14 +47,18 @@ function ActionAside() {
         <div className="flex justify-between border-b-[1px] border-gray-300 px-3 py-4">
           <span className="text-sm">{totalItemsInCart} items</span>
           <span>
-            {Number(totalCartPriceNumber) + " " + totalCartPriceCurrency}
+            {totalCartPriceNumber > 0 ? (
+              <>{Number(totalCartPriceNumber) + " " + totalCartPriceCurrency}</>
+            ) : (
+              0
+            )}
           </span>
         </div>
         <div className="flex justify-between border-b-[1px] border-gray-300 px-3 py-4">
           <span className="text-sm">Total Price (tax incl.)</span>
           <span className="text-lg">
             {Number(totalCartPriceNumber) + 0.14 * Number(totalCartPriceNumber)}
-            {" " + totalCartPriceCurrency}
+            {totalCartPriceNumber > 0 && " " + totalCartPriceCurrency}
           </span>
         </div>
         <form className="py-4">
