@@ -8,7 +8,7 @@ import { FaCrown } from "react-icons/fa";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { ImageUploader } from "../Shared/ImageUploader";
 import { FiAlertTriangle } from "react-icons/fi";
-import { myAuctions } from "../utils/AuctionStaticData";
+import { myAuctions } from "../assets/AuctionStaticData";
 
 MyAuctionCard.propTypes = {
   auction: propTypes.object,

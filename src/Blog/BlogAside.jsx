@@ -7,7 +7,7 @@ import {
   MenuHandler,
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { asideData } from "../utils/BlogStaticData";
+import { asideData } from "../assets/BlogStaticData";
 
 export default function BlogAside() {
   return (

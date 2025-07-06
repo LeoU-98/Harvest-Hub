@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import BlogPreviewCard from "./BlogPreviewCard";
 import { motion } from "motion/react";
 import { headerVariants } from "../motion/variants";
-import { blogPreviewData } from "../utils/BlogStaticData";
+import { blogPreviewData } from "../assets/BlogStaticData";
 
 function BlogPreview() {
   const settings = {

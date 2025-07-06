@@ -2,8 +2,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import propTypes from "prop-types";
-import { introData } from "../utils/StaticData";
+
 import { Link } from "react-router-dom";
+import { introData } from "../assets/IntroStaticData";
 
 export default function IntroCarousel() {
   var settings = {

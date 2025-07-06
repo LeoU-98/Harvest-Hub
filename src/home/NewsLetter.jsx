@@ -1,13 +1,11 @@
-import sendIcon from "../images/send-icon.png";
-
 function NewsLetter() {
   return (
-    <div className="newsletter-background">
+    <div className="bg-[url(/newsletter/newsletter-bg.jpg)]">
       <div className="block pb-24 pt-5 lg:container lg:mx-auto lg:flex lg:items-center lg:pb-72 lg:pt-12">
         {/* text */}
         <div className="block lg:flex lg:w-1/2 lg:items-center">
           <div className="hidden lg:block">
-            <img src={sendIcon} alt="send icon" />
+            <img src="/newsletter/send-icon.png" alt="send icon" />
           </div>
           <div className="mb-2 text-center text-white lg:text-start">
             <h3 className="text-base font-bold lg:text-2xl">
@@ -27,7 +25,7 @@ function NewsLetter() {
               placeholder="Your Email Address"
               className="w-[70%] rounded-s-full px-6 py-2 text-sm outline-none lg:py-3"
             />
-            <button className="bg-apple-500 rounded-e-full px-2 py-2 pe-3 text-sm uppercase text-white duration-300 hover:bg-black lg:py-3">
+            <button className="rounded-e-full bg-apple-500 px-2 py-2 pe-3 text-sm uppercase text-white duration-300 hover:bg-black lg:py-3">
               subscribe
             </button>
           </form>

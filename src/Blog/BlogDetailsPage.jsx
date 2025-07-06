@@ -1,6 +1,6 @@
 import BreadCrumb from "../Shared/BreadCrumb";
 import BlogAside from "./BlogAside";
-import { blogDetailsData } from "../utils/BlogStaticData";
+import { blogDetailsData } from "../assets/BlogStaticData";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import propTypes from "prop-types";

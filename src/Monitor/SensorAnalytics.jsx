@@ -14,7 +14,7 @@ import { useState } from "react";
 import { Select, Option } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import propTypes from "prop-types";
-import { sensorHealthData } from "../utils/MonitorStaticData";
+import { sensorHealthData } from "../assets/MonitorStaticData";
 
 const fieldData = {
   "West Zone": [

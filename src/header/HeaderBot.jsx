@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavList from "./Bot/NavList";
-import { cropAndFreshProducesSearchData } from "../utils/SearchData";
+import { cropAndFreshProducesSearchData } from "../assets/SearchData";
 
 function HeaderBot() {
   const [openNav, setOpenNav] = useState(false);

@@ -4,7 +4,7 @@ import {
   cropAndFreshProducesData,
   dairyAndLivestockProducts,
   seedAndSaplingProducts,
-} from "../utils/AgriDataPLP";
+} from "../assets/AgriDataPLP";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import propTypes from "prop-types";

@@ -3,14 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import propTypes from "prop-types";
 import ProductCard from "../../Shared/ProductCard";
-import { productData } from "../../utils/ProductStaticData";
 import { headerVariants } from "../../motion/variants";
 import { motion } from "motion/react";
 import {
   cropAndFreshProducesData,
   dairyAndLivestockProducts,
   seedAndSaplingProducts,
-} from "../../utils/AgriDataPLP";
+} from "../../assets/AgriDataPLP";
 
 export default function RelatedProducts() {
   const settings = {

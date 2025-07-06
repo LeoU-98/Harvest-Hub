@@ -4,7 +4,10 @@ import ProductSpecifications from "./ProductSpecifications";
 import ProductReviews from "../Reviews/ProductReviews";
 import RelatedProducts from "./RelatedProducts";
 import { useParams } from "react-router-dom";
-import { cropAndFreshPDP, dairyAndLivestockPDP } from "../../utils/AgriDataPDP";
+import {
+  cropAndFreshPDP,
+  dairyAndLivestockPDP,
+} from "../../assets/AgriDataPDP";
 
 import { splitCommonPrefix } from "../../utils/helpers";
 

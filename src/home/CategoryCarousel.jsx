@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { CategoryCarouselArray } from "../utils/StaticData";
+import { CategoryCarouselArray } from "../assets/CategoryCarouselStaticData";
 
 export default function CategoryCarousel() {
   var settings = {

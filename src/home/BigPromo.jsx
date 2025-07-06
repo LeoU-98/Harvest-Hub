@@ -1,11 +1,9 @@
-import bigPromoImage from "../images/big-promo/banner-3.png";
-
 function BigPromo() {
   return (
     <div className="group relative overflow-hidden">
       <a href="/shop big promo now">
         <img
-          src={bigPromoImage}
+          src="/bigPromo/big-promo-3.png"
           alt="big promo image"
           className="w-full duration-700 group-hover:scale-105"
         />

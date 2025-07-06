@@ -1,6 +1,6 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/16/solid";
 
-import forgotPassword from "../images/forgotPassword.svg";
+// import forgotPassword from "../images/forgotPassword.svg";
 import { useState } from "react";
 import propTypes from "prop-types";
 
@@ -23,7 +23,7 @@ function ResetPassword() {
             <input
               type={showPassword.password ? "text" : "password"}
               name="password"
-              className="focus:ring-apple-500 w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400"
+              className="w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400 focus:ring-apple-500"
             />
             <ShowPasswordButton
               showPassword={showPassword.password}
@@ -42,7 +42,7 @@ function ResetPassword() {
             <input
               type={showPassword.confirmPassword ? "text" : "password"}
               name="confirmPassword"
-              className="focus:ring-apple-500 w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400"
+              className="w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400 focus:ring-apple-500"
             />
             <ShowPasswordButton
               showPassword={showPassword.confirmPassword}
@@ -57,13 +57,13 @@ function ResetPassword() {
         </label>
         <button
           type="submit"
-          className="bg-apple-500 mx-auto block w-full rounded-lg px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
+          className="mx-auto block w-full rounded-lg bg-apple-500 px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
         >
           Reset
         </button>
       </form>
       <div className="flex basis-1/2 items-center justify-center">
-        <img src={forgotPassword} className="size-96" />
+        <img src="/forgotPassword.svg" className="size-96" />
       </div>
     </div>
   );
@@ -75,7 +75,7 @@ function ShowPasswordButton({ onClick, showPassword }) {
   return (
     <button
       type="button"
-      className="bg-apple-500 absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center px-1 py-2 text-white outline-none duration-300 hover:bg-black focus:bg-black"
+      className="absolute right-0 top-1/2 z-10 flex -translate-y-1/2 items-center justify-center bg-apple-500 px-1 py-2 text-white outline-none duration-300 hover:bg-black focus:bg-black"
       onClick={onClick}
     >
       {showPassword ? (

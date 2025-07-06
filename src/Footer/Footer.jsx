@@ -1,4 +1,3 @@
-import logo from "../images/logo.png";
 import { motion } from "motion/react";
 
 //////////////////////////
@@ -17,7 +16,7 @@ import { contactInfoVariants } from "../motion/variants";
 
 function Footer() {
   return (
-    <footer className="relative bg-[url(/footer.png)] bg-[100%_100%]">
+    <footer className="relative bg-[url(/footer/footer.png)] bg-[100%_100%]">
       <div className="absolute h-full w-full bg-black/45"></div>
       <div className="container relative mx-auto px-4 lg:py-8">
         <div className="relative py-8 lg:py-12">
@@ -34,7 +33,7 @@ function Footer() {
           </div>
           <div className="flex flex-col justify-between lg:flex-row">
             <div className="basis-1/4 pl-3">
-              <img src={logo} alt="Harvest Hub Logo" className="size-40" />
+              <img src="/logo.png" alt="Harvest Hub Logo" className="size-40" />
 
               <p className="mt-5 text-white">
                 Harvest Hub – Connecting farmers with quality equipment,

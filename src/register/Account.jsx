@@ -1,6 +1,5 @@
 import BreadCrumb from "../Shared/BreadCrumb";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import image1 from "../images/sidebar_banner.jpg";
 import SignInUp from "./SignInUp";
 
 function Account() {
@@ -15,7 +14,7 @@ function Account() {
           <div className="hidden h-fit flex-shrink-0 flex-grow-0 basis-[22%] overflow-hidden lg:block">
             <Link to="offer">
               <img
-                src={image1}
+                src="/ads/ad1.jpg"
                 className="w-full rounded-2xl duration-300 hover:scale-110"
               />
             </Link>

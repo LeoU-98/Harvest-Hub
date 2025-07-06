@@ -1,5 +1,5 @@
 import { ChevronLeftIcon, EnvelopeIcon } from "@heroicons/react/16/solid";
-import forgotPassword from "../images/forgotPassword.svg";
+
 import { Link } from "react-router-dom";
 
 function ForgotPassword() {
@@ -15,26 +15,26 @@ function ForgotPassword() {
             type="text"
             name="email"
             placeholder="leou123@gmail.com"
-            className="focus:ring-apple-500 peer w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400"
+            className="peer w-full rounded-lg px-2 py-1 outline-none ring-1 ring-gray-400 focus:ring-apple-500"
           />
-          <EnvelopeIcon className="peer-focus:fill-apple-500 peer-focus:text-apple-500 size-9" />
+          <EnvelopeIcon className="size-9 peer-focus:fill-apple-500 peer-focus:text-apple-500" />
         </label>
         <button
           type="submit"
-          className="bg-apple-500 focus:ring-apple-800 mx-auto mb-5 block w-full rounded-lg px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:ring-2 active:translate-y-1"
+          className="mx-auto mb-5 block w-full rounded-lg bg-apple-500 px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:ring-2 focus:ring-apple-800 active:translate-y-1"
         >
           Submit
         </button>
         <Link
           to="/account/signin"
-          className="hover:text-apple-500 focus:outline-apple-500 mx-auto flex w-fit items-center text-gray-900 duration-300"
+          className="mx-auto flex w-fit items-center text-gray-900 duration-300 hover:text-apple-500 focus:outline-apple-500"
         >
           <ChevronLeftIcon className="size-6" />
           Back to Login
         </Link>
       </form>
       <div className="flex basis-1/2 items-center justify-center">
-        <img src={forgotPassword} className="size-96" />
+        <img src="/forgotPassword.svg" className="size-96" />
       </div>
     </div>
   );

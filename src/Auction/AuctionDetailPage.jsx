@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import ProductImagePreview from "../Shared/ProductImagePreview";
 import { splitCommonPrefix } from "../utils/helpers";
-import { productDetailsData } from "../utils/ProductStaticData";
+import { productDetailsData } from "../assets/ProductStaticData";
 import { Link, useParams } from "react-router-dom";
 import { CountdownTimer } from "../Shared/CountdownTimer";
-import { auctions } from "../utils/AuctionStaticData";
+import { auctions } from "../assets/AuctionStaticData";
 import propTypes from "prop-types";
 import { TbArrowBackUp } from "react-icons/tb";
 import { GiPayMoney } from "react-icons/gi";

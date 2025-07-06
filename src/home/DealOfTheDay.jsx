@@ -6,7 +6,7 @@ import AddToCartButton from "../Shared/AddToCartButton";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { headerVariants } from "../motion/variants";
-import { dealOfTheDayProducts } from "../utils/ProductStaticData";
+import { dealOfTheDayProducts } from "../assets/ProductStaticData";
 import { Rating } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../cart/cartSlice";

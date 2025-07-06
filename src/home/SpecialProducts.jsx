@@ -9,7 +9,7 @@ import {
   cropAndFreshProducesData,
   dairyAndLivestockProducts,
   seedAndSaplingProducts,
-} from "../utils/AgriDataPLP";
+} from "../assets/AgriDataPLP";
 
 function SpecialProducts() {
   const settings = {

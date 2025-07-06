@@ -11,13 +11,13 @@ import {
   cropAndFreshProducesData,
   dairyAndLivestockProducts,
   seedAndSaplingProducts,
-} from "../../utils/AgriDataPLP";
+} from "../../assets/AgriDataPLP";
 import { useParams } from "react-router-dom";
 import {
   cropSprayingEquipment,
   soilCropMonitoring,
   storageProcessing,
-} from "../../utils/TechProductStaticData";
+} from "../../assets/TechProductStaticData";
 
 function fetchData(dataCategory) {
   switch (dataCategory) {

@@ -1,5 +1,34 @@
-import { featurePromoData } from "../utils/StaticData";
 import propTypes from "prop-types";
+
+import { BsShop } from "react-icons/bs";
+import { PiGiftBold } from "react-icons/pi";
+import { MdOutlineQueryStats } from "react-icons/md";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
+
+const featurePromoData = [
+  {
+    svg: <BsShop className="size-7 group-hover:fill-white" />,
+    title: "Marketplace",
+    descryption: "Buy, sell, or rent farming Needs",
+  },
+  {
+    svg: <TfiHeadphoneAlt className="size-7 group-hover:fill-white" />,
+    title: "24/7 Online Support",
+    descryption: "Contact us 24/7",
+  },
+  {
+    svg: <MdOutlineQueryStats className="size-7 group-hover:fill-white" />,
+    title: "Real-Time Insights",
+    descryption:
+      "crop analytics, and market trends for smarter farming decisions.",
+  },
+  {
+    svg: <PiGiftBold className="size-7 group-hover:fill-white" />,
+    title: "special gift cards",
+    descryption: "offer special bonuses with gifts",
+  },
+];
+
 function FeaturePromo() {
   return (
     <div className="grid-row-2 container mx-auto grid grid-cols-2 gap-3 px-4 pt-16 md:flex md:justify-center md:pb-8 lg:gap-5 lg:pb-16">

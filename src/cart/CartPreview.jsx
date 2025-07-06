@@ -2,7 +2,6 @@ import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import CartPreviewItem from "./CartPreviewItem";
 import { useCart } from "./cartSlice";
-import cartBackground_280_196 from "../images/cartBackground_280_196.jpg";
 import { useEffect, useRef } from "react";
 
 function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
@@ -37,7 +36,10 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
       <ul className="cart max-h-72 min-h-6 overflow-y-auto scroll-smooth p-2">
         {cart.length === 0 ? (
           <div className="h-64 text-center text-xl text-green-500">
-            <img src={cartBackground_280_196} alt="Empty Cart Background" />
+            <img
+              src="/cart/cartBackground_280_196.jpg"
+              alt="Empty Cart Background"
+            />
             Your Cart is Empty{" "}
           </div>
         ) : (

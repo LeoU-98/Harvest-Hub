@@ -1,12 +1,13 @@
-import leou from "../images/leou.jpg";
+import { useSelector } from "react-redux";
 import SideTabs from "./SideNav";
 
 export default function SideBar() {
+  const { user } = useSelector((state) => state.auth);
   return (
     <section className="w-1/4">
       <div className="sticky top-0 h-fit w-full rounded-br-2xl rounded-tl-2xl bg-white px-5 py-10">
         <div className="flex flex-col items-center gap-2">
-          <img src={leou} alt="leou" className="size-40 rounded-full" />
+          <img src={user.image} alt="leou" className="size-40 rounded-full" />
           <p className="mt-3 text-center text-xl">LeoU</p>
           <p className="text-center text-sm">Merchant</p>
           <button className="rounded-lg bg-apple-500 px-3 py-2 text-sm text-white outline-none duration-300 hover:bg-black">

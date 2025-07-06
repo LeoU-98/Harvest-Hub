@@ -1,5 +1,5 @@
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
-import forgotPassword from "../images/forgotPassword.svg";
+// import forgotPassword from "../images/forgotPassword.svg";
 import { Link } from "react-router-dom";
 import AuthCode from "react-auth-code-input";
 import { useState } from "react";
@@ -29,28 +29,28 @@ function EnterCode() {
 
         <button
           type="submit"
-          className="bg-apple-500 mx-auto mb-7 block w-full rounded-lg px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
+          className="mx-auto mb-7 block w-full rounded-lg bg-apple-500 px-10 py-2 text-white outline-none duration-500 hover:bg-black focus:bg-black active:translate-y-1"
         >
           Confirm Code
         </button>
         <div className="flex justify-between">
           <Link
             to="/account/signin"
-            className="hover:text-apple-500 focus:outline-apple-500 flex w-fit items-center text-gray-900 duration-300"
+            className="flex w-fit items-center text-gray-900 duration-300 hover:text-apple-500 focus:outline-apple-500"
           >
             <ChevronLeftIcon className="size-6" />
             Back to Login
           </Link>
           <button
             type="button"
-            className="hover:text-apple-500 focus:outline-apple-500 block text-center duration-300"
+            className="block text-center duration-300 hover:text-apple-500 focus:outline-apple-500"
           >
             Send another code
           </button>
         </div>
       </form>
       <div className="flex basis-1/2 items-center justify-center">
-        <img src={forgotPassword} className="size-96" />
+        <img src="/forgotPassword.svg" className="size-96" />
       </div>
     </div>
   );

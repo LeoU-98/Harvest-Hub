@@ -1,8 +1,6 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { Menu, MenuHandler, MenuList } from "@material-tailwind/react";
-import english from "../images/language/1.jpg";
-import arabic from "../images/language/2.jpg";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -99,7 +97,7 @@ function HeaderTop() {
                   <li className="group cursor-pointer px-0 py-1 outline-none">
                     <a className="outline-none group-hover:text-apple-500">
                       <img
-                        src={english}
+                        src="/languages/english.jpg"
                         alt="english icon"
                         className="relative bottom-[1px] inline-block"
                       />
@@ -109,7 +107,7 @@ function HeaderTop() {
                   <li className="group cursor-pointer px-0 py-1 outline-none">
                     <a className="outline-none group-hover:text-apple-500">
                       <img
-                        src={arabic}
+                        src="/languages/arabic.jpg"
                         alt="arabic icon"
                         className="relative bottom-[1px] inline-block"
                       />

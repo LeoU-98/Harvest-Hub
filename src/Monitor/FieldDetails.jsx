@@ -4,11 +4,9 @@ import SensorCard from "./Components/SensorCard";
 import { Select, Option } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
-import moistureSensor from "../images/moistureSensor.png";
-import humditySensor from "../images/humditySensor.png";
-import tempertureSensor from "../images/tempertureSensor.png";
-
-// import fieldDetailsData from "../utils/MonitorStaticData";
+// import moistureSensor from "../images/moistureSensor.png";
+// import humditySensor from "../images/humditySensor.png";
+// import tempertureSensor from "../images/tempertureSensor.png";
 
 export default function FieldDetails() {
   const [selectedField, setSelectedField] = useState("West Zone");
@@ -49,19 +47,19 @@ export default function FieldDetails() {
           </h3>
           <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
             <SensorCard
-              image={moistureSensor}
+              image="/monitors/sensors/moistureSensor.png"
               label="Soil Moisture"
               value="42%"
               status="Normal"
             />
             <SensorCard
-              image={tempertureSensor}
+              image="/monitors/sensors/tempertureSensor.png"
               label="Temperature"
               value="30°C"
               status="Normal"
             />
             <SensorCard
-              image={humditySensor}
+              image="/monitors/sensors/humditySensor.png"
               label="Humidity"
               value="70%"
               status="High"
@@ -76,12 +74,12 @@ export default function FieldDetails() {
           </h3>
           <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
             <ImageAnalysisResult
-              imageUrl="/Picture2.jpg"
+              imageUrl="/monitors/AIresults/Picture2.jpg"
               result="Disease: Early Blight"
               confidence={85}
             />
             <ImageAnalysisResult
-              imageUrl="/Picture1.jpg"
+              imageUrl="/monitors/AIresults/Picture1.jpg"
               result="Not Ripe Yet"
               confidence={90}
             />

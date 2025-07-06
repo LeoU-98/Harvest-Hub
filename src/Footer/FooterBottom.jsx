@@ -1,4 +1,3 @@
-import paymentImage from "../images/payment.png";
 import {
   FaFacebookF,
   FaGithub,
@@ -15,7 +14,7 @@ export default function FooterBottom() {
     <div className="flex flex-col items-center justify-between gap-3 border-b-2 border-t-2 border-gray-200 py-6 md:flex-row">
       <FooterLinks />
       <div>
-        <img src={paymentImage} alt="payment methods"></img>
+        <img src="/footer/payment.png" alt="payment methods"></img>
       </div>
     </div>
   );

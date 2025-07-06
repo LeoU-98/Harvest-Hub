@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home from "./home/Home";
 import ProductListPage from "./shop/ProductListPage/ProductListPage";
-import CartView from "./cart/CartView";
+import CartDetialsPage from "./cart/CartDetialsPage";
 import Register from "./register/Register";
 import SignIn from "./register/SignIn";
 import ProductDetailsPage from "./shop/ProductDetailsPage/ProductDetailsPage";
@@ -187,7 +187,7 @@ const router = createBrowserRouter([
       },
       {
         path: "view-cart",
-        element: <CartView />,
+        element: <CartDetialsPage />,
       },
 
       {
