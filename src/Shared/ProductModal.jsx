@@ -41,7 +41,7 @@ export default ProductModal;
 
 function ItemPreview({ handleOpen, itemID }) {
   const item = useSelector((store) =>
-    store.cart.find((item) => item.id === itemID),
+    store.cart?.find((item) => item.id === itemID),
   );
   const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
     useCart();
@@ -125,7 +125,7 @@ function ItemPreview({ handleOpen, itemID }) {
 function VerticalTags({ tags }) {
   return (
     <div className="flex flex-col items-start space-y-2 rounded-xl border bg-white p-4 shadow-md">
-      {tags.map((tag, index) => (
+      {tags?.map((tag, index) => (
         <span
           key={index}
           className="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700 transition hover:bg-green-200"
