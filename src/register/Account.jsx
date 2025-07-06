@@ -14,7 +14,7 @@ function Account() {
           <div className="hidden h-fit flex-shrink-0 flex-grow-0 basis-[22%] overflow-hidden lg:block">
             <Link to="offer">
               <img
-                src="/ads/ad1.jpg"
+                src="../ads/ad1.jpg"
                 className="w-full rounded-2xl duration-300 hover:scale-110"
               />
             </Link>

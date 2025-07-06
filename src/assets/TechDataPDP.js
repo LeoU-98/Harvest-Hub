@@ -2,13 +2,7 @@ const farmingTechnologyPDP = [
   {
     id: 1,
     productName: "wheel barrows",
-    images: [
-      "/images/products/saw1.jpg",
-      "/images/products/saw2.jpg",
-      "/images/products/saw3.jpg",
-      "/images/products/saw4.jpg",
-      "/images/products/saw5.jpg",
-    ],
+    images: [`${import.meta.env.BASE_URL}images/products/saw1.jpg`],
     description:
       "Heavy-duty wheel barrow for transporting soil, tools, and plants across the farm with ease.",
     specs: { material: "Steel", capacity: "80L", wheelType: "Pneumatic" },
@@ -48,13 +42,7 @@ const farmingTechnologyPDP = [
   {
     id: 2,
     productName: "micro rain",
-    images: [
-      "/images/products/saw1.jpg",
-      "/images/products/saw2.jpg",
-      "/images/products/saw3.jpg",
-      "/images/products/saw4.jpg",
-      "/images/products/saw5.jpg",
-    ],
+    images: [`${import.meta.env.BASE_URL}images/products/saw1.jpg`],
     description:
       "Compact and efficient micro-rain sprinkler for uniform irrigation in small farms or gardens.",
     specs: {
@@ -97,13 +85,7 @@ const farmingTechnologyPDP = [
   {
     id: 3,
     productName: "pulsating sprinklers",
-    images: [
-      "/images/products/saw1.jpg",
-      "/images/products/saw2.jpg",
-      "/images/products/saw3.jpg",
-      "/images/products/saw4.jpg",
-      "/images/products/saw5.jpg",
-    ],
+    images: [`${import.meta.env.BASE_URL}images/products/saw1.jpg`],
     description:
       "High-pressure pulsating sprinkler ideal for wide coverage and consistent water delivery.",
     specs: { range: "30m", pressure: "40 PSI", material: "Aluminum" },
@@ -144,13 +126,7 @@ const farmingTechnologyPDP = [
   {
     id: 4,
     productName: "drive sprinkler",
-    images: [
-      "/images/products/saw1.jpg",
-      "/images/products/saw2.jpg",
-      "/images/products/saw3.jpg",
-      "/images/products/saw4.jpg",
-      "/images/products/saw5.jpg",
-    ],
+    images: [`${import.meta.env.BASE_URL}images/products/saw1.jpg`],
     description:
       "Drive sprinkler with rotating head for even water distribution across large areas.",
     specs: { rotation: "360°", material: "Plastic + Aluminum", range: "25m" },

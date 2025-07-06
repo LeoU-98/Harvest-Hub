@@ -42,22 +42,22 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        path: "/",
+        path: "/Harvest-Hub",
         element: <Home />,
         index: true,
       },
 
       {
-        path: "auctions/:id",
+        path: "/Harvest-Hub/auctions/:id",
         element: <AuctionDetailPage />,
       },
       {
-        path: "merchant/setup",
+        path: "/Harvest-Hub/merchant/setup",
         element: <MerchantSetupPage />,
       },
 
       {
-        path: "auctions",
+        path: "/Harvest-Hub/auctions",
         element: <Auction />,
         children: [
           {
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "control-center",
+        path: "/Harvest-Hub/control-center",
         element: <ControlCenter />,
         children: [
           {
@@ -95,7 +95,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "monitor",
+        path: "/Harvest-Hub/monitor",
         element: <Monitor />,
         children: [
           {
@@ -114,11 +114,11 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "manage-products",
+        path: "/Harvest-Hub/manage-products",
         element: <ManageProducts />,
       },
       {
-        path: "dashboard",
+        path: "/Harvest-Hub/dashboard",
         element: <DashboardLayout />,
         children: [
           {
@@ -137,7 +137,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "profile",
+        path: "/Harvest-Hub/profile",
         element: <ProfileLayout />,
         children: [
           {
@@ -160,7 +160,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "account",
+        path: "/Harvest-Hub/account",
         element: <Account />,
         children: [
           {
@@ -186,26 +186,26 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "view-cart",
+        path: "/Harvest-Hub/view-cart",
         element: <CartDetialsPage />,
       },
 
       {
-        path: "products/:type",
+        path: "/Harvest-Hub/products/:type",
         element: <ProductListPage />,
       },
 
       {
-        path: "blog",
+        path: "/Harvest-Hub/blog",
         element: <Blog />,
       },
       {
-        path: "blog-view/:id",
+        path: "/Harvest-Hub/blog-view/:id",
         element: <BlogDetailsPage />,
       },
 
       {
-        path: "product-details/:id",
+        path: "/Harvest-Hub/product-details/:id",
         element: <ProductDetailsPage />,
       },
     ],

@@ -68,7 +68,7 @@ function AuctionCard({ data }) {
   return (
     <Link
       key={data.id}
-      to={`/auctions/${data.id}`}
+      to={`/Harvest-Hub/auctions/${data.id}`}
       className="flex flex-col items-center gap-2 rounded-xl border bg-white p-4 hover:shadow-xl md:flex-row lg:flex-col"
     >
       <div>

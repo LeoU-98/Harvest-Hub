@@ -2,7 +2,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-01",
     productName: "Organic Gala Apples",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/redApple.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
     price: "60 EGP/kg",
     discountPrice: "52 EGP/kg",
     rating: 4,
@@ -11,7 +11,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-02",
     productName: "Bananas",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/bananas.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
     price: "32 EGP/kg",
     discountPrice: "28 EGP/kg",
     rating: 3,
@@ -20,7 +20,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-03",
     productName: "Grapes",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/grapes.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
     price: "65 EGP/kg",
     discountPrice: "60 EGP/kg",
     rating: 5,
@@ -29,7 +29,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-04",
     productName: "Green Apples",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/greenApple.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
     price: "50 EGP/kg",
     discountPrice: "45 EGP/kg",
     rating: 2,
@@ -38,7 +38,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-05",
     productName: "Pears",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/pears.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
     price: "75 EGP/kg",
     discountPrice: "68 EGP/kg",
     rating: 4,
@@ -47,7 +47,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-06",
     productName: "Fig",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/fig.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
     price: "28 EGP/kg",
     discountPrice: "24 EGP/kg",
     rating: 3,
@@ -56,7 +56,7 @@ export const farmingTechnologyPLP = [
   {
     id: "fruit-07",
     productName: "Strawberry",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/strawberry.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
     price: "35 EGP/kg",
     discountPrice: "30 EGP/kg",
     rating: 3,
@@ -65,7 +65,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-01",
     productName: "Tomato",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/tomato1.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
     price: "42 EGP/kg",
     discountPrice: "36 EGP/kg",
     rating: 4,
@@ -74,7 +74,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-02",
     productName: "onion",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/onion1.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
     price: "35 EGP/kg",
     discountPrice: "30 EGP/kg",
     rating: 4,
@@ -83,7 +83,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-03",
     productName: "Potato",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/potato1.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
     price: "20 EGP/kg",
     discountPrice: "17 EGP/kg",
     rating: 3,
@@ -92,7 +92,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-04",
     productName: "Carrot",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/carrot1.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
     price: "55 EGP/kg",
     discountPrice: "48 EGP/kg",
     rating: 5,
@@ -101,7 +101,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-05",
     productName: "Cucumbers",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/cucumbers.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
     price: "30 EGP/kg",
     discountPrice: "27 EGP/kg",
     rating: 4,
@@ -110,8 +110,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-06",
     productName: "Cauliflower",
-    productImage:
-      "/products/agriProducts/CropsAndFreshProduces/cauliflower.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cauliflower.jpg`,
     price: "35 EGP/kg",
     discountPrice: "30 EGP/kg",
     rating: 4,
@@ -120,7 +119,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-07",
     productName: "Corn",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/corn.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
     price: "30 EGP/kg",
     discountPrice: "27 EGP/kg",
     rating: 4,
@@ -129,8 +128,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-08",
     productName: "Chili Peppers",
-    productImage:
-      "/products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
     price: "32 EGP/kg",
     discountPrice: "28 EGP/kg",
     rating: 4,
@@ -139,7 +137,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-09",
     productName: "Lemon",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/lemon.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
     price: "30 EGP/kg",
     discountPrice: "26 EGP/kg",
     rating: 4,
@@ -148,7 +146,7 @@ export const farmingTechnologyPLP = [
   {
     id: "vege-10",
     productName: "Peas",
-    productImage: "/products/agriProducts/CropsAndFreshProduces/peas.jpg",
+    productImage: `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
     price: "34 EGP/kg",
     discountPrice: "30 EGP/kg",
     rating: 4,

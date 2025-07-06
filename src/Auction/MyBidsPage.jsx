@@ -86,7 +86,7 @@ export function MyBidCard({ data }) {
 
   return (
     <Link
-      to={`/auctions/${data.id}`}
+      to={`/Harvest-Hub/auctions/${data.id}`}
       className="relative rounded-xl border bg-white p-4 hover:shadow-xl"
       onClick={(e) => {
         if (hasEnded) {

@@ -5,7 +5,7 @@ function NewsLetter() {
         {/* text */}
         <div className="block lg:flex lg:w-1/2 lg:items-center">
           <div className="hidden lg:block">
-            <img src="/newsletter/send-icon.png" alt="send icon" />
+            <img src="newsletter/send-icon.png" alt="send icon" />
           </div>
           <div className="mb-2 text-center text-white lg:text-start">
             <h3 className="text-base font-bold lg:text-2xl">

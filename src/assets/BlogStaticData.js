@@ -1,25 +1,10 @@
 /////////////////////////////////////
-///   blog posters
-
-// import poster1 from "../images/blogitem/consectetur-adipiscing.jpg";
-// import poster2 from "../images/blogitem/lorem-ipsum-dolo.jpg";
-// import poster3 from "../images/blogitem/lorem-ipsum-dolor-sit-amet.jpg";
-// import poster4 from "../images/blogitem/lorem-ipsum-dolor.jpg";
-
-/////////////////////////////////////
-///   blog preview poster
-
-// import previewPoster1 from "../images/blog/consectetur-adipiscing.jpg";
-// import previewPoster2 from "../images/blog/lorem-ipsum-dolo.jpg";
-// import previewPoster3 from "../images/blog/lorem-ipsum-dolor.jpg";
-
-/////////////////////////////////////
 ///   Blog Page  data
 
 export const blogItemData = [
   {
     id: 1,
-    blogImage: "/blogs/blogItems/blog1.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog1.jpg`,
     blogAuthor: "Sarah Greenfield",
     blogComments: 48,
     blogReviews: 1342,
@@ -29,7 +14,7 @@ export const blogItemData = [
   },
   {
     id: 2,
-    blogImage: "/blogs/blogItems/blog2.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog2.jpg`,
     blogAuthor: "Ahmed Farouk",
     blogComments: 76,
     blogReviews: 1890,
@@ -39,7 +24,7 @@ export const blogItemData = [
   },
   {
     id: 3,
-    blogImage: "/blogs/blogItems/blog3.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog3.jpg`,
     blogAuthor: "Emily Waters",
     blogComments: 31,
     blogReviews: 1044,
@@ -49,7 +34,7 @@ export const blogItemData = [
   },
   {
     id: 4,
-    blogImage: "/blogs/blogItems/blog4.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog4.jpg`,
     blogAuthor: "Dr. Tarek Hossam",
     blogComments: 90,
     blogReviews: 2301,
@@ -65,13 +50,13 @@ export const asideData = [
     sectionItems: [
       {
         id: 1,
-        itemImage: "/blogs/blogItems/blog1.jpg",
+        itemImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog1.jpg`,
         itemTitle: "Farming Technologies 2025",
         itemDate: "Feb 14, 2025",
       },
       {
         id: 2,
-        itemImage: "/blogs/blogItems/blog2.jpg",
+        itemImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog2.jpg`,
         itemTitle: "Crop Rotation Benefits",
         itemDate: "Mar 03, 2025",
       },
@@ -82,13 +67,13 @@ export const asideData = [
     sectionItems: [
       {
         id: 1,
-        itemImage: "/blogs/blogItems/blog3.jpg",
+        itemImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog3.jpg`,
         itemTitle: "Organic Growth in Egypt",
         itemDate: "Jun 21, 2025",
       },
       {
         id: 2,
-        itemImage: "/blogs/blogItems/blog4.jpg",
+        itemImage: `${import.meta.env.BASE_URL}blogs/blogItems/blog4.jpg`,
         itemTitle: "Smart Irrigation Practices",
         itemDate: "Jun 10, 2025",
       },
@@ -102,7 +87,7 @@ export const asideData = [
 export const blogPreviewData = [
   {
     id: 5,
-    image: "/blogs/blogItems/blog1.jpg",
+    image: `${import.meta.env.BASE_URL}blogs/blogItems/blog1.jpg`,
     title: "Farming Technologies 2025",
     descryption:
       "AI drones, soil analytics, and real-time crop monitoring are changing the way we farm. Here’s what’s coming next...",
@@ -110,7 +95,7 @@ export const blogPreviewData = [
   },
   {
     id: 6,
-    image: "/blogs/blogItems/blog2.jpg",
+    image: `${import.meta.env.BASE_URL}blogs/blogItems/blog2.jpg`,
     title: "Organic Growth in Egypt",
     descryption:
       "Local farms are switching to pesticide-free, eco-friendly methods. Find out why organic is booming...",
@@ -118,7 +103,7 @@ export const blogPreviewData = [
   },
   {
     id: 7,
-    image: "/blogs/blogItems/blog3.jpg",
+    image: `${import.meta.env.BASE_URL}blogs/blogItems/blog3.jpg`,
     title: "Smart Irrigation Practices",
     descryption:
       "Modern irrigation systems can save up to 60% water. Discover the techniques adopted by farmers worldwide...",
@@ -132,7 +117,7 @@ export const blogPreviewData = [
 export const blogDetailsData = [
   {
     id: 1,
-    blogImage: "/blogs/blogDetails/blog1.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog1.jpg`,
     blogAuthor: "Sarah Greenfield",
     blogDate: "01/10/2025 09:45:12",
     blogComments: 48,
@@ -160,7 +145,7 @@ export const blogDetailsData = [
   },
   {
     id: 2,
-    blogImage: "/blogs/blogDetails/blog2.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog2.jpg`,
     blogAuthor: "Ahmed Farouk",
     blogDate: "03/22/2025 14:30:05",
     blogComments: 76,
@@ -195,7 +180,7 @@ export const blogDetailsData = [
   },
   {
     id: 3,
-    blogImage: "/blogs/blogDetails/blog3.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog3.jpg`,
     blogAuthor: "Emily Waters",
     blogDate: "04/08/2025 16:12:33",
     blogComments: 31,
@@ -216,7 +201,7 @@ export const blogDetailsData = [
   },
   {
     id: 4,
-    blogImage: "/blogs/blogDetails/blog4.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog4.jpg`,
     blogAuthor: "Dr. Tarek Hossam",
     blogDate: "06/15/2025 11:03:50",
     blogComments: 90,
@@ -244,7 +229,7 @@ export const blogDetailsData = [
   },
   {
     id: 5,
-    blogImage: "/blogs/blogDetails/blog1.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog1.jpg`,
     blogAuthor: "Layla Morgan",
     blogDate: "02/14/2025 08:20:00",
     blogComments: 62,
@@ -279,7 +264,7 @@ export const blogDetailsData = [
   },
   {
     id: 6,
-    blogImage: "/blogs/blogDetails/blog3.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog3.jpg`,
     blogAuthor: "Omar El Saeed",
     blogDate: "06/21/2025 09:10:33",
     blogComments: 39,
@@ -307,7 +292,7 @@ export const blogDetailsData = [
   },
   {
     id: 7,
-    blogImage: "/blogs/blogDetails/blog4.jpg",
+    blogImage: `${import.meta.env.BASE_URL}blogs/blogDetails/blog4.jpg`,
     blogAuthor: "Lina El Araby",
     blogDate: "06/10/2025 15:44:28",
     blogComments: 26,

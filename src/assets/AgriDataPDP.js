@@ -5,7 +5,15 @@ export const cropAndFreshPDP = [
   {
     id: "fruit-01",
     productName: "Organic Gala Apples",
-    images: ["/products/agriProducts/CropsAndFreshProduces/redApple.jpg"],
+
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/redApple.jpg`,
+    ],
+
     description:
       "Freshly picked organic Gala apples, rich in flavor and nutrients. Ideal for snacking or baking.",
     specs: { origin: "Local Farms", size: "Medium", organic: true },
@@ -37,10 +45,11 @@ export const cropAndFreshPDP = [
     id: "fruit-02",
     productName: "Bananas",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/bananas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/bananas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/bananas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/bananas.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/bananas.jpg`,
     ],
     description:
       "Naturally sweet and full of potassium, our bananas are ideal for a healthy snack or smoothie.",
@@ -72,7 +81,13 @@ export const cropAndFreshPDP = [
   {
     id: "fruit-03",
     productName: "Grapes",
-    images: ["/products/agriProducts/CropsAndFreshProduces/grapes.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/grapes.jpg`,
+    ],
     description:
       "Sweet and juicy grapes perfect for snacking or making juice. Grown without synthetic pesticides.",
     specs: { color: "Red", seedless: true, weight: "1kg" },
@@ -103,7 +118,13 @@ export const cropAndFreshPDP = [
   {
     id: "fruit-04",
     productName: "Green Apples",
-    images: ["/products/agriProducts/CropsAndFreshProduces/greenApple.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/greenApple.jpg`,
+    ],
     description:
       "Tangy and crisp green apples, perfect for juicing or baking pies.",
     specs: { taste: "Tart", skin: "Shiny", size: "Medium" },
@@ -134,7 +155,13 @@ export const cropAndFreshPDP = [
   {
     id: "fruit-05",
     productName: "Pears",
-    images: ["/products/agriProducts/CropsAndFreshProduces/pears.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/pears.jpg`,
+    ],
     description:
       "Juicy and mellow pears perfect for snacking and desserts. Rich in fiber and vitamin C.",
     specs: { origin: "Delta", type: "Bartlett", size: "Large" },
@@ -165,7 +192,13 @@ export const cropAndFreshPDP = [
   {
     id: "fruit-06",
     productName: "Fig",
-    images: ["/products/agriProducts/CropsAndFreshProduces/fig.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/fig.jpg`,
+    ],
     description:
       "Sweet seasonal figs loaded with antioxidants and dietary fiber.",
     specs: { variety: "Black Mission", texture: "Soft", organic: false },
@@ -196,7 +229,13 @@ export const cropAndFreshPDP = [
   {
     id: "fruit-07",
     productName: "Strawberry",
-    images: ["/products/agriProducts/CropsAndFreshProduces/strawberry.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/strawberry.jpg`,
+    ],
     description:
       "*Note: Product image is strawberry. Verify name.* Likely to be fresh strawberries – juicy and sweet.",
     specs: { origin: "Coastal", season: "Spring", type: "Fresh berries" },
@@ -219,7 +258,13 @@ export const cropAndFreshPDP = [
   {
     id: "vege-01",
     productName: "Tomato",
-    images: ["/products/agriProducts/CropsAndFreshProduces/tomato1.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/tomato1.jpg`,
+    ],
     description:
       "Juicy and ripe tomatoes perfect for salads, sauces, and everyday cooking.",
     specs: { origin: "Local farms", type: "Roma", shelfLife: "7 days" },
@@ -250,7 +295,13 @@ export const cropAndFreshPDP = [
   {
     id: "vege-02",
     productName: "onion",
-    images: ["/products/agriProducts/CropsAndFreshProduces/onion1.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/onion1.jpg`,
+    ],
     description:
       "Aromatic and versatile onions great for cooking and garnishing.",
     specs: {
@@ -285,7 +336,13 @@ export const cropAndFreshPDP = [
   {
     id: "vege-03",
     productName: "Potato",
-    images: ["/products/agriProducts/CropsAndFreshProduces/potato1.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/potato1.jpg`,
+    ],
     description: "Staple food with a rich source of carbohydrates and fiber.",
     specs: { origin: "Upper Egypt", type: "Spunta", shelfLife: "25 days" },
     rating: 3,
@@ -315,7 +372,13 @@ export const cropAndFreshPDP = [
   {
     id: "vege-04",
     productName: "Carrot",
-    images: ["/products/agriProducts/CropsAndFreshProduces/carrot1.jpg"],
+    images: [
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/carrot1.jpg`,
+    ],
     description: "Crunchy, sweet carrots full of vitamins and antioxidants.",
     specs: { origin: "Ismailia", type: "Nantes", shelfLife: "14 days" },
     rating: 5,
@@ -346,11 +409,11 @@ export const cropAndFreshPDP = [
     id: "vege-05",
     productName: "Cucumbers",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/cucumbers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cucumbers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cucumbers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cucumbers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cucumbers.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cucumbers.jpg`,
     ],
     description: "Fresh and crisp cucumbers ideal for salads and hydration.",
     specs: { origin: "Local Farms", size: "Medium", freshness: "High" },
@@ -391,11 +454,7 @@ export const cropAndFreshPDP = [
     id: "vege-06",
     productName: "Cauliflower",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/cauliflower.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cauliflower.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cauliflower.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cauliflower.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/cauliflower.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/cauliflower.jpg`,
     ],
     description:
       "Nutritious and versatile white cauliflower, great for roasting or steaming.",
@@ -436,11 +495,11 @@ export const cropAndFreshPDP = [
     id: "vege-07",
     productName: "Corn",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/corn.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/corn.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/corn.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/corn.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/corn.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/corn.jpg`,
     ],
     description:
       "Golden yellow corn, sweet and juicy – perfect for grilling or boiling.",
@@ -482,11 +541,11 @@ export const cropAndFreshPDP = [
     id: "vege-08",
     productName: "Chili Peppers",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/chiliPeppers.jpg`,
     ],
     description: "Spicy red chili peppers for cooking and pickling.",
     specs: { spiceLevel: "High", color: "Red", shelfLife: "5 days" },
@@ -526,11 +585,11 @@ export const cropAndFreshPDP = [
     id: "vege-09",
     productName: "Lemon",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/lemon.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/lemon.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/lemon.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/lemon.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/lemon.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/lemon.jpg`,
     ],
     description:
       "Fresh yellow lemons rich in vitamin C, perfect for seasoning and beverages.",
@@ -572,11 +631,11 @@ export const cropAndFreshPDP = [
     id: "vege-10",
     productName: "Peas",
     images: [
-      "/products/agriProducts/CropsAndFreshProduces/peas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/peas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/peas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/peas.jpg",
-      "/products/agriProducts/CropsAndFreshProduces/peas.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/CropsAndFreshProduces/peas.jpg`,
     ],
     description: "Sweet green peas, perfect for soups, stews, and rice dishes.",
     specs: { podType: "Green", taste: "Sweet", freshness: "High" },
@@ -622,9 +681,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-01",
     productName: "Fresh Chicken Eggs (30 pcs)",
     images: [
-      "/products/agriProducts/DairyAndLivestock/egg3.jpg",
-      "/products/agriProducts/DairyAndLivestock/egg3.jpg",
-      "/products/agriProducts/DairyAndLivestock/egg3.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/egg3.jpg`,
     ],
     description:
       "Farm-fresh chicken eggs, unprocessed and packed with nutrition. Ideal for daily meals and baking.",
@@ -661,9 +722,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-02",
     productName: "Raw Cow Milk (1L)",
     images: [
-      "/products/agriProducts/DairyAndLivestock/milk2.jpg",
-      "/products/agriProducts/DairyAndLivestock/milk2.jpg",
-      "/products/agriProducts/DairyAndLivestock/milk2.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/milk2.jpg`,
     ],
     description:
       "Unprocessed cow milk directly sourced from local farms. Rich in nutrients and ideal for boiling or cooking.",
@@ -701,9 +764,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-03",
     productName: "Beef Steak (Boneless)",
     images: [
-      "/products/agriProducts/DairyAndLivestock/sirloinSteak.jpg",
-      "/products/agriProducts/DairyAndLivestock/sirloinSteak.jpg",
-      "/products/agriProducts/DairyAndLivestock/sirloinSteak.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/sirloinSteak.jpg`,
     ],
     description:
       "Premium boneless beef steak, tender and flavorful. Ideal for grilling or pan-searing.",
@@ -740,9 +805,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-04",
     productName: "Feta Cheese",
     images: [
-      "/products/agriProducts/DairyAndLivestock/fetaCheese.jpg",
-      "/products/agriProducts/DairyAndLivestock/fetaCheese.jpg",
-      "/products/agriProducts/DairyAndLivestock/fetaCheese.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/fetaCheese.jpg`,
     ],
     description:
       "Creamy and salty feta cheese made from fresh cow's milk. Perfect for salads and sandwiches.",
@@ -780,9 +847,10 @@ export const dairyAndLivestockPDP = [
     id: "animal-05",
     productName: "Natural Honey (Pure)",
     images: [
-      "/products/agriProducts/DairyAndLivestock/honey.jpg",
-      "/products/agriProducts/DairyAndLivestock/honey.jpg",
-      "/products/agriProducts/DairyAndLivestock/honey.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/honey.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/honey.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/honey.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/honey.jpg`,
     ],
     description:
       "Pure, unfiltered natural honey with a golden hue and rich floral aroma. Great for health and sweetness.",
@@ -819,9 +887,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-06",
     productName: "Free-Range Chicken (Whole)",
     images: [
-      "/products/agriProducts/DairyAndLivestock/rawChicken.webp",
-      "/products/agriProducts/DairyAndLivestock/rawChicken.webp",
-      "/products/agriProducts/DairyAndLivestock/rawChicken.webp",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/rawChicken.webp`,
     ],
     description:
       "Whole free-range chicken with rich flavor and firm texture. Perfect for roasting or stewing.",
@@ -858,9 +928,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-07",
     productName: "Chicken Breasts",
     images: [
-      "/products/agriProducts/DairyAndLivestock/chickenBreasts.jpg",
-      "/products/agriProducts/DairyAndLivestock/chickenBreasts.jpg",
-      "/products/agriProducts/DairyAndLivestock/chickenBreasts.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenBreasts.jpg`,
     ],
     description:
       "Lean, boneless chicken breasts perfect for grilling, roasting, or slicing into strips.",
@@ -897,9 +969,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-08",
     productName: "Chicken Thighs",
     images: [
-      "/products/agriProducts/DairyAndLivestock/chickenThighs.jpg",
-      "/products/agriProducts/DairyAndLivestock/chickenThighs.jpg",
-      "/products/agriProducts/DairyAndLivestock/chickenThighs.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/chickenThighs.jpg`,
     ],
     description:
       "Tender and juicy chicken thighs with skin, great for frying or baking.",
@@ -936,9 +1010,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-09",
     productName: "Beef Mince",
     images: [
-      "/products/agriProducts/DairyAndLivestock/beefMince.webp",
-      "/products/agriProducts/DairyAndLivestock/beefMince.webp",
-      "/products/agriProducts/DairyAndLivestock/beefMince.webp",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefMince.webp`,
     ],
     description:
       "Fresh ground beef with perfect fat balance for making burgers, meatballs, or sauces.",
@@ -975,9 +1051,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-010",
     productName: "Beef Chuck",
     images: [
-      "/products/agriProducts/DairyAndLivestock/beefChuck.jpg",
-      "/products/agriProducts/DairyAndLivestock/beefChuck.jpg",
-      "/products/agriProducts/DairyAndLivestock/beefChuck.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/beefChuck.jpg`,
     ],
     description:
       "Flavorful cut of beef ideal for slow cooking, stews, or shredding for tacos.",
@@ -1014,9 +1092,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-011",
     productName: "Beef Steak Packed",
     images: [
-      "/products/agriProducts/DairyAndLivestock/steak1.jpg",
-      "/products/agriProducts/DairyAndLivestock/steak1.jpg",
-      "/products/agriProducts/DairyAndLivestock/steak1.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/steak1.jpg`,
     ],
     description:
       "Premium quality beef steak slices, vacuum-packed to preserve freshness and flavor.",
@@ -1053,9 +1133,11 @@ export const dairyAndLivestockPDP = [
     id: "animal-012",
     productName: "Butter",
     images: [
-      "/products/agriProducts/DairyAndLivestock/butter.jpg",
-      "/products/agriProducts/DairyAndLivestock/butter.jpg",
-      "/products/agriProducts/DairyAndLivestock/butter.jpg",
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
+      `${import.meta.env.BASE_URL}products/agriProducts/DairyAndLivestock/butter.jpg`,
     ],
     description:
       "Creamy and rich dairy butter made from natural cow’s milk, perfect for cooking and baking.",

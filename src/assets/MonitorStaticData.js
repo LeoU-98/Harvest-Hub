@@ -5,12 +5,12 @@ export const fieldDetailsData = [
     disease: {
       name: "Fungal Infection",
       confidence: 85,
-      image: "/Picture2.jpg",
+      image: `${import.meta.env.BASE_URL}Picture2.jpg`,
     },
     rippeness: {
       name: "Not Ripe Yet",
       confidence: 90,
-      image: "/Picture1.jpg",
+      image: `${import.meta.env.BASE_URL}Picture1.jpg`,
     },
     sensorReadings: {
       soilMoisture: "42%",
@@ -24,12 +24,12 @@ export const fieldDetailsData = [
     disease: {
       name: "Fungal Infection",
       confidence: 80,
-      image: "/Picture2.jpg",
+      image: `${import.meta.env.BASE_URL}Picture2.jpg`,
     },
     rippeness: {
       name: "Not Ripe Yet",
       confidence: 92,
-      image: "/Picture1.jpg",
+      image: `${import.meta.env.BASE_URL}Picture1.jpg`,
     },
     sensorReadings: {
       soilMoisture: "42%",
@@ -43,12 +43,12 @@ export const fieldDetailsData = [
     disease: {
       name: "Fungal Infection",
       confidence: 83,
-      image: "/Picture2.jpg",
+      image: `${import.meta.env.BASE_URL}Picture2.jpg`,
     },
     rippeness: {
       name: "Not Ripe Yet",
       confidence: 82,
-      image: "/Picture1.jpg",
+      image: `${import.meta.env.BASE_URL}Picture1.jpg`,
     },
     sensorReadings: {
       soilMoisture: "42%",
@@ -62,12 +62,12 @@ export const fieldDetailsData = [
     disease: {
       name: "Fungal Infection",
       confidence: 85,
-      image: "/Picture2.jpg",
+      image: `${import.meta.env.BASE_URL}Picture2.jpg`,
     },
     rippeness: {
       name: "Not Ripe Yet",
       confidence: 90,
-      image: "/Picture1.jpg",
+      image: `${import.meta.env.BASE_URL}Picture1.jpg`,
     },
     sensorReadings: {
       soilMoisture: "42%",

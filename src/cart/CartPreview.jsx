@@ -37,7 +37,7 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
         {cart.length === 0 ? (
           <div className="h-64 text-center text-xl text-green-500">
             <img
-              src="/cart/cartBackground_280_196.jpg"
+              src={`${import.meta.env.BASE_URL}cart/cartBackground_280_196.jpg`}
               alt="Empty Cart Background"
             />
             Your Cart is Empty{" "}
@@ -60,7 +60,7 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
       <div className="flex justify-center gap-2 py-2">
         <Link
           onClick={() => setIsCartPreviewOpen(false)}
-          to="/view-cart"
+          to="/Harvest-Hub/view-cart"
           className="cursor-pointer rounded-full bg-apple-500 px-5 py-3 text-sm uppercase text-white duration-300 hover:bg-black"
         >
           view cart

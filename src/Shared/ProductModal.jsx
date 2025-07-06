@@ -64,7 +64,7 @@ function ItemPreview({ handleOpen, itemID }) {
             <XMarkIcon className="w-36 text-red-500" />
           )}
         </div>
-        <div className="flex lg:ml-2">
+        <div className="flex gap-3 lg:ml-2">
           <div className="flex flex-col gap-1 text-sm">
             <span className="max-w-40 text-base capitalize text-apple-500">
               {item?.productName}
@@ -78,12 +78,12 @@ function ItemPreview({ handleOpen, itemID }) {
             </span>
             <ItemCounter itemID={itemID} handleOpen={handleOpen} />
           </div>
-          <Specification />
+          <VerticalTags tags={item?.tags} />
         </div>
       </div>
       {/* right  */}
       <div>
-        <div className="mt-3 border-t-[1px] border-gray-300 pt-3 text-sm lg:ml-5 lg:mt-0 lg:border-l-[1px] lg:border-t-0 lg:px-4 lg:pt-0">
+        <div className="mt-3 border-t-[1px] border-gray-300 pt-3 text-sm lg:ml-2 lg:mt-0 lg:border-l-[1px] lg:border-t-0 lg:px-4 lg:pt-0">
           <p className="mb-3 text-base sm:text-lg">
             There are {totalItemsInCart} items in your cart
           </p>
@@ -122,25 +122,24 @@ function ItemPreview({ handleOpen, itemID }) {
   );
 }
 
-function Specification() {
+function VerticalTags({ tags }) {
   return (
-    <div className="ml-3 flex flex-col gap-2 text-sm lg:ml-5">
-      <h3 className="border-b-[1px] border-gray-300 pb-1 text-base">
-        Specification
-      </h3>
-      <span>
-        Prop1: <span>Value</span>
-      </span>
-      <span>
-        Prop2: <span>Value</span>
-      </span>
-      <span>
-        Prop3: <span>Value</span>
-      </span>
+    <div className="flex flex-col items-start space-y-2 rounded-xl border bg-white p-4 shadow-md">
+      {tags.map((tag, index) => (
+        <span
+          key={index}
+          className="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700 transition hover:bg-green-200"
+        >
+          {tag}
+        </span>
+      ))}
     </div>
   );
 }
 
+VerticalTags.propTypes = {
+  tags: propTypes.array,
+};
 ItemPreview.propTypes = {
   handleOpen: propTypes.func,
   itemID: propTypes.string,

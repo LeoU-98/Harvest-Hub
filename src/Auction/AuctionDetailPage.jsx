@@ -1,35 +1,32 @@
 import { useEffect, useRef, useState } from "react";
 import ProductImagePreview from "../Shared/ProductImagePreview";
 import { splitCommonPrefix } from "../utils/helpers";
-import { productDetailsData } from "../assets/ProductStaticData";
 import { Link, useParams } from "react-router-dom";
 import { CountdownTimer } from "../Shared/CountdownTimer";
-import { auctions } from "../assets/AuctionStaticData";
 import propTypes from "prop-types";
 import { TbArrowBackUp } from "react-icons/tb";
 import { GiPayMoney } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { IoPerson } from "react-icons/io5";
+import { auctionDetails } from "../assets/AuctionDetailsStaticData";
 
 // AuctionDetailPage.jsx
 export default function AuctionDetailPage() {
   const { id } = useParams();
 
-  const product = productDetailsData.find((p) => p.id === Number(id));
-
-  const auction = auctions.find((auction) => auction.id === Number(id));
+  const auctionDetailsData = auctionDetails.find((p) => p.id === Number(id));
 
   const images = {
-    prefix: splitCommonPrefix(product.images).prefix,
-    variables: splitCommonPrefix(product.images).variables,
+    prefix: splitCommonPrefix(auctionDetailsData.images).prefix,
+    variables: splitCommonPrefix(auctionDetailsData.images).variables,
   };
 
   return (
     <div className="container mx-auto my-10 mb-16 rounded-2xl bg-gradient-to-br from-emerald-900/80 to-emerald-600/90 p-5">
       <div className="mb-3">
         <Link
-          to={"../auctions/list"}
+          to={"/Harvest-Hub/auctions/list"}
           className="flex h-12 w-36 items-center justify-center gap-1 rounded-3xl bg-white px-2 py-1 text-green-900 duration-300 hover:bg-black hover:text-white"
         >
           <TbArrowBackUp className="size-6" />
@@ -42,7 +39,7 @@ export default function AuctionDetailPage() {
           iconClassName="overflow-hidden rounded-2xl"
           imageClassName="overflow-hidden rounded-2xl !w-[500px] "
         />
-        <AuctionSpecifications data={auction} />
+        <AuctionSpecifications data={auctionDetailsData} />
       </div>
     </div>
   );
@@ -54,7 +51,7 @@ export function AuctionSpecifications({ data }) {
   const [bid, setBid] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const { id, title, currentBid, endTime } = data;
+  const { id, title, currentBid, endTime, description } = data;
 
   const handlePlaceBidClick = () => {
     if (!phone || !email || !bid) {
@@ -102,7 +99,7 @@ export function AuctionSpecifications({ data }) {
         <textarea
           className="dark:border-zinc-700 dark:bg-zinc-800 h-28 w-full resize-none rounded-xl border border-gray-300 bg-gray-50 px-4 py-2 text-gray-800 placeholder-gray-400 focus:outline-none dark:text-white"
           disabled
-          value="Powerful and reliable tractor, perfect for small farms."
+          value={description}
         />
 
         <div className="flex items-center gap-2">

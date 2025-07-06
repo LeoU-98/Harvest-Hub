@@ -21,17 +21,17 @@ const profileMenuItems = [
   {
     label: "My Profile",
     icon: UserCircleIcon,
-    path: "profile/basic-info",
+    path: "/Harvest-Hub/profile/basic-info",
   },
   {
     label: "Inbox",
     icon: InboxArrowDownIcon,
-    path: "MyProfile/",
+    path: "/Harvest-Hub/my-profile/",
   },
   {
     label: "Sign Out",
     icon: PowerIcon,
-    path: "/",
+    path: "/Harvest-Hub/",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function ProfileMenu({ data }) {
           type="button"
           className="flex w-fit items-center gap-2 self-center rounded-full border border-gray-500 pr-2 text-sm outline-none duration-500"
         >
-          <img className="size-12 rounded-full" src={data.image} />
+          <img className="size-12 rounded-full" src={`${data.image}`} />
           <p className="cursor text-base duration-500">{data.name}</p>
           <ChevronDownIcon
             strokeWidth={2.5}

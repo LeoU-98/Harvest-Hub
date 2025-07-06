@@ -14,37 +14,37 @@ import CategoryList from "./CategoryList";
 const megaMenuData = [
   {
     categoryItem: "Agricultural Products",
-    categoryLink: "products/agricultural-products",
+    categoryLink: "/Harvest-Hub/products/agricultural-products",
     items: [
       {
         itemTitle: "Crops & Fresh Produce",
-        itemLink: "products/crop-fresh-produce",
+        itemLink: "/Harvest-Hub/products/crop-fresh-produce",
       },
       {
         itemTitle: "Seeds & Saplings",
-        itemLink: "products/seeds-and-saplings",
+        itemLink: "/Harvest-Hub/products/seeds-and-saplings",
       },
       {
         itemTitle: "Dairy & livestock",
-        itemLink: "products/dairy-and-livestock",
+        itemLink: "/Harvest-Hub/products/dairy-and-livestock",
       },
     ],
   },
   {
     categoryItem: "Farming Technology",
-    categoryLink: "products/farming-technology",
+    categoryLink: "/Harvest-Hub/products/farming-technology",
     items: [
       {
         itemTitle: "Soil & Crop Monitoring",
-        itemLink: "products/soil-and-crop-monitoring",
+        itemLink: "/Harvest-Hub/products/soil-and-crop-monitoring",
       },
       {
         itemTitle: "Crop Spraying Equipment",
-        itemLink: "products/crop-spraying-equipment",
+        itemLink: "/Harvest-Hub/products/crop-spraying-equipment",
       },
       {
         itemTitle: "Storage & Processing ",
-        itemLink: "products/storage-and-processing ",
+        itemLink: "/Harvest-Hub/products/storage-and-processing ",
       },
     ],
   },

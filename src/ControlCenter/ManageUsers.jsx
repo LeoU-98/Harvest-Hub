@@ -12,7 +12,7 @@ const dummyUser = {
   email: "ahmed@harvesthub.com",
   role: "Merchant",
   status: "Active",
-  image: "/public/merchant.jpg",
+  image: `${import.meta.env.BASE_URL}users/merchant.jpg`,
 };
 
 export default function ManageUsers() {

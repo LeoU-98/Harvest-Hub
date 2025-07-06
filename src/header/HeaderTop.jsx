@@ -97,7 +97,7 @@ function HeaderTop() {
                   <li className="group cursor-pointer px-0 py-1 outline-none">
                     <a className="outline-none group-hover:text-apple-500">
                       <img
-                        src="/languages/english.jpg"
+                        src="languages/english.jpg"
                         alt="english icon"
                         className="relative bottom-[1px] inline-block"
                       />
@@ -107,7 +107,7 @@ function HeaderTop() {
                   <li className="group cursor-pointer px-0 py-1 outline-none">
                     <a className="outline-none group-hover:text-apple-500">
                       <img
-                        src="/languages/arabic.jpg"
+                        src="languages/arabic.jpg"
                         alt="arabic icon"
                         className="relative bottom-[1px] inline-block"
                       />

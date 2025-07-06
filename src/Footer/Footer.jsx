@@ -33,7 +33,11 @@ function Footer() {
           </div>
           <div className="flex flex-col justify-between lg:flex-row">
             <div className="basis-1/4 pl-3">
-              <img src="/logo.png" alt="Harvest Hub Logo" className="size-40" />
+              <img
+                src={`${import.meta.env.BASE_URL}logo.png`}
+                alt="Harvest Hub Logo"
+                className="size-40"
+              />
 
               <p className="mt-5 text-white">
                 Harvest Hub – Connecting farmers with quality equipment,

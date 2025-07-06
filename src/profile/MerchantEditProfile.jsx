@@ -1,4 +1,3 @@
-// src/pages/merchant/MerchantSetupPage.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";

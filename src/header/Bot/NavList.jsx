@@ -10,7 +10,7 @@ export default function NavList() {
       <ul className="flex min-w-[240px] select-none flex-col gap-4 px-4 py-4 font-sans text-base font-normal text-blue-gray-700 lg:flex-row lg:items-center lg:gap-7 lg:px-0 lg:py-2">
         <li>
           <NavLink
-            to="/"
+            to="/Harvest-Hub/"
             className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
           >
             home
@@ -24,7 +24,7 @@ export default function NavList() {
         {user?.role === "admin" && (
           <li>
             <NavLink
-              to="dashboard/products-dashboard"
+              to="/Harvest-Hub/dashboard/products-dashboard"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
               Dashboard
@@ -34,7 +34,7 @@ export default function NavList() {
 
         <li>
           <NavLink
-            to="blog"
+            to="/Harvest-Hub/blog"
             className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
           >
             Blog
@@ -45,7 +45,7 @@ export default function NavList() {
           user?.role === "admin") && (
           <li>
             <NavLink
-              to="monitor/field-details"
+              to="/Harvest-Hub/monitor/field-details"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
               Monitor
@@ -58,7 +58,7 @@ export default function NavList() {
           user?.role === "admin") && (
           <li>
             <NavLink
-              to="auctions/list"
+              to="/Harvest-Hub/auctions/list"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
               Auction
@@ -68,7 +68,7 @@ export default function NavList() {
         {user?.role === "admin" && (
           <li>
             <NavLink
-              to="control-center/manage-users"
+              to="/Harvest-Hub/control-center/manage-users"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
               Control Center
@@ -78,7 +78,7 @@ export default function NavList() {
         {(user?.role === "merchant" || user?.role === "admin") && (
           <li>
             <NavLink
-              to="manage-products"
+              to="/Harvest-Hub/manage-products"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
               Manage Products

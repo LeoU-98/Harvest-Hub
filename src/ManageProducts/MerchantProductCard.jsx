@@ -26,7 +26,7 @@ export default function MerchantProductCard({
         <div className="group relative flex flex-col items-center">
           <Link
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            to={`/product-details/${id}`}
+            to={`/Harvest-Hub/product-details/${id}`}
             className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
           >
             <img

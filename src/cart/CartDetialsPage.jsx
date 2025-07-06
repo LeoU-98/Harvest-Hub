@@ -18,7 +18,7 @@ export default function CartDetialsPage() {
             {cart.length === 0 ? (
               <div className="relative h-64 overflow-hidden text-center text-xl text-green-500">
                 <img
-                  src="/cart/cartBackground_800_650.jpg"
+                  src={`${import.meta.env.BASE_URL}cart/cartBackground_800_650.jpg`}
                   className="absolute max-h-96 w-full"
                   alt="Empty Cart Background"
                 />

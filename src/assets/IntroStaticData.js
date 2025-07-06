@@ -6,7 +6,7 @@ export const introData = [
     overlay: false,
     promoDesc:
       "Crisp, nutritious veggies, straight from local farms to your table.",
-    promoBanner: "/banners/banner-22.webp",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-22.webp`,
     promoLink: "link2",
   },
   {
@@ -16,7 +16,7 @@ export const introData = [
     overlay: false,
     promoDesc:
       "Savor the juiciest, ripest fruits straight from the orchards to your table.",
-    promoBanner: "/banners/banner-33.webp",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-33.webp`,
     promoLink: "link2",
   },
   {
@@ -26,7 +26,7 @@ export const introData = [
     overlay: true,
     promoDesc:
       "Get the latest farming tools and smart tech to boost productivity and efficiency.",
-    promoBanner: "/banners/banner-44.jpg",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-44.jpg`,
     promoLink: "link2",
   },
   {
@@ -36,7 +36,7 @@ export const introData = [
     overlay: true,
     promoDesc:
       "Optimize your yields and reduce waste with our smart agricultural solutions.",
-    promoBanner: "/banners/banner-55.png",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-55.png`,
     promoLink: "link2",
   },
   {
@@ -45,7 +45,7 @@ export const introData = [
     textPosition: "left",
     overlay: true,
     promoDesc: "Providing the tools and resources farmers need to thrive.",
-    promoBanner: "/banners/banner-66.jpg",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-66.jpg`,
     promoLink: "link2",
   },
   {
@@ -55,7 +55,7 @@ export const introData = [
     overlay: true,
     promoDesc:
       "Empowering farmers with sustainable practices for a greener tomorrow.",
-    promoBanner: "/banners/banner-77.jpg",
+    promoBanner: `${import.meta.env.BASE_URL}banners/banner-77.jpg`,
     promoLink: "link2",
   },
 ];

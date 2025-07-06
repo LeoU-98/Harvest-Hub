@@ -16,6 +16,8 @@ function HeaderMid() {
 
   const { isAuthenticated, user } = useSelector((state) => state.auth);
 
+  console.log(user);
+
   return (
     <div className="bg-white">
       <div className="container mx-auto flex flex-wrap justify-between sm:px-3">
@@ -25,7 +27,7 @@ function HeaderMid() {
             <ProfileMenu data={user} />
           ) : (
             <Link
-              to={"/account/signin"}
+              to={"/Harvest-Hub/account/signin"}
               className="group flex w-fit items-center gap-2 self-center rounded-full border border-apple-500 text-sm duration-500 hover:border-gray-500"
             >
               <div className="w-fit rounded-full bg-apple-500 p-2 duration-500 group-hover:bg-black">
@@ -41,7 +43,11 @@ function HeaderMid() {
         {/* middle  */}
         <div className="-order-1 flex w-1/2 basis-full items-end justify-center gap-1 p-4 md:-order-none md:w-1/3 md:basis-1/3">
           <span className="text-4xl text-green-500">Harvest</span>
-          <img src="./logo.png" alt="Harvest Hub Logo" className="w-20"></img>
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Harvest Hub Logo"
+            className="w-20"
+          ></img>
           <span className="text-4xl text-green-500">Hub</span>
         </div>
 
