@@ -356,12 +356,12 @@ function EditModal({ closeModal, selectedAuction }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto flex h-[450px] w-full gap-3"
+      className="mx-auto flex h-[450px] w-full flex-col gap-3 md:flex-row"
     >
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2">
         <ImageUploader onImagesChange={handleImageChange} />
       </div>
-      <div className="w-1/2 rounded-2xl bg-white p-5">
+      <div className="w-full rounded-2xl bg-white p-5 md:w-1/2">
         <div>
           <label htmlFor="title" className="mb-1 block text-sm font-medium">
             Item Name
