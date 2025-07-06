@@ -11,30 +11,30 @@ export default function ItemCounter({
 }) {
   const dispatch = useDispatch();
   const item = useSelector((store) =>
-    store.cart.find((item) => item.id === itemID),
+    store.cart?.find((item) => item.id === itemID),
   );
 
   function handleInc() {
     dispatch(updateItemCount({ id: itemID, count: item.count + 1 }));
   }
   function handleDec(e) {
-    if (item.count <= 0) return;
-    if (forCartView === false && item.count === 1) {
+    if (item?.count <= 0) return;
+    if (forCartView === false && item?.count === 1) {
       e.stopPropagation();
       dispatch(removeItem({ id: itemID }));
       handleOpen((state) => !state);
       return;
     }
 
-    if (forCartView === true && item.count === 1) return;
+    if (forCartView === true && item?.count === 1) return;
 
-    dispatch(updateItemCount({ id: itemID, count: item.count - 1 }));
+    dispatch(updateItemCount({ id: itemID, count: item?.count - 1 }));
   }
 
   function handleSetCount(e) {
     if (e.target.value < 0) return;
 
-    dispatch(updateItemCount({ id: itemID, count: Number(e.target.value) }));
+    dispatch(updateItemCount({ id: itemID, count: Number(e.target?.value) }));
   }
 
   return (

@@ -50,7 +50,7 @@ const megaMenuData = [
   },
 ];
 
-export default function NestedNavMenu({ handlerText }) {
+export default function NestedNavMenu({ handlerText, onClose }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const renderItems = megaMenuData.map((data, key) => (
@@ -58,7 +58,7 @@ export default function NestedNavMenu({ handlerText }) {
       className="flex items-center gap-4 rounded-md border-2 border-green-500"
       key={key}
     >
-      <CategoryList data={data} />
+      <CategoryList data={data} onClose={onClose} />
     </Menu>
   ));
 
@@ -99,4 +99,5 @@ export default function NestedNavMenu({ handlerText }) {
 NestedNavMenu.propTypes = {
   data: propTypes.array,
   handlerText: propTypes.string,
+  onClose: propTypes.func,
 };

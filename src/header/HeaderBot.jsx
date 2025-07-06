@@ -35,7 +35,7 @@ function HeaderBot() {
   const handleSuggestionClick = (product) => {
     setSearchTerm("");
     setShowSuggestions(false);
-    navigate(`/product-details/${product.id}`);
+    navigate(`/Harvest-Hub/product-details/${product.id}`);
   };
 
   const handleSubmit = (e) => {
@@ -53,7 +53,7 @@ function HeaderBot() {
           <div className="col-span-1 col-start-1 row-span-1 row-start-1">
             <div className="flex items-center text-blue-gray-900">
               <div className="hidden lg:block">
-                <NavList />
+                <NavList type="desktop" />
               </div>
               <IconButton
                 variant="text"
@@ -72,7 +72,11 @@ function HeaderBot() {
           {/* center bot */}
           <div className="col-span-2 row-start-2">
             <Collapse open={openNav}>
-              <NavList className="absolute" />
+              <NavList
+                className="absolute"
+                type="mobile"
+                setOpenNav={setOpenNav}
+              />
             </Collapse>
           </div>
 

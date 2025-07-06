@@ -37,7 +37,7 @@ export default function AuctionDetailPage() {
         <ProductImagePreview
           data={images}
           iconClassName="overflow-hidden rounded-2xl"
-          imageClassName="overflow-hidden rounded-2xl !w-[500px] "
+          imageClassName="overflow-hidden rounded-2xl  2xl:!w-[500px] "
         />
         <AuctionSpecifications data={auctionDetailsData} />
       </div>

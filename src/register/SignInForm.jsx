@@ -1,8 +1,8 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import propTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "./authSlice";
 
 export default function SignInForm({ className }) {
@@ -11,6 +11,8 @@ export default function SignInForm({ className }) {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
   const authError = useSelector((state) => state.auth.error);
@@ -28,10 +30,17 @@ export default function SignInForm({ className }) {
     e.preventDefault();
 
     const email = e.target.email.value;
-    const password = e.target.password.value;
+    const password = e.target.password.valu;
+    e;
 
     dispatch(login({ email, password }));
   };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/Harvest-Hub"); // or any protected route
+    }
+  }, [isAuthenticated, navigate]);
 
   return (
     <form className={className} onSubmit={handleSubmit}>
