@@ -30,8 +30,7 @@ export default function SignInForm({ className }) {
     e.preventDefault();
 
     const email = e.target.email.value;
-    const password = e.target.password.valu;
-    e;
+    const password = e.target.password.value;
 
     dispatch(login({ email, password }));
   };

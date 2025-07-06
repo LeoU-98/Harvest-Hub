@@ -40,7 +40,10 @@ export default function BasicInfoEdit() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-3/4 space-y-5 rounded-xl p-6">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full space-y-5 rounded-xl p-6 lg:w-1/2 xl:w-2/3 2xl:w-3/4"
+    >
       <h3 className="text-2xl font-bold text-white">Basic Info</h3>
 
       <div className="space-y-5">

@@ -123,7 +123,7 @@ export default function MerchantEditProfile() {
   };
 
   return (
-    <div className="w-3/4 space-y-6 p-6">
+    <div className="w-full space-y-6 p-6 lg:w-1/2 xl:w-2/3 2xl:w-3/4">
       <h2 className="text-2xl font-bold text-white">Merchant Profile Edit</h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Business Info */}

@@ -17,7 +17,7 @@ function DeactivateAccount() {
   };
 
   return (
-    <div className="w-3/4 p-6">
+    <div className="w-full p-6 lg:w-1/2 xl:w-2/3 2xl:w-3/4">
       <h2 className="mb-6 text-2xl font-bold text-white">Deactivate Account</h2>
 
       <div className="rounded-2xl bg-white px-8 py-16">
