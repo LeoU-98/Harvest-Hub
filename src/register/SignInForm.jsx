@@ -37,7 +37,7 @@ export default function SignInForm({ className }) {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/Harvest-Hub"); // or any protected route
+      navigate("/Harvest-Hub/"); // or any protected route
     }
   }, [isAuthenticated, navigate]);
 

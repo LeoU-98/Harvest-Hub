@@ -3,7 +3,7 @@ export const dummyUsers = [
   {
     email: "merchant@harvesthub.com",
     // password: "merchant123",
-    name: "Ahmed",
+    name: "Hasan",
     image: `${import.meta.env.BASE_URL}users/merchant.jpg`,
     phone: "0100-123-4567",
     location: "Giza, Egypt",
@@ -23,7 +23,7 @@ export const dummyUsers = [
   {
     email: "admin@harvesthub.com",
     // password: "admin123",
-    name: "Khaled",
+    name: "Mohamed",
     image: `${import.meta.env.BASE_URL}users/admin.jpg`,
     phone: "0100-888-4444",
     location: "Alexandria, Egypt",
