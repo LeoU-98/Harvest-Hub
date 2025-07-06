@@ -160,7 +160,7 @@ function SearchBox({ placeholder = "Search...", onSearch }) {
       onChange={(e) => setQuery(e.target.value)}
       onFocus={() => query && setShowSuggestions(true)}
       placeholder={placeholder}
-      className="w-[400px] max-w-80 flex-1 rounded-2xl px-3 py-2 text-sm text-gray-800 outline-none ring-1 ring-gray-800 focus:ring-green-500"
+      className="max-w-80 flex-1 rounded-2xl px-3 py-2 text-sm text-gray-800 outline-none ring-1 ring-gray-800 focus:ring-green-500 sm:w-[400px]"
     />
   );
 }
