@@ -1,8 +1,8 @@
-import FilterBy from "../../Shared/FilterBy";
-import BreadCrumb from "../../Shared/BreadCrumb";
+import FilterBy from "../../shared/FilterBy";
+import BreadCrumb from "../../shared/BreadCrumb";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
-import ProductCard from "../../Shared/ProductCard";
+import ProductCard from "../../shared/ProductCard";
 import { Select, Option } from "@material-tailwind/react";
 
 import { AiOutlineProduct } from "react-icons/ai";

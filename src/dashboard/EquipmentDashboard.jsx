@@ -21,7 +21,7 @@ const storageInvestment = [
   { name: "Processing Units", value: 2500 },
 ];
 
-function EquipmentDashboard() {
+export default function EquipmentDashboard() {
   return (
     <Dashboard
       barTitle={"Equipment Sales"}
@@ -33,5 +33,3 @@ function EquipmentDashboard() {
     />
   );
 }
-
-export default EquipmentDashboard;

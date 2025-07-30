@@ -2,7 +2,7 @@ import CartPreview from "../cart/CartPreview";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import ProfileMenu from "./Mid/ProfileMenu";
+import ProfileMenu from "./mid/ProfileMenu";
 import { useCart } from "../cart/cartSlice";
 import { useSelector } from "react-redux";
 

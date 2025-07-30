@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
-function BreadCrumb() {
+export default function BreadCrumb() {
   const location = useLocation();
 
   // Split the pathname into segments, ignoring empty ones
@@ -127,5 +127,3 @@ function BreadCrumb() {
     </div>
   );
 }
-
-export default BreadCrumb;

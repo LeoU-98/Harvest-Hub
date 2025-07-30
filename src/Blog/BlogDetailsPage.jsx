@@ -1,4 +1,4 @@
-import BreadCrumb from "../Shared/BreadCrumb";
+import BreadCrumb from "../shared/BreadCrumb";
 import BlogAside from "./BlogAside";
 import { blogDetailsData } from "../assets/BlogStaticData";
 import { useParams } from "react-router-dom";

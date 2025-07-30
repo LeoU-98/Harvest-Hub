@@ -1,21 +1,16 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import propTypes from "prop-types";
-import AddToCartButton from "../Shared/AddToCartButton";
+import AddToCartButton from "../shared/AddToCartButton";
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
-import { headerVariants } from "../motion/variants";
 import { dealOfTheDayProducts } from "../assets/ProductStaticData";
 import { Rating } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../cart/cartSlice";
 import { Link } from "react-router-dom";
+import { H2 } from "../ui/Heading";
 
 function DealOfTheDay() {
   const settings = {
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
     infinite: false,
     dots: false,
     arrows: false,
@@ -29,7 +24,6 @@ function DealOfTheDay() {
           slidesToShow: 1,
           dots: false,
           infinite: false,
-          arrows: true,
         },
       },
     ],
@@ -37,20 +31,17 @@ function DealOfTheDay() {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <motion.h2
-        variants={headerVariants}
-        initial="hidden"
-        whileInView="visible"
-        className="relative top-5 mx-auto mb-8 flex w-fit items-center justify-center rounded-full rounded-bl-lg rounded-tr-lg bg-gradient-to-l from-emerald-500 to-emerald-900 px-5 py-2 capitalize text-white sm:text-xl md:mb-12 md:w-full md:py-2 md:text-2xl lg:py-3 lg:text-4xl"
-      >
-        deal of the day
-      </motion.h2>
+      <H2>deal of the day</H2>
 
-      <Slider {...settings}>
-        {dealOfTheDayProducts.map((product) => (
-          <DealOfTheDayItem data={product} key={product.id} />
-        ))}
-      </Slider>
+      <div className="mx-auto max-w-[400px] md:max-w-none lg:max-w-[800px] xl:max-w-none">
+        <Slider {...settings}>
+          {dealOfTheDayProducts.map((product) => (
+            <div key={product.id}>
+              <DealOfTheDayItem data={product} />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
@@ -75,7 +66,7 @@ function DealOfTheDayItem({ data }) {
   }
 
   return (
-    <div className="mx-auto flex max-w-[400px] flex-col overflow-hidden rounded-3xl bg-white xl:mx-4 xl:max-w-[685px] xl:flex-row 2xl:mx-auto">
+    <div className="m-2 flex flex-col overflow-hidden rounded-3xl bg-white xl:max-w-[685px] xl:flex-row">
       <Link
         to={`./product-details/${id}`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -89,7 +80,7 @@ function DealOfTheDayItem({ data }) {
       </Link>
       <div className="mx-auto flex w-full flex-col gap-2 p-5 xl:p-3 2xl:border-l-[1px] 2xl:border-gray-400 2xl:p-5">
         <ItemTimer />
-        <p className="text-gray-900">{productName}</p>
+        <p className="line-clamp-1 text-gray-900">{productName}</p>
 
         <p className="text-apple-500 xl:text-base 2xl:text-xl">
           {Number(discountPrice) !== 0 ? (
@@ -105,7 +96,7 @@ function DealOfTheDayItem({ data }) {
         </p>
 
         <Rating value={rating} readonly />
-        <p className="max-w-80 xl:line-clamp-2 2xl:line-clamp-3">
+        <p className="line-clamp-2 max-w-80 xl:line-clamp-2 2xl:line-clamp-3">
           {description}
         </p>
         {/* add to cart & other  */}
@@ -193,39 +184,39 @@ function ItemTimer() {
   );
 }
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} -top-8 right-[2%] size-7 rounded-full bg-white opacity-100 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] lg:size-9`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-}
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={`${className} -top-8 right-[2%] size-7 rounded-full bg-white opacity-100 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] lg:size-9`}
+//       style={{ ...style }}
+//       onClick={onClick}
+//     />
+//   );
+// }
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} -top-8 left-[78%] size-7 rounded-full bg-white before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] sm:left-[86%] md:left-[89%] lg:left-[90%] lg:size-9 xl:left-[91%]`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-}
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={`${className} -top-8 left-[78%] size-7 rounded-full bg-white before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] sm:left-[86%] md:left-[89%] lg:left-[90%] lg:size-9 xl:left-[91%]`}
+//       style={{ ...style }}
+//       onClick={onClick}
+//     />
+//   );
+// }
 
-SamplePrevArrow.propTypes = {
-  className: propTypes.string,
-  style: propTypes.object,
-  onClick: propTypes.func,
-};
+// SamplePrevArrow.propTypes = {
+//   className: propTypes.string,
+//   style: propTypes.object,
+//   onClick: propTypes.func,
+// };
 
-SampleNextArrow.propTypes = {
-  className: propTypes.string,
-  style: propTypes.object,
-  onClick: propTypes.func,
-};
+// SampleNextArrow.propTypes = {
+//   className: propTypes.string,
+//   style: propTypes.object,
+//   onClick: propTypes.func,
+// };
 
 DealOfTheDayItem.propTypes = {
   data: propTypes.object,

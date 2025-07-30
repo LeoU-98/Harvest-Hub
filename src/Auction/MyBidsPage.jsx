@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
-import { CountdownTimer } from "../Shared/CountdownTimer";
+import { CountdownTimer } from "../shared/CountdownTimer";
 import { userBids } from "../assets/AuctionStaticData"; // You will create this file with sample bids
 import ReactPaginate from "react-paginate";
 import { useState } from "react";

@@ -6,7 +6,7 @@ import ReactPaginate from "react-paginate";
 import { formatDate } from "../utils/helpers";
 import { FaCrown } from "react-icons/fa";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { ImageUploader } from "../Shared/ImageUploader";
+import { ImageUploader } from "../shared/ImageUploader";
 import { FiAlertTriangle } from "react-icons/fi";
 import { myAuctions } from "../assets/AuctionStaticData";
 

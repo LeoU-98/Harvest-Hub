@@ -23,7 +23,7 @@ const revenueData = [
   { name: "Supplies", value: 2000 },
 ];
 
-function ProductsDashboard() {
+export default function ProductsDashboard() {
   return (
     <Dashboard
       barTitle={"Product Demand"}
@@ -35,5 +35,3 @@ function ProductsDashboard() {
     />
   );
 }
-
-export default ProductsDashboard;

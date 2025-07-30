@@ -16,7 +16,7 @@ import propTypes from "prop-types";
 
 const COLORS = ["#4CAF50", "#FF9800", "#2196F3"];
 
-function Dashboard({
+export default function Dashboard({
   barData,
   lineData,
   pieData,
@@ -90,8 +90,6 @@ function Dashboard({
     </div>
   );
 }
-
-export default Dashboard;
 
 Dashboard.propTypes = {
   barData: propTypes.array,

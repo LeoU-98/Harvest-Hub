@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ImageAnalysisResult from "./Components/ImageAnalysisResult";
-import SensorCard from "./Components/SensorCard";
+import ImageAnalysisResult from "./components/ImageAnalysisResult";
+import SensorCard from "./components/SensorCard";
 import { Select, Option } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 

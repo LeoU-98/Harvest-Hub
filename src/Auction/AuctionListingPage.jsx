@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
-import { CountdownTimer } from "../Shared/CountdownTimer";
+import { CountdownTimer } from "../shared/CountdownTimer";
 import { auctions } from "../assets/AuctionStaticData";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import BreadCrumb from "../Shared/BreadCrumb";
+import BreadCrumb from "../shared/BreadCrumb";
 import { useCart } from "./cartSlice";
 import CartItem from "./CartItem";
 

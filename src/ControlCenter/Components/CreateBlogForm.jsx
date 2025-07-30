@@ -1,4 +1,4 @@
-import { ImageUploader } from "../../Shared/ImageUploader";
+import { ImageUploader } from "../../shared/ImageUploader";
 import propTypes from "prop-types";
 export default function CreateBlogForm({
   blogData,

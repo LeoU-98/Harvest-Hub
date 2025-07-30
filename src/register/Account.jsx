@@ -1,4 +1,4 @@
-import BreadCrumb from "../Shared/BreadCrumb";
+import BreadCrumb from "../shared/BreadCrumb";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import SignInUp from "./SignInUp";
 

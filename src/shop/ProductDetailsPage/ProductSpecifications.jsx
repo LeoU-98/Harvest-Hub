@@ -1,5 +1,5 @@
 import { Rating } from "@material-tailwind/react";
-import AddToCartButton from "../../Shared/AddToCartButton";
+import AddToCartButton from "../../shared/AddToCartButton";
 import ProductShare from "./ProductShare";
 import propTypes from "prop-types";
 import { useDispatch } from "react-redux";

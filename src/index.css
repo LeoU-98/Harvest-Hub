@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  outline: 1px solid red;
+} */
+
 html {
   scroll-behavior: smooth;
 }
@@ -109,6 +113,8 @@ input[type="checkbox"]:checked + label span:first-of-type {
 /*       React Slick Config    */
 /*/////////////////////////////*/
 
+/* 
+
 .intro-carousel .slick-track {
   display: block;
 }
@@ -127,13 +133,12 @@ input[type="checkbox"]:checked + label span:first-of-type {
 }
 
 .deal-of-the-day .slick-track,
-.slick-track {
+{
   display: flex;
-  gap: 10px;
-  justify-content: space-between;
+
 }
 
 .product-image-preview .slick-track {
   display: flex;
   gap: 1px;
-}
+} */

@@ -20,7 +20,7 @@ const packagingMaterials = [
   { name: "Cardboard Boxes", value: 25 },
 ];
 
-function SuppliesDashboard() {
+export default function SuppliesDashboard() {
   return (
     <Dashboard
       barTitle={"Water Usage by Irrigation Method"}
@@ -32,5 +32,3 @@ function SuppliesDashboard() {
     />
   );
 }
-
-export default SuppliesDashboard;

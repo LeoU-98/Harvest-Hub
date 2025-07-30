@@ -19,8 +19,6 @@ export default function ProductCard({
     dispatch(addItem({ ...data }));
   }
 
-  console.log(productImage);
-
   return (
     <div
       className={`flex h-full max-w-[312px] cursor-pointer flex-col items-center overflow-hidden rounded-[32px] border-2 bg-white ${className}`}

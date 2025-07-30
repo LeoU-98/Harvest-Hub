@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import ProductImagePreview from "../Shared/ProductImagePreview";
+import ProductImagePreview from "../shared/ProductImagePreview";
 import { splitCommonPrefix } from "../utils/helpers";
 import { Link, useParams } from "react-router-dom";
-import { CountdownTimer } from "../Shared/CountdownTimer";
+import { CountdownTimer } from "../shared/CountdownTimer";
 import propTypes from "prop-types";
 import { TbArrowBackUp } from "react-icons/tb";
 import { GiPayMoney } from "react-icons/gi";

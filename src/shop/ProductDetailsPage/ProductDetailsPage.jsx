@@ -1,7 +1,7 @@
-import BreadCrumb from "../../Shared/BreadCrumb";
-import ProductImagePreview from "../../Shared/ProductImagePreview";
+import BreadCrumb from "../../shared/BreadCrumb";
+import ProductImagePreview from "../../shared/ProductImagePreview";
 import ProductSpecifications from "./ProductSpecifications";
-import ProductReviews from "../Reviews/ProductReviews";
+import ProductReviews from "../reviews/ProductReviews";
 import RelatedProducts from "./RelatedProducts";
 import { useParams } from "react-router-dom";
 import {

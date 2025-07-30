@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/outline";
-import { ImageUploader } from "../Shared/ImageUploader";
+import { ImageUploader } from "../shared/ImageUploader";
 import { FiAlertTriangle } from "react-icons/fi";
 
 export default function MerchantProductCard({

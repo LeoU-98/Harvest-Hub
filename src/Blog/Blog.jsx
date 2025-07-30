@@ -1,8 +1,7 @@
-import BreadCrumb from "../Shared/BreadCrumb";
 import { blogItemData } from "../assets/BlogStaticData";
-import BlogAside from "./BlogAside";
-
+import BreadCrumb from "../shared/BreadCrumb";
 import BlogCard from "./BlogCard";
+import BlogAside from "./BlogAside";
 
 function Blog() {
   return (

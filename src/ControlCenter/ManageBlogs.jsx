@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import SidebarTabs from "./Components/SidebarTabs";
-import CreateBlogForm from "./Components/CreateBlogForm";
-import EditBlogForm from "./Components/EditBlogForm";
-import RemoveBlogSection from "./Components/RemoveBlogSection";
-import DeleteModal from "./Components/DeleteModal";
+import SidebarTabs from "./components/SidebarTabs";
+import CreateBlogForm from "./components/CreateBlogForm";
+import EditBlogForm from "./components/EditBlogForm";
+import RemoveBlogSection from "./components/RemoveBlogSection";
+import DeleteModal from "./components/DeleteModal";
 
 export default function ManageBlogsPage() {
   const [activeTab, setActiveTab] = useState("create");
