@@ -1,8 +1,7 @@
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import propTypes from "prop-types";
-import { removeItem } from "./cartSlice";
+import { removeItem } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
-
 export default function CartPreviewItem({ data }) {
   const { id, productImage, productName, discountPrice, price, count } = data;
   const dispatch = useDispatch();

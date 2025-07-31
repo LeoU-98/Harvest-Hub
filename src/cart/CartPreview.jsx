@@ -1,8 +1,9 @@
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
 import CartPreviewItem from "./CartPreviewItem";
-import { useCart } from "./cartSlice";
+import { useCart } from "../slices/cartSlice";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
   const { cart, totalCartPriceNumber, totalCartPriceCurrency } = useCart();
@@ -33,7 +34,10 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
       className={`absolute right-0 top-full z-50 w-80 origin-top scale-y-0 rounded-b-2xl border-b-2 border-apple-500 bg-white px-5 duration-500 ${isCartPreviewOpen ? "scale-y-100 py-5" : ""} `}
     >
       {/* items  */}
-      <ul className="cart max-h-72 min-h-6 overflow-y-auto scroll-smooth p-2">
+      <motion.ul
+        layout
+        className="cart max-h-72 min-h-6 overflow-y-auto scroll-smooth p-2"
+      >
         {cart.length === 0 ? (
           <div className="h-64 text-center text-xl text-green-500">
             <img
@@ -45,7 +49,7 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
         ) : (
           cart.map((item) => <CartPreviewItem data={item} key={item.id} />)
         )}
-      </ul>
+      </motion.ul>
       {/* total  */}
       <div className="flex justify-between border-y-[1px] border-gray-400 py-4">
         <span className="font-bold text-gray-900">Total</span>
@@ -60,7 +64,7 @@ function CartPreview({ isCartPreviewOpen, setIsCartPreviewOpen, buttonRef }) {
       <div className="flex justify-center gap-2 py-2">
         <Link
           onClick={() => setIsCartPreviewOpen(false)}
-          to="/Harvest-Hub/view-cart"
+          to="view-cart"
           className="cursor-pointer rounded-full bg-apple-500 px-5 py-3 text-sm uppercase text-white duration-300 hover:bg-black"
         >
           view cart

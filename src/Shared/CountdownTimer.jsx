@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import propTypes from "prop-types";
 
-export const CountdownTimer = ({ endTime }) => {
+export function CountdownTimer({ endTime }) {
   const calculateTimeLeft = () => {
     const difference = +new Date(endTime) - +new Date();
     let timeLeft = {};
@@ -38,6 +38,6 @@ export const CountdownTimer = ({ endTime }) => {
       {timeLeft.s}s
     </div>
   );
-};
+}
 
 CountdownTimer.propTypes = { endTime: propTypes.string };

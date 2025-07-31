@@ -1,5 +1,5 @@
 import BreadCrumb from "../shared/BreadCrumb";
-import { useCart } from "./cartSlice";
+import { useCart } from "../slices/cartSlice";
 import CartItem from "./CartItem";
 
 export default function CartDetialsPage() {

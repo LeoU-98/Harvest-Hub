@@ -14,24 +14,24 @@ import {
 } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logout } from "../../register/authSlice";
+import { logout } from "../../slices/authSlice";
 
 import propTypes from "prop-types";
 const profileMenuItems = [
   {
     label: "My Profile",
     icon: UserCircleIcon,
-    path: "/Harvest-Hub/profile/basic-info",
+    path: "profile/basic-info",
   },
   {
     label: "Inbox",
     icon: InboxArrowDownIcon,
-    path: "/Harvest-Hub/my-profile/",
+    path: "#inbox",
   },
   {
     label: "Sign Out",
     icon: PowerIcon,
-    path: "/Harvest-Hub/",
+    path: "/",
   },
 ];
 

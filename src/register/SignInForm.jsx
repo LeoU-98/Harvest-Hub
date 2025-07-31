@@ -1,9 +1,11 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import propTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { login } from "./authSlice";
+import { login, useAuth } from "../slices/authSlice";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 export default function SignInForm({ className }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,11 +13,10 @@ export default function SignInForm({ className }) {
     email: "",
     password: "",
   });
+  const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
-  const { isAuthenticated } = useSelector((state) => state.auth);
-
   const dispatch = useDispatch();
-  const authError = useSelector((state) => state.auth.error);
+  const { isAuthenticated } = useAuth();
 
   const handleCredentialsEntry = (e) => {
     const { name, value } = e.target;
@@ -26,18 +27,30 @@ export default function SignInForm({ className }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-
-    dispatch(login({ email, password }));
-  };
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        userCredentials.email,
+        userCredentials.password,
+      );
+      dispatch(
+        login({
+          email: user.user.email,
+          uid: user.user.uid,
+          accessToken: user.user.accessToken,
+        }),
+      );
+    } catch (error) {
+      setErrorMsg(error.message);
+    }
+  }
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/Harvest-Hub/"); // or any protected route
+      navigate("/");
     }
   }, [isAuthenticated, navigate]);
 
@@ -79,12 +92,24 @@ export default function SignInForm({ className }) {
           </button>
         </div>
       </label>
-      {authError && <p className="text-red-500">{authError}</p>}
+      {errorMsg && <p className="text-red-500">{errorMsg}</p>}
       <button
         type="submit"
         className="rounded-xl bg-apple-500 py-3 text-sm font-semibold uppercase text-white duration-300 hover:bg-black focus:bg-black active:translate-y-1"
       >
         sign in
+      </button>
+      <button
+        className="animate-pulse rounded-2xl bg-apple-500 py-2 text-white"
+        type="button"
+        onClick={() => {
+          setUserCredentials({
+            email: "admin@harvesthub.com",
+            password: "admin123",
+          });
+        }}
+      >
+        Fill Demo Credentials
       </button>
 
       <div>

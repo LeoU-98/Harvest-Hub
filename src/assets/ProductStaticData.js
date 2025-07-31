@@ -6,7 +6,7 @@ export const dealOfTheDayProducts = [
     id: "animal-01",
     productImage: "products/agriProducts/DairyAndLivestock/egg3.jpg",
     rating: 4,
-    productName: "Pulsating Sprinklers",
+    productName: "Eggs",
     description:
       "Farm-fresh chicken eggs, unprocessed and packed with nutrition. Ideal for daily meals and baking.",
     price: "50 EGP/pack",
@@ -17,7 +17,7 @@ export const dealOfTheDayProducts = [
     id: "animal-011",
     productImage: "products/agriProducts/DairyAndLivestock/steak1.jpg",
     rating: 5,
-    productName: "Drive Sprinkler",
+    productName: "Beef Steak",
     description:
       "Premium quality beef steak slices, vacuum-packed to preserve freshness and flavor.",
 

@@ -98,7 +98,7 @@ export default function BreadCrumb() {
         <div className="mx-auto w-fit sm:mx-0">
           <nav className="my-2 flex items-center text-sm text-gray-600 dark:text-gray-300">
             <Link
-              to="/Harvest-Hub/"
+              to="/"
               className="hover:text-green-600 hover:underline dark:hover:text-green-400"
             >
               Home

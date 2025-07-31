@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { extractPriceDetails } from "../utils/helpers";
 
 const initialState = [];
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
@@ -26,6 +27,7 @@ const cartSlice = createSlice({
     },
   },
 });
+
 export const { addItem, removeItem, updateItemCount, clearCart } =
   cartSlice.actions;
 

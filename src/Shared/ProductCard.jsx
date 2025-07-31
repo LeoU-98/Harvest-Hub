@@ -2,7 +2,7 @@ import propTypes from "prop-types";
 import AddToCartButton from "./AddToCartButton";
 import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
-import { addItem } from "../cart/cartSlice";
+import { addItem } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
 
 export default function ProductCard({
@@ -27,7 +27,7 @@ export default function ProductCard({
       <div className="group relative flex flex-col items-center">
         <Link
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          to={`/Harvest-Hub/product-details/${id}`}
+          to={`/product-details/${id}`}
           className={`max-h-[280] max-w-[280px] outline-none ${imgClassName}`}
         >
           <img

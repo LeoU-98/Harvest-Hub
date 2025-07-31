@@ -2,7 +2,7 @@ import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 
 import propTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
-import { removeItem, updateItemCount } from "../cart/cartSlice";
+import { removeItem, updateItemCount } from "../slices/cartSlice";
 
 export default function ItemCounter({
   itemID,

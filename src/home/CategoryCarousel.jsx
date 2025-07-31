@@ -49,7 +49,10 @@ export default function CategoryCarousel() {
 
 function CategoryItem({ data }) {
   return (
-    <a href="#ss" className="group mx-auto block max-w-44 text-center text-xs">
+    <a
+      href={`#${data.text}`}
+      className="group mx-auto block max-w-44 text-center text-xs"
+    >
       <div className="mx-auto mb-2 w-[90%] cursor-pointer overflow-hidden rounded-full border-2 border-mercury-200 bg-white duration-700 group-hover:border-b-orange-500 group-hover:border-l-apple-500 group-hover:border-r-orange-500 group-hover:border-t-apple-500 group-hover:[transform:rotateY(180deg)]">
         <img
           src={data.image}

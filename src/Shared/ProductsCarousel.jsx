@@ -9,6 +9,7 @@ export default function ProductsCarousel({ data }) {
     prevArrow: <SamplePrevArrow />,
     infinite: false,
     dots: false,
+    draggable: false,
     speed: 500,
     rows: 2,
     slidesToShow: 4,

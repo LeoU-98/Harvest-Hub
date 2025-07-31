@@ -3,7 +3,7 @@ import { Dialog } from "@material-tailwind/react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import ItemCounter from "../shop/ItemCounter";
 import { useSelector } from "react-redux";
-import { useCart } from "../cart/cartSlice";
+import { useCart } from "../slices/cartSlice";
 import { Link } from "react-router-dom";
 import { extractPriceDetails } from "../utils/helpers";
 
@@ -116,7 +116,7 @@ function ItemPreview({ handleOpen, itemID }) {
                   behavior: "smooth",
                 })
               }
-              to="/Harvest-Hub/view-cart"
+              to="/view-cart"
               className="outline-normal flex w-full items-center justify-center text-nowrap rounded-full bg-apple-500 px-6 py-3 text-xs uppercase leading-[normal] text-white duration-300 hover:bg-black lg:w-auto"
             >
               View Cart

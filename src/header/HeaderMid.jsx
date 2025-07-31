@@ -3,7 +3,7 @@ import { UserIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 import ProfileMenu from "./mid/ProfileMenu";
-import { useCart } from "../cart/cartSlice";
+import { useCart } from "../slices/cartSlice";
 import { useSelector } from "react-redux";
 
 function HeaderMid() {
@@ -11,12 +11,8 @@ function HeaderMid() {
 
   const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
     useCart();
-
   const buttonRef = useRef(null);
-
   const { isAuthenticated, user } = useSelector((state) => state.auth);
-
-  console.log(user);
 
   return (
     <div className="bg-white">
@@ -28,7 +24,7 @@ function HeaderMid() {
             <ProfileMenu data={user} />
           ) : (
             <Link
-              to={"/Harvest-Hub/account/signin"}
+              to={"account/signin"}
               className="group flex w-fit items-center gap-2 self-center rounded-full border border-apple-500 text-sm duration-500 hover:border-gray-500"
             >
               <div className="w-fit rounded-full bg-apple-500 p-2 duration-500 group-hover:bg-black">

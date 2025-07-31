@@ -5,7 +5,6 @@ export default function SignupForm() {
   return (
     <form className="flex w-fit basis-3/5 flex-col gap-2 bg-white p-5 pt-8">
       <h3 className="mb-4 text-center text-3xl text-gray-900">Sign Up</h3>
-
       {/* Name */}
       <div className="flex justify-between gap-5">
         <label className="flex-grow">

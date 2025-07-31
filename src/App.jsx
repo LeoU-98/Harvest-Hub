@@ -11,7 +11,6 @@ import BlogDetailsPage from "./blog/BlogDetailsPage";
 import ForgotPassword from "./register/ForgotPassword";
 import ResetPassword from "./register/ResetPassword";
 import EnterCode from "./register/EnterCode";
-
 import Auction from "./auction/Auction";
 import AuctionListingsPage from "./auction/AuctionListingPage";
 import AuctionDetailPage from "./auction/AuctionDetailPage";
@@ -37,131 +36,19 @@ import DashboardLayout from "./dashboard/DashboardLayout";
 import ProductsDashboard from "./dashboard/ProductsDashboard";
 import EquipmentDashboard from "./dashboard/EquipmentDashboard";
 import SuppliesDashboard from "./dashboard/SuppliesDashboard";
+import ProtectedRoute from "./ui/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
     children: [
       {
-        path: "/Harvest-Hub",
+        path: "/",
         element: <Home />,
         index: true,
       },
-
       {
-        path: "/Harvest-Hub/auctions/:id",
-        element: <AuctionDetailPage />,
-      },
-      {
-        path: "/Harvest-Hub/merchant/setup",
-        element: <MerchantSetupPage />,
-      },
-
-      {
-        path: "/Harvest-Hub/auctions",
-        element: <Auction />,
-        children: [
-          {
-            path: "list",
-            element: <AuctionListingsPage />,
-          },
-          {
-            path: "my-auctions",
-            element: <MyAuctionsPage />,
-          },
-          {
-            path: "new",
-            element: <CreateAuctionPage />,
-          },
-          {
-            path: "my-bids",
-            element: <MyBidsPage />,
-          },
-        ],
-      },
-
-      {
-        path: "/Harvest-Hub/control-center",
-        element: <ControlCenter />,
-        children: [
-          {
-            path: "manage-users",
-            element: <ManageUsers />,
-          },
-          {
-            path: "manage-blogs",
-            element: <ManageBlogs />,
-          },
-        ],
-      },
-
-      {
-        path: "/Harvest-Hub/monitor",
-        element: <Monitor />,
-        children: [
-          {
-            path: "field-details",
-            element: <FieldDetails />,
-          },
-          {
-            path: "sensor-analytics",
-            element: <SensorAnalytics />,
-          },
-          {
-            path: "notification-alerts",
-            element: <AlertsNotifications />,
-          },
-        ],
-      },
-
-      {
-        path: "/Harvest-Hub/manage-products",
-        element: <ManageProducts />,
-      },
-      {
-        path: "/Harvest-Hub/dashboard",
-        element: <DashboardLayout />,
-        children: [
-          {
-            path: "products-dashboard",
-            element: <ProductsDashboard />,
-          },
-          {
-            path: "equipment-dashboard",
-            element: <EquipmentDashboard />,
-          },
-          {
-            path: "supplies-dashboard",
-            element: <SuppliesDashboard />,
-          },
-        ],
-      },
-
-      {
-        path: "/Harvest-Hub/profile",
-        element: <ProfileLayout />,
-        children: [
-          {
-            path: "profile-info",
-            element: <ProfileEdit />,
-          },
-          {
-            path: "basic-info",
-            element: <BasicInfoEdit />,
-          },
-          {
-            path: "change-password",
-            element: <ChangePassword />,
-          },
-          {
-            path: "deactivate-account",
-            element: <DeactivateAccount />,
-          },
-        ],
-      },
-
-      {
-        path: "/Harvest-Hub/account",
+        path: "account",
         element: <Account />,
         children: [
           {
@@ -186,28 +73,146 @@ const router = createBrowserRouter([
           },
         ],
       },
-      {
-        path: "/Harvest-Hub/view-cart",
-        element: <CartDetialsPage />,
-      },
 
       {
-        path: "/Harvest-Hub/products/:type",
-        element: <ProductListPage />,
-      },
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: "auctions/:id",
+            element: <AuctionDetailPage />,
+          },
+          {
+            path: "merchant/setup",
+            element: <MerchantSetupPage />,
+          },
 
-      {
-        path: "/Harvest-Hub/blog",
-        element: <Blog />,
-      },
-      {
-        path: "/Harvest-Hub/blog-view/:id",
-        element: <BlogDetailsPage />,
-      },
+          {
+            path: "auctions",
+            element: <Auction />,
+            children: [
+              {
+                path: "list",
+                element: <AuctionListingsPage />,
+              },
+              {
+                path: "my-auctions",
+                element: <MyAuctionsPage />,
+              },
+              {
+                path: "new",
+                element: <CreateAuctionPage />,
+              },
+              {
+                path: "my-bids",
+                element: <MyBidsPage />,
+              },
+            ],
+          },
 
-      {
-        path: "/Harvest-Hub/product-details/:id",
-        element: <ProductDetailsPage />,
+          {
+            path: "control-center",
+            element: <ControlCenter />,
+            children: [
+              {
+                path: "manage-users",
+                element: <ManageUsers />,
+              },
+              {
+                path: "manage-blogs",
+                element: <ManageBlogs />,
+              },
+            ],
+          },
+
+          {
+            path: "monitor",
+            element: <Monitor />,
+            children: [
+              {
+                path: "field-details",
+                element: <FieldDetails />,
+              },
+              {
+                path: "sensor-analytics",
+                element: <SensorAnalytics />,
+              },
+              {
+                path: "notification-alerts",
+                element: <AlertsNotifications />,
+              },
+            ],
+          },
+
+          {
+            path: "manage-products",
+            element: <ManageProducts />,
+          },
+          {
+            path: "dashboard",
+            element: <DashboardLayout />,
+            children: [
+              {
+                path: "products-dashboard",
+                element: <ProductsDashboard />,
+              },
+              {
+                path: "equipment-dashboard",
+                element: <EquipmentDashboard />,
+              },
+              {
+                path: "supplies-dashboard",
+                element: <SuppliesDashboard />,
+              },
+            ],
+          },
+
+          {
+            path: "profile",
+            element: <ProfileLayout />,
+            children: [
+              {
+                path: "profile-info",
+                element: <ProfileEdit />,
+              },
+              {
+                path: "basic-info",
+                element: <BasicInfoEdit />,
+              },
+              {
+                path: "change-password",
+                element: <ChangePassword />,
+              },
+              {
+                path: "deactivate-account",
+                element: <DeactivateAccount />,
+              },
+            ],
+          },
+
+          {
+            path: "view-cart",
+            element: <CartDetialsPage />,
+          },
+
+          {
+            path: "products/:type",
+            element: <ProductListPage />,
+          },
+
+          {
+            path: "blog",
+            element: <Blog />,
+          },
+          {
+            path: "blog-view/:id",
+            element: <BlogDetailsPage />,
+          },
+
+          {
+            path: "product-details/:id",
+            element: <ProductDetailsPage />,
+          },
+        ],
       },
     ],
   },
@@ -215,7 +220,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="">
+    <div>
       <RouterProvider router={router} />
     </div>
   );

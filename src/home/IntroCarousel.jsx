@@ -20,7 +20,6 @@ export default function IntroCarousel() {
     autoplay: true,
     speed: 1300,
     autoplaySpeed: 3000,
-    // cssEase: "linear",
     responsive: [
       {
         breakpoint: 1530,

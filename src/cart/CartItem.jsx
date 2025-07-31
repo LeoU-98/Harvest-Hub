@@ -1,8 +1,7 @@
 import { TrashIcon } from "@heroicons/react/24/outline";
-
 import propTypes from "prop-types";
 import ItemCounter from "../shop/ItemCounter";
-import { removeItem } from "./cartSlice";
+import { removeItem } from "../slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { extractPriceDetails } from "../utils/helpers";
 
@@ -14,12 +13,11 @@ export default function CartItem({ data }) {
   const orignalPrice = extractPriceDetails(price).numberOnly;
   const finalPrice = discount > 0 ? discount : orignalPrice;
 
-  console.log(discount);
-  console.log(orignalPrice);
-  console.log(finalPrice);
-
   return (
-    <li className="flex flex-col items-center border-b-[1px] border-gray-300 px-2 md:flex-row">
+    <li
+      layout
+      className="flex flex-col items-center border-b-[1px] border-gray-300 px-2 md:flex-row"
+    >
       <div className="size-40">
         <img src={productImage} alt={productName} />
       </div>

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { dealOfTheDayProducts } from "../assets/ProductStaticData";
 import { Rating } from "@material-tailwind/react";
 import { useDispatch } from "react-redux";
-import { addItem } from "../cart/cartSlice";
+import { addItem } from "../slices/cartSlice";
 import { Link } from "react-router-dom";
 import { H2 } from "../ui/Heading";
 
@@ -183,40 +183,6 @@ function ItemTimer() {
     </div>
   );
 }
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={`${className} -top-8 right-[2%] size-7 rounded-full bg-white opacity-100 before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟩'] lg:size-9`}
-//       style={{ ...style }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={`${className} -top-8 left-[78%] size-7 rounded-full bg-white before:absolute before:left-1/2 before:top-1/2 before:z-10 before:-translate-x-1/2 before:translate-y-[-62%] before:rounded-full before:text-xs before:font-bold before:text-black before:content-['⟨'] sm:left-[86%] md:left-[89%] lg:left-[90%] lg:size-9 xl:left-[91%]`}
-//       style={{ ...style }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// SamplePrevArrow.propTypes = {
-//   className: propTypes.string,
-//   style: propTypes.object,
-//   onClick: propTypes.func,
-// };
-
-// SampleNextArrow.propTypes = {
-//   className: propTypes.string,
-//   style: propTypes.object,
-//   onClick: propTypes.func,
-// };
 
 DealOfTheDayItem.propTypes = {
   data: propTypes.object,

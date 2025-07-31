@@ -35,7 +35,7 @@ function HeaderBot() {
   const handleSuggestionClick = (product) => {
     setSearchTerm("");
     setShowSuggestions(false);
-    navigate(`/Harvest-Hub/product-details/${product.id}`);
+    navigate(`product-details/${product.id}`);
   };
 
   const handleSubmit = (e) => {

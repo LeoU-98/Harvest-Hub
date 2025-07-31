@@ -3,7 +3,7 @@ import AddToCartButton from "../../shared/AddToCartButton";
 import ProductShare from "./ProductShare";
 import propTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { addItem } from "../../cart/cartSlice";
+import { addItem } from "../../slices/cartSlice";
 import { extractPriceDetails } from "../../utils/helpers";
 
 ProductSpecifications.propTypes = { data: propTypes.object };
