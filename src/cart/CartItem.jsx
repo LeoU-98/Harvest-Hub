@@ -14,10 +14,7 @@ export default function CartItem({ data }) {
   const finalPrice = discount > 0 ? discount : orignalPrice;
 
   return (
-    <li
-      layout
-      className="flex flex-col items-center border-b-[1px] border-gray-300 px-2 md:flex-row"
-    >
+    <li className="flex flex-col items-center border-b-[1px] border-gray-300 px-2 md:flex-row">
       <div className="size-40">
         <img src={productImage} alt={productName} />
       </div>

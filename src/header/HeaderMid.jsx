@@ -5,8 +5,10 @@ import { useRef, useState } from "react";
 import ProfileMenu from "./mid/ProfileMenu";
 import { useCart } from "../slices/cartSlice";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 function HeaderMid() {
+  const { t } = useTranslation("header");
   const [isCartPreviewOpen, setIsCartPreviewOpen] = useState(false);
 
   const { totalItemsInCart, totalCartPriceNumber, totalCartPriceCurrency } =
@@ -19,7 +21,6 @@ function HeaderMid() {
       <div className="container mx-auto flex flex-wrap justify-between sm:px-3">
         {/* left */}
         <div className="flex items-center p-1 py-4 sm:p-0 sm:py-2">
-          {/* <div className="flex items-center p-4 sm:p-0 sm:py-2"> */}
           {isAuthenticated ? (
             <ProfileMenu data={user} />
           ) : (
@@ -31,25 +32,24 @@ function HeaderMid() {
                 <UserIcon className="size-8 text-white" />
               </div>
               <p className="cursor pl-1 pr-4 text-base duration-500 group-hover:text-apple-500">
-                Login
+                {t("mid.login")}
               </p>
             </Link>
           )}
         </div>
 
         {/* middle  */}
-        <div className="-order-1 flex w-1/2 basis-full items-end justify-center gap-1 p-4 md:-order-none md:w-1/3 md:basis-1/3">
-          <span className="text-4xl text-green-500">Harvest</span>
+        <div className="-order-1 flex w-1/2 basis-full items-end justify-center gap-1 p-4 md:-order-none md:w-1/3 md:basis-1/3 ltr:flex rtl:flex-row-reverse">
+          <span className="text-4xl text-green-500">{t("mid.harvest")}</span>
           <img
             src={`${import.meta.env.BASE_URL}logo.png`}
             alt="Harvest Hub Logo"
             className="w-20"
           ></img>
-          <span className="text-4xl text-green-500">Hub</span>
+          <span className="text-4xl text-green-500">{t("mid.hub")}</span>
         </div>
 
         {/* right */}
-        {/* <div className="relative flex w-fit items-center justify-end gap-2 p-4 sm:p-0 sm:py-2"> */}
         <div className="relative flex w-fit items-center justify-end gap-2 p-1 py-4 sm:p-0 sm:py-2">
           <div
             ref={buttonRef}
@@ -73,7 +73,9 @@ function HeaderMid() {
                 : 0}
             </span>
             <span> - </span>
-            <span>{totalItemsInCart} items</span>
+            <span>
+              {totalItemsInCart} {t("mid.items")}
+            </span>
           </div>
           <CartPreview
             isCartPreviewOpen={isCartPreviewOpen}

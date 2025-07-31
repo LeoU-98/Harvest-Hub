@@ -4,6 +4,7 @@ import { Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import NavList from "./bot/NavList";
 import { cropAndFreshProducesSearchData } from "../assets/SearchData";
+import { useTranslation } from "react-i18next";
 
 function HeaderBot() {
   const [openNav, setOpenNav] = useState(false);
@@ -11,6 +12,7 @@ function HeaderBot() {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation("header");
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -84,7 +86,7 @@ function HeaderBot() {
           <div className="relative col-span-1 col-start-2 row-span-1 row-start-1 max-h-12 self-center">
             <div className="flex items-center text-xs">
               <form
-                className="relative flex items-center"
+                className="relative flex items-center ltr:flex-row rtl:flex-row-reverse"
                 onSubmit={handleSubmit}
               >
                 <input
@@ -92,14 +94,14 @@ function HeaderBot() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   onFocus={() => searchTerm && setShowSuggestions(true)}
-                  placeholder="Search..."
+                  placeholder={t("bot.search")}
                   className="rounded-l-full bg-gray-100 px-4 py-[10px] text-gray-800 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-apple-500 md:w-64"
                 />
                 <button
                   type="submit"
                   className="rounded-r-full bg-apple-500 p-[10px] uppercase text-white duration-300 hover:bg-black"
                 >
-                  <span className="relative top-[1px]">search</span>
+                  <span className="relative top-[1px]">{t("bot.search")}</span>
                 </button>
 
                 {showSuggestions && filteredSuggestions.length > 0 && (

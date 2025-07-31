@@ -2,9 +2,11 @@ import { NavLink } from "react-router-dom";
 import NestedNavMenu from "./NestedNavMenu";
 import { useSelector } from "react-redux";
 import propTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
 export default function NavList({ setOpenNav, type }) {
   const { user } = useSelector((state) => state.auth);
+  const { t } = useTranslation("header");
 
   function handleClose() {
     if (type === "desktop") return;
@@ -20,14 +22,17 @@ export default function NavList({ setOpenNav, type }) {
             to="/"
             className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
           >
-            home
+            {t("bot.links.home")}
           </NavLink>
         </li>
         {(user?.role === "merchant" ||
           user?.role === "customer" ||
           user?.role === "admin") && (
           <li>
-            <NestedNavMenu handlerText={"store"} onClose={handleClose} />
+            <NestedNavMenu
+              handlerText={t("bot.links.store")}
+              onClose={handleClose}
+            />
           </li>
         )}
 
@@ -38,7 +43,7 @@ export default function NavList({ setOpenNav, type }) {
               to="dashboard/products-dashboard"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              Dashboard
+              {t("bot.links.dashboard")}
             </NavLink>
           </li>
         )}
@@ -52,7 +57,7 @@ export default function NavList({ setOpenNav, type }) {
               to="blog"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              Blog
+              {t("bot.links.blog")}
             </NavLink>
           </li>
         )}
@@ -66,7 +71,7 @@ export default function NavList({ setOpenNav, type }) {
               to="monitor/field-details"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              Monitor
+              {t("bot.links.monitor")}
             </NavLink>
           </li>
         )}
@@ -80,7 +85,7 @@ export default function NavList({ setOpenNav, type }) {
               to="auctions/list"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              Auction
+              {t("bot.links.auction")}
             </NavLink>
           </li>
         )}
@@ -91,7 +96,7 @@ export default function NavList({ setOpenNav, type }) {
               to="control-center/manage-users"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              Control Center
+              {t("bot.links.controlCenter")}
             </NavLink>
           </li>
         )}
@@ -102,7 +107,7 @@ export default function NavList({ setOpenNav, type }) {
               to="manage-products"
               className="middle-underline block h-full w-full text-nowrap text-sm font-semibold uppercase text-gray-700 after:mt-0 hover:text-green-500 hover:after:w-full"
             >
-              Manage Products
+              {t("bot.links.manageProducts")}
             </NavLink>
           </li>
         )}

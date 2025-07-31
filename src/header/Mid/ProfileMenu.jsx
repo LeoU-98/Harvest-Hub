@@ -49,7 +49,7 @@ export default function ProfileMenu({ data }) {
       <MenuHandler>
         <button
           type="button"
-          className="flex w-fit items-center gap-2 self-center rounded-full border border-gray-500 pr-2 text-sm outline-none duration-500"
+          className="flex w-fit items-center gap-2 self-center rounded-full border border-gray-500 pr-2 text-sm outline-none duration-500 ltr:flex-row rtl:flex-row-reverse"
         >
           <img className="size-12 rounded-full" src={`${data.image}`} />
           <p className="cursor text-base duration-500">{data.name}</p>
